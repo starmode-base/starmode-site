@@ -182,7 +182,7 @@ export function StudioLogo() {
   return (
     <div className="text-slate-800">
       <StarModeLogoMedium className="m-auto h-auto w-full max-w-[380px] px-10 sm:px-0" />
-      <p className="mt-1 text-center text-xs font-medium uppercase tracking-[0.3em]">
+      <p className="mt-1 text-center text-xs font-medium tracking-[0.3em] uppercase">
         Studios
       </p>
     </div>
@@ -223,7 +223,7 @@ export function Button(props: React.ComponentProps<"button">) {
   return (
     <button
       className={
-        "block w-max text-nowrap rounded-md bg-slate-600 px-5 py-3 text-center font-medium text-slate-50 hover:bg-slate-500" +
+        "block w-max rounded-md bg-slate-600 px-5 py-3 text-center font-medium text-nowrap text-slate-50 hover:bg-slate-500" +
         (className ? ` ${className}` : "")
       }
       {...rest}
@@ -237,7 +237,7 @@ export function AnchorButton(props: React.HTMLProps<HTMLAnchorElement>) {
   return (
     <a
       className={
-        "block w-max text-nowrap rounded-md bg-slate-600 px-5 py-3 text-center font-medium text-slate-50 hover:bg-slate-500" +
+        "block w-max rounded-md bg-slate-600 px-5 py-3 text-center font-medium text-nowrap text-slate-50 hover:bg-slate-500" +
         (className ? ` ${className}` : "")
       }
       {...rest}

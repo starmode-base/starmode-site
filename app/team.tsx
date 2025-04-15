@@ -36,7 +36,7 @@ export default function Team(props: {
             <div className="text-lg font-medium">{props.name}</div>
             <div className="text-slate-800">{props.title}</div>
           </div>
-          <div className="italic text-slate-800">{props.description}</div>
+          <div className="text-slate-800 italic">{props.description}</div>
         </div>
         <div className="flex flex-col gap-2 text-sm sm:flex-row sm:gap-4">
           <Social url={props.socialUrls.x} icon={SquareXTwitterIcon} />
