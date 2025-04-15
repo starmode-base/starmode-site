@@ -1,5 +1,11 @@
 import { expect, test } from "vitest";
 
-test("placeholder - should be true", () => {
-  expect(true).toBe(true);
+test("test", () => {
+  expect({
+    a: "a",
+    b: "b",
+  }).toStrictEqual({
+    a: "a",
+    b: expect.any(String),
+  });
 });
