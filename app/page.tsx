@@ -18,38 +18,10 @@ import { TeamV2 } from "./team";
 import { PortfolioItem } from "./portfolio";
 import mikaelImage from "../public/mikael-lirbank.jpg";
 import spencerImage from "../public/Spencer-headshot.jpg";
-import starmode from "../public/starmode-example.png";
 import expertSystem from "../public/expert-system-hero.png";
 import Link from "next/link";
 
 const portfolioItems = [
-  {
-    title: "AI Bookkeeping Copilot",
-    subtitle: "Automated Accounting SaaS",
-    description: (
-      <>
-        We built an end-to-end AI-powered bookkeeping solution for freelancers
-        and small businesses. It connects directly to bank accounts via Plaid,
-        uses LLMs to categorize transactions, and generates financial statements
-        autonomously. The system supports human-in-the-loop feedback and was
-        deployed in under 6 weeks.
-      </>
-    ),
-    techStack: [
-      "Next.js",
-      "TypeScript",
-      "OpenAI",
-      "Plaid",
-      "Drizzle ORM",
-      "PostgreSQL",
-      "Tailwind CSS",
-    ],
-    image: starmode,
-    imageAlt: "AI Bookkeeping Copilot UI",
-    liveUrl: "https://bookkeeping-demo.starmode.ai",
-    repoUrl: "https://github.com/starmode/starmode",
-    badge: "Internal Product",
-  },
   {
     title: "Expert System",
     subtitle:
@@ -79,31 +51,6 @@ const portfolioItems = [
     imageAlt: "AI Bookkeeping Copilot UI",
     liveUrl: "https://expert-system-rust.vercel.app/",
     repoUrl: undefined,
-    badge: "Internal Product",
-  },
-  {
-    title: "AI Bookkeeping Copilot2",
-    subtitle: "Automated Accounting SaaS",
-    description: (
-      <>
-        We built an end-to-end AI-powered bookkeeping solution for freelancers
-        and small businesses. It connects directly to bank accounts via Plaid,
-        uses LLMs to categorize transactions, and generates financial statements
-        autonomously. The system supports human-in-the-loop feedback and was
-        deployed in under 6 weeks.
-      </>
-    ),
-    techStack: [
-      "Next.js",
-      "TypeScript",
-      "OpenAI",
-      "Plaid",
-      "Drizzle ORM",
-      "PostgreSQL",
-      "Tailwind CSS",
-    ],
-    image: spencerImage,
-    imageAlt: "AI Bookkeeping Copilot UI",
     badge: "Internal Product",
   },
 ];
