@@ -20,6 +20,7 @@ import mikaelImage from "../public/mikael-lirbank.jpg";
 import spencerImage from "../public/Spencer-headshot.jpg";
 import expertSystem from "../public/expert-system-hero.png";
 import Link from "next/link";
+import { technologies } from "./technologies";
 
 const portfolioItems = [
   {
@@ -194,32 +195,17 @@ export default function LandingPage() {
           <Section>
             <H3 centered>Technologies we are excited about</H3>
             <div className="mx-auto my-8 flex max-w-2xl flex-wrap justify-center text-sm text-slate-600">
-              {[
-                "LLMs",
-                "TanStack",
-                "WebRTC",
-                "WebSockets",
-                "Solid.js",
-                "Tailwind CSS",
-                "PostgreSQL",
-                "PGlite",
-                "Drizzle",
-                "TypeScript",
-                "Prettier",
-                "ESLint",
-                "Vitest",
-                "Playwright",
-                "Inngest",
-                "Ably",
-              ]
-                .sort()
-                .map((tech) => (
-                  <div
+              {technologies
+                .toSorted((a, b) => a[0].localeCompare(b[0]))
+                .map(([tech, url]) => (
+                  <a
+                    href={url}
+                    target="_blank"
                     key={tech}
                     className="mx-2 my-2 rounded-full border border-slate-200 bg-white px-6 py-1 text-nowrap shadow-sm"
                   >
                     {tech}
-                  </div>
+                  </a>
                 ))}
             </div>
           </Section>
