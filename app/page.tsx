@@ -19,6 +19,7 @@ import { PortfolioItem } from "./portfolio";
 import mikaelImage from "../public/mikael-lirbank.jpg";
 import spencerImage from "../public/Spencer-headshot.jpg";
 import expertSystem from "../public/expert-system-hero.png";
+import benaiDemoImage from "../public/benai/benai-demo-image.png";
 import Link from "next/link";
 import { technologies } from "./technologies";
 
@@ -40,10 +41,9 @@ const portfolioItems = [
       </>
     ),
     techStack: [
-      "Next.js",
+      "TanStack",
       "TypeScript",
       "OpenAI",
-      "Plaid",
       "Drizzle ORM",
       "PostgreSQL",
       "Tailwind CSS",
@@ -53,6 +53,28 @@ const portfolioItems = [
     liveUrl: "https://expert-system-rust.vercel.app/",
     repoUrl: undefined,
     badge: "Internal Product",
+  },
+  {
+    title: "BenAi",
+    subtitle:
+      "Navigating healthcare, simplified. Boosting member literacy and plan utilization through AI.",
+    description: (
+      <>
+        BenAi is a healthcare-focused customer service copilot. It streamlines
+        insurance plan inquiries, enabling members to instantly access plan
+        details and make smarter healthcare decisions. With a combination of an
+        AI chat assistant and a centralized service portal, BenAi improves
+        support for both members and third-party administrators. Features
+        include a Member Chat-Bot for real-time plan Q&A, a Customer Service
+        Co-Pilot for agents, and an Enrollment Scenario Planner to help members
+        select the most cost-effective plans.
+      </>
+    ),
+    techStack: ["Python", "Next.js", "TypeScript", "OpenAI", "Tailwind CSS"],
+    image: benaiDemoImage,
+    imageAlt: "BenAi architecture diagram",
+    liveUrl: "/benai",
+    badge: "Client Project",
   },
 ];
 
