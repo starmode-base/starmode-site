@@ -1,5 +1,3 @@
-"use client";
-
 import Image, { StaticImageData } from "next/image";
 import { GitHubIcon, LinkedInIcon, SquareXTwitterIcon } from "./icons";
 
@@ -13,38 +11,6 @@ export function Social(props: { url: string; icon: React.ElementType }) {
       <props.icon className="size-6" />
       <div>{extractUsername(props.url)}</div>
     </a>
-  );
-}
-
-export default function Team(props: {
-  name: string;
-  title: string;
-  description: string | React.ReactNode;
-  image: StaticImageData;
-  socialUrls: { x: string; linkedIn: string; gitHub: string };
-}) {
-  return (
-    <div className="flex max-w-3xl flex-col items-center gap-10 rounded-xl bg-gradient-to-br from-slate-300 to-slate-400 px-5 py-10 sm:mx-auto sm:flex-row sm:rounded-3xl sm:px-10">
-      <Image
-        src={props.image}
-        alt={props.name}
-        className="size-48 shrink-0 rounded-full object-cover"
-      />
-      <div className="flex flex-col gap-10">
-        <div className="flex flex-col gap-4">
-          <div>
-            <div className="text-lg font-medium">{props.name}</div>
-            <div className="text-slate-800">{props.title}</div>
-          </div>
-          <div className="text-slate-800 italic">{props.description}</div>
-        </div>
-        <div className="flex flex-col gap-2 text-sm sm:flex-row sm:gap-4">
-          <Social url={props.socialUrls.x} icon={SquareXTwitterIcon} />
-          <Social url={props.socialUrls.linkedIn} icon={LinkedInIcon} />
-          <Social url={props.socialUrls.gitHub} icon={GitHubIcon} />
-        </div>
-      </div>
-    </div>
   );
 }
 

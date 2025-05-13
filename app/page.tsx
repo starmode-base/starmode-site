@@ -1,25 +1,18 @@
-"use client";
-
 import {
-  AnchorButton,
-  Footer,
   GradientDark,
   GradientLight,
   H1,
   H3,
-  Header,
   Logo,
   P1,
   P3,
   Section,
-  StudioLogo,
 } from "./atoms";
 import { TeamV2 } from "./team";
 import { PortfolioItem } from "./portfolio";
 import mikaelImage from "../public/mikael-lirbank.jpg";
 import spencerImage from "../public/Spencer-headshot.jpg";
 import expertSystem from "../public/expert-system-hero.png";
-import Link from "next/link";
 import { technologies } from "./technologies";
 
 const portfolioItems = [
@@ -59,27 +52,19 @@ const portfolioItems = [
 export default function LandingPage() {
   return (
     <div className="grow">
-      <Header>
-        <StudioLogo />
-      </Header>
+      <header className="my-8 px-4 sm:px-10">
+        <Logo />
+      </header>
       <main>
-        <Section tall={false}>
-          <H1>AI-Powered Applications. Built End to End.</H1>
+        <Section tall={true}>
+          <H1>We help companies build better AI</H1>
           <P1 centered>
-            Starmode Studios designs and develops modern web applications with
-            AI at their core. From early-stage prototypes to fully deployed
-            systems, we can build the entire stack—fast.
-            <span className="flex justify-center">
-              <b>
-                Every industry is being reshaped by AI. We’ll help you lead, not
-                lag.
-              </b>
-            </span>
+            We design and deliver full-stack software with AI at the core—built
+            for real-world use, not just demos.
           </P1>
-
-          <div className="flex justify-center">
-            <AnchorButton href="#pricing">Contact Us</AnchorButton>
-          </div>
+          <a className="button mx-auto" href="#team">
+            Get in touch
+          </a>
         </Section>
 
         <GradientDark>
@@ -122,6 +107,7 @@ export default function LandingPage() {
           </Section>
         </GradientDark>
 
+        <div id="team" />
         <Section>
           <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4 px-4 sm:px-6 lg:grid-cols-2">
             <TeamV2
@@ -212,15 +198,10 @@ export default function LandingPage() {
         </GradientLight>
       </main>
 
-      <Footer>
+      <footer className="my-8 px-4 sm:px-10">
         <Logo />
-        <P3>
-          © {new Date().getFullYear()} STΛR MODΞ. All rights reserved.{" "}
-          <Link href="/legal" className="hover:underline">
-            Privacy policy & Terms of service
-          </Link>
-        </P3>
-      </Footer>
+        <P3>© {new Date().getFullYear()} STΛR MODΞ. All rights reserved.</P3>
+      </footer>
     </div>
   );
 }
