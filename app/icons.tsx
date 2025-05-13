@@ -1,5 +1,9 @@
 /**
- * https://fontawesome.com/icons/github
+ * Github icon
+ *
+ * https://fontawesome.com/icons/github?f=brands&s=solid
+ *
+ * !Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.
  */
 export function GitHubIcon(props: React.SVGProps<SVGSVGElement>) {
   return (

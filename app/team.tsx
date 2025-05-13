@@ -1,20 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import Image, { StaticImageData } from "next/image";
-import {
-  GitHubIcon,
-  LinkedInIcon,
-  SquareBlueskyIcon,
-  SquareXTwitterIcon,
-} from "./icons";
-
-const extractUsername = (url: string) => {
-  return new URL(url).pathname.toLowerCase().replace(/.*\//, "");
-};
+import { GitHubIcon, LinkedInIcon } from "./icons";
 
 export function Social(props: { url: string; icon: React.ElementType }) {
   return (
     <a href={props.url} target="_blank" className="flex items-center gap-2">
-      <props.icon className="size-6" />
-      <div>{extractUsername(props.url)}</div>
+      <props.icon className="size-8" />
     </a>
   );
 }
@@ -43,15 +34,31 @@ export function TeamV2(props: {
         <div className="text-lg text-gray-700">{props.title}</div>
       </div>
       <div className="max-w-xl text-sm text-gray-800">{props.description}</div>
-      <div className="mt-4 flex flex-wrap gap-4 overflow-hidden">
+      <div className="mt-4 flex flex-wrap justify-center gap-4">
+        <Social url={props.socialUrls.gitHub} icon={GitHubIcon} />
+        <Social url={props.socialUrls.linkedIn} icon={LinkedInIcon} />
         {props.socialUrls.x ? (
-          <Social url={props.socialUrls.x} icon={SquareXTwitterIcon} />
+          <a
+            href={props.socialUrls.x}
+            target="_blank"
+            className="flex items-center gap-2"
+          >
+            <img src="/icons/x-twitter-brands.svg" alt="X" className="size-8" />
+          </a>
         ) : null}
         {props.socialUrls.bluesky ? (
-          <Social url={props.socialUrls.bluesky} icon={SquareBlueskyIcon} />
+          <a
+            href={props.socialUrls.bluesky}
+            target="_blank"
+            className="flex items-center gap-2"
+          >
+            <img
+              src="/icons/bluesky-brands.svg"
+              alt="Bluesky"
+              className="size-8"
+            />
+          </a>
         ) : null}
-        <Social url={props.socialUrls.linkedIn} icon={LinkedInIcon} />
-        <Social url={props.socialUrls.gitHub} icon={GitHubIcon} />
       </div>
     </div>
   );
