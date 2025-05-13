@@ -1,5 +1,16 @@
 import { StarModeLogoMedium } from "./brand";
 
+export function Header(props: React.HTMLProps<HTMLDivElement>) {
+  const { className, ...rest } = props;
+
+  return (
+    <header
+      className={"my-8 px-4 sm:px-10" + (className ? ` ${className}` : "")}
+      {...rest}
+    />
+  );
+}
+
 export function Section(
   props: React.HTMLProps<HTMLDivElement> & {
     tall?: boolean;
@@ -188,6 +199,20 @@ export function GradientLight(props: React.HTMLProps<HTMLDivElement>) {
     <div
       className={
         "w-screen overflow-hidden bg-gradient-to-br from-slate-300 to-slate-400" +
+        (className ? ` ${className}` : "")
+      }
+      {...rest}
+    />
+  );
+}
+
+export function Button(props: React.ComponentProps<"button">) {
+  const { className, ...rest } = props;
+
+  return (
+    <button
+      className={
+        "block w-max rounded-md bg-slate-600 px-5 py-3 text-center font-medium text-nowrap text-slate-50 hover:bg-slate-500" +
         (className ? ` ${className}` : "")
       }
       {...rest}
