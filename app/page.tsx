@@ -173,7 +173,7 @@ export default function LandingPage() {
               }
               image={mikaelImage}
               socialUrls={{
-                x: "https://x.com/MikaelLirbank",
+                bluesky: "https://bsky.app/profile/lirbank.com",
                 linkedIn: "https://www.linkedin.com/in/mikaellirbank",
                 gitHub: "https://github.com/lirbank",
               }}

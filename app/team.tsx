@@ -1,8 +1,13 @@
 import Image, { StaticImageData } from "next/image";
-import { GitHubIcon, LinkedInIcon, SquareXTwitterIcon } from "./icons";
+import {
+  GitHubIcon,
+  LinkedInIcon,
+  SquareBlueskyIcon,
+  SquareXTwitterIcon,
+} from "./icons";
 
 const extractUsername = (url: string) => {
-  return new URL(url).pathname.toLowerCase().replace(/^\//, "");
+  return new URL(url).pathname.toLowerCase().replace(/.*\//, "");
 };
 
 export function Social(props: { url: string; icon: React.ElementType }) {
@@ -19,7 +24,12 @@ export function TeamV2(props: {
   title: string;
   description: string | React.ReactNode;
   image: StaticImageData;
-  socialUrls: { x: string; linkedIn: string; gitHub: string };
+  socialUrls: {
+    bluesky?: string;
+    x?: string;
+    linkedIn: string;
+    gitHub: string;
+  };
 }) {
   return (
     <div className="flex w-full flex-col items-center gap-4 rounded-xl p-4 text-center sm:p-6">
@@ -34,7 +44,12 @@ export function TeamV2(props: {
       </div>
       <div className="max-w-xl text-sm text-gray-800">{props.description}</div>
       <div className="mt-4 flex flex-wrap gap-4 overflow-hidden">
-        <Social url={props.socialUrls.x} icon={SquareXTwitterIcon} />
+        {props.socialUrls.x ? (
+          <Social url={props.socialUrls.x} icon={SquareXTwitterIcon} />
+        ) : null}
+        {props.socialUrls.bluesky ? (
+          <Social url={props.socialUrls.bluesky} icon={SquareBlueskyIcon} />
+        ) : null}
         <Social url={props.socialUrls.linkedIn} icon={LinkedInIcon} />
         <Social url={props.socialUrls.gitHub} icon={GitHubIcon} />
       </div>
