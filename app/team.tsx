@@ -1,11 +1,9 @@
 import Image, { StaticImageData } from "next/image";
 import {
   BlueskyIcon,
-  EnvelopeIcon,
   GitHubIcon,
   LinkedInIcon,
   RegularEnvelopeIcon,
-  SquareEnvelopeIcon,
   XTwitterIcon,
 } from "./icons";
 
