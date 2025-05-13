@@ -153,6 +153,7 @@ export default function LandingPage() {
                 x: "https://x.com/Smith6G",
                 linkedIn: "https://www.linkedin.com/in/spencergsmith6",
                 gitHub: "https://github.com/spencer-g-smith",
+                email: "mailto:spencer@starmode.dev",
               }}
             />
 
@@ -176,6 +177,7 @@ export default function LandingPage() {
                 bluesky: "https://bsky.app/profile/lirbank.com",
                 linkedIn: "https://www.linkedin.com/in/mikaellirbank",
                 gitHub: "https://github.com/lirbank",
+                email: "mailto:mikael@starmode.dev",
               }}
             />
           </div>

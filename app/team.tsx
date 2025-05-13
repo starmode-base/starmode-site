@@ -1,6 +1,13 @@
-/* eslint-disable @next/next/no-img-element */
 import Image, { StaticImageData } from "next/image";
-import { GitHubIcon, LinkedInIcon } from "./icons";
+import {
+  BlueskyIcon,
+  EnvelopeIcon,
+  GitHubIcon,
+  LinkedInIcon,
+  RegularEnvelopeIcon,
+  SquareEnvelopeIcon,
+  XTwitterIcon,
+} from "./icons";
 
 export function Social(props: { url: string; icon: React.ElementType }) {
   return (
@@ -20,6 +27,7 @@ export function TeamV2(props: {
     x?: string;
     linkedIn: string;
     gitHub: string;
+    email: string;
   };
 }) {
   return (
@@ -38,27 +46,12 @@ export function TeamV2(props: {
         <Social url={props.socialUrls.gitHub} icon={GitHubIcon} />
         <Social url={props.socialUrls.linkedIn} icon={LinkedInIcon} />
         {props.socialUrls.x ? (
-          <a
-            href={props.socialUrls.x}
-            target="_blank"
-            className="flex items-center gap-2"
-          >
-            <img src="/icons/x-twitter-brands.svg" alt="X" className="size-8" />
-          </a>
+          <Social url={props.socialUrls.x} icon={XTwitterIcon} />
         ) : null}
         {props.socialUrls.bluesky ? (
-          <a
-            href={props.socialUrls.bluesky}
-            target="_blank"
-            className="flex items-center gap-2"
-          >
-            <img
-              src="/icons/bluesky-brands.svg"
-              alt="Bluesky"
-              className="size-8"
-            />
-          </a>
+          <Social url={props.socialUrls.bluesky} icon={BlueskyIcon} />
         ) : null}
+        <Social url={props.socialUrls.email} icon={RegularEnvelopeIcon} />
       </div>
     </div>
   );
