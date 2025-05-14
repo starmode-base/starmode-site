@@ -11,7 +11,7 @@ export default function Benai() {
           <Image src={benai} alt="BenAi Logo" width={500} height={500} />
         </div>
 
-        <h2 className="h2 text-center">Navigating Healthcare, Simplified.</h2>
+        <h2 className="text-center">Navigating Healthcare, Simplified.</h2>
         <p className="paragraph-1 mt-2 text-lg">
           BenAI is a next-generation customer service platform we developed to
           transform how members understand and interact with their healthcare
@@ -19,14 +19,14 @@ export default function Benai() {
           maximize their benefits, reduces administrative load, and enhances
           support quality for healthcare administrators.
         </p>
-        <div className="my-6 flex h-full items-center justify-center">
-          <BenaiDemo className="w-full lg:w-3/5" />
+        <div className="mx-auto aspect-video w-3xl max-w-full">
+          <BenaiDemo />
         </div>
       </section>
-      {/* What We Built & Outcomes */}
 
+      {/* What We Built & Outcomes */}
       <section className="section-short gradient-dark">
-        <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8 sm:grid-cols-2">
           <div className="rounded-2xl bg-white/40 p-6 shadow-sm transition-transform duration-300 hover:scale-105 hover:shadow-lg">
             <div className="mb-4 text-2xl font-bold">🔍 What We Built</div>
             <ul className="list-inside list-disc space-y-2 font-medium text-gray-900">
@@ -61,7 +61,7 @@ export default function Benai() {
           />
         </div>
         <div className="text-grey-800 text-center">
-          <h2 className="h2 mt-16 mb-4">Agentic Architecture</h2>
+          <h2 className="mt-16 mb-4">Agentic Architecture</h2>
           <p className="mx-auto max-w-3xl text-base">
             We created a modular agent framework for BenAI to enable intelligent
             data retrieval and workflow execution. A central Routing Agent
