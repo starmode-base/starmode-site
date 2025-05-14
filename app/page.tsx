@@ -4,7 +4,10 @@ import mikaelImage from "../public/mikael-lirbank.jpg";
 import spencerImage from "../public/spencer-smith.jpg";
 import expertSystem from "../public/expert-system-hero.png";
 import benaiDemoImage from "../public/benai/benai-demo-image.png";
+import mattiasImage from "../public/mattias-karlsson.jpg";
+import justinImage from "../public/justin-muncaster.jpg";
 import { technologies } from "./technologies";
+import { Testimonial } from "./testimonial";
 
 const portfolioItems = [
   {
@@ -76,8 +79,9 @@ export default function LandingPage() {
       <section className="section-short gradient-dark">
         <h2 className="heading-light">How we can help</h2>
         <p className="paragraph-1 paragraph-light">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-          quos.
+          We design and build AI-native products—from first sketch to production
+          launch. Whether you need strategic thinking, deep technical expertise,
+          or fast, focused execution, we've got you covered.
         </p>
         <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 lg:grid-cols-3">
           <div className="rounded-2xl bg-white/20 p-6 shadow-sm transition hover:scale-[1.02] hover:shadow-md">
@@ -85,7 +89,7 @@ export default function LandingPage() {
               Full-stack product thinking
             </div>
             <p className="mt-2 text-sm text-slate-100">
-              We don’t just build what’s specced—we help define it. From early
+              We don't just build what's specced—we help define it. From early
               concept to launch, we think holistically about product, tech, and
               user experience.
             </p>
@@ -106,7 +110,7 @@ export default function LandingPage() {
               Lean team and fast execution
             </div>
             <p className="mt-2 text-sm text-slate-100">
-              We’re a small, veteran team with an optimized stack and years of
+              We're a small, veteran team with an optimized stack and years of
               collaboration. No middle layers. No drag. Just high-velocity
               execution.
             </p>
@@ -130,7 +134,7 @@ export default function LandingPage() {
                 product-minded builder. Before co-founding the studio, he spent
                 a decade at Zillow as a Principal Data Scientist, where he led
                 the development of intelligent systems and AI agents. He holds a
-                master’s in machine learning, has worked as a research
+                master's in machine learning, has worked as a research
                 scientist, and previously founded an AI startup focused on
                 automating customer service in healthcare. Spencer brings a rare
                 mix of deep ML expertise, product intuition, and startup
@@ -155,7 +159,7 @@ export default function LandingPage() {
                 served as Lead Engineer at BootstrapLabs, a VC firm focused on
                 AI, where he turned early-stage ideas into polished,
                 production-ready products. Mikael has a deep command of modern
-                web technologies and a builder’s instinct for clean architecture
+                web technologies and a builder's instinct for clean architecture
                 and long-term maintainability. In an age of “vibe coding,”
                 Mikael brings structure, clarity, and craftsmanship.
               </>
@@ -171,12 +175,64 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="section-short">
+        <h2 className="">What is it like to work with us?</h2>
+        <p className="paragraph-1">
+          We partner with innovative teams to solve hard problems with clarity,
+          speed, and deep technical expertise. Here's what a few of them had to
+          say.
+        </p>
+        <div className="mx-auto flex max-w-2xl flex-col gap-10">
+          <Testimonial
+            project={{
+              name: "FLIR Conservator",
+              url: "https://www.flir.com/products/conservator/",
+              description:
+                "Conservator™ is a powerful cloud-based data lifecycle management (DLM) application that enables data scientists to quickly build image datasets and accelerate AI development.",
+            }}
+            quote="Mikael was a pleasure to work with. Very knowledgable, very competent, very productive."
+            author={{
+              name: "Justin Muncaster",
+              title: "Teledyne FLIR/Muncaster Consulting",
+              avatar: justinImage,
+              url: "https://www.linkedin.com/in/jmuncaster/",
+            }}
+          />
+          <Testimonial
+            project={{
+              name: "SpikeGadgets",
+              url: "https://spikegadgets.com/",
+              description:
+                "SpikeGadgets develops advanced neuroscience tools that combine high-performance, lab-grade hardware with an open-source software platform for science-driven customization.",
+            }}
+            quote={
+              <p>
+                Mikael came to our company and gave a well-organized and highly
+                informative talk to our developers about how to use AI to speed
+                up software development in a practical way. Mikael has a knack
+                for explaining complex ideas in a way that is very accessible,
+                and our entire group was immediately inspired and empowered to
+                use the emerging methodologies he showcased. I was super
+                impressed!
+              </p>
+            }
+            author={{
+              name: "Mattias Karlsson",
+              title: "SpikeGadgets CEO",
+              avatar: mattiasImage,
+              url: "https://www.linkedin.com/in/mattias-karlsson-32100b119/",
+            }}
+          />
+        </div>
+      </section>
       {/* Portfolio */}
       <section className="section-short gradient-dark">
         <h2 className="heading-light">Portfolio</h2>
         <p className="paragraph-1 paragraph-light">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-          quos.
+          A few examples of the AI-powered tools and platforms we've helped
+          bring to life—ranging from healthcare copilots to knowledge systems
+          for expert users.
         </p>
 
         <div className="grid grid-cols-1 gap-4 overflow-x-auto sm:gap-10 md:grid-cols-2">
