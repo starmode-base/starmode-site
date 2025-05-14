@@ -1,8 +1,11 @@
 /**
  * STΛR MODΞ Icon
  *
- * SVG file:
- * https://github.com/lirbank/starmode/blob/main/apps/starmode-site/public/starmode-icon.svg
+ * SVG file (GitHub):
+ * https://github.com/starmode-base/starmode-site/blob/main/public/starmode-icon.svg
+ *
+ * SVG file (Website):
+ * https://www.starmode.dev/starmode-icon.svg
  *
  * Figma file:
  * https://www.figma.com/file/gt1f3Jz3fRhh7GAcvqplp3/Star-Mode?type=design&node-id=14-2
@@ -18,8 +21,11 @@ export function StarModeIconSVG(props: React.SVGProps<SVGSVGElement>) {
 /**
  * STΛR MODΞ Logo
  *
- * SVG file:
- * https://github.com/lirbank/starmode/blob/main/apps/starmode-site/public/starmode-logo-medium.svg
+ * SVG file (GitHub):
+ * https://github.com/starmode-base/starmode-site/blob/main/public/starmode-logo.svg
+ *
+ * SVG file (Website):
+ * https://www.starmode.dev/starmode-logo.svg
  *
  * Figma file:
  * https://www.figma.com/file/gt1f3Jz3fRhh7GAcvqplp3/Star-Mode?type=design&node-id=14-2
