@@ -2,6 +2,7 @@ import Image from "next/image";
 import benai from "@/public/benai/Ben_Ai Logo .png";
 import agentFramework from "@/public/benai/benai-agent-framework.png";
 import { BenaiDemo } from "./benai-demo";
+import Link from "next/link";
 
 export default function Benai() {
   return (
@@ -86,7 +87,9 @@ export default function Benai() {
             internal operations or launching AI-first products, we can help you
             design, build, and scale.
           </p>
-          <button className="button inline-block">Start a Project</button>
+          <Link href="/#team" className="button inline-block">
+            Start a Project
+          </Link>
         </div>
       </section>
     </main>
