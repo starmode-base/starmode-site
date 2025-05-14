@@ -1,9 +1,10 @@
-// components/VideoPlayer.tsx
+"use client";
+
 import dynamic from "next/dynamic";
 
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
-const BenaiDemo = ({ className = "" }: { className?: string }) => {
+export const BenaiDemo = ({ className = "" }: { className?: string }) => {
   return (
     <div className={`relative ${className}`}>
       <div className="aspect-video w-full">
@@ -19,5 +20,3 @@ const BenaiDemo = ({ className = "" }: { className?: string }) => {
     </div>
   );
 };
-
-export default BenaiDemo;

@@ -1,9 +1,7 @@
-"use client";
-
 import Image from "next/image";
 import benai from "@/public/benai/Ben_Ai Logo .png";
 import agentFramework from "@/public/benai/benai-agent-framework.png";
-import BenaiDemo from "./benai-demo";
+import { BenaiDemo } from "./benai-demo";
 import { Button, GradientDark, H1, H2, P1, Section } from "../atoms";
 
 export default function Benai() {
