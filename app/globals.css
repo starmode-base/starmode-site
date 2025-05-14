@@ -17,9 +17,13 @@
   }
 }
 
+/* Button */
+
 @utility button {
   @apply block w-max rounded-md bg-slate-600 px-5 py-3 text-center font-medium text-nowrap text-slate-50 hover:bg-slate-500;
 }
+
+/* Gradients */
 
 @utility gradient-dark {
   @apply bg-gradient-to-br from-slate-600 to-slate-700;
@@ -29,7 +33,9 @@
   @apply bg-gradient-to-br from-slate-300 to-slate-400;
 }
 
-@utility section {
+/* Section */
+
+section {
   @apply px-4 sm:px-10;
 }
 
@@ -45,22 +51,42 @@
   @apply py-20 sm:py-48;
 }
 
-@utility h1 {
+/* Headings */
+
+h1 {
   @apply mx-auto max-w-4xl text-5xl font-semibold text-slate-800 sm:text-center sm:text-7xl;
 }
 
-@utility h2 {
+h2 {
   @apply mx-auto max-w-4xl text-4xl font-medium tracking-tight text-slate-800 sm:text-center sm:text-5xl;
 }
 
-@utility h2-light {
-  @apply text-slate-200;
-}
-
-@utility h3 {
+h3 {
   @apply mx-auto text-3xl font-medium tracking-tight text-slate-800 sm:text-center sm:text-4xl;
 }
 
-@utility paragraph {
+h4 {
+  @apply mt-4 text-lg font-medium tracking-tight text-slate-700;
+}
+
+@utility heading-light {
+  @apply text-slate-200!;
+}
+
+/* Paragraphs */
+
+@utility paragraph-1 {
   @apply mx-auto my-6 max-w-2xl text-slate-600 sm:text-center sm:text-lg sm:leading-relaxed;
+}
+
+@utility paragraph-2 {
+  @apply mx-auto my-2 max-w-2xl text-sm leading-7 text-slate-600 sm:leading-6;
+}
+
+@utility paragraph-3 {
+  @apply mx-auto my-8 text-center text-xs leading-relaxed text-slate-600 sm:text-sm;
+}
+
+@utility paragraph-light {
+  @apply text-slate-200!;
 }

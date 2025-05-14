@@ -64,9 +64,9 @@ const portfolioItems = [
 export default function LandingPage() {
   return (
     <main>
-      <section className="section section-tall">
-        <h1 className="h1">We help companies build better AI</h1>
-        <p className="paragraph">
+      <section className="section-tall">
+        <h1>We help companies build better AI</h1>
+        <p className="paragraph-1">
           We design and deliver full-stack software with AI at the core—built
           for real-world use, not just demos.
         </p>
@@ -74,12 +74,12 @@ export default function LandingPage() {
           Get in touch
         </a>
       </section>
-      <section className="section section-short gradient-dark">
+      <section className="section-short gradient-dark">
         <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 lg:grid-cols-3">
           <div className="rounded-2xl bg-white/20 p-6 shadow-sm transition hover:scale-[1.02] hover:shadow-md">
-            <h3 className="text-xl font-semibold text-white">
+            <div className="text-xl font-semibold text-white">
               Full-Stack Product Thinking
-            </h3>
+            </div>
             <p className="mt-2 text-sm text-gray-100">
               We don’t just build what’s specced—we help define it. From early
               concept to launch, we think holistically about product, tech, and
@@ -87,9 +87,9 @@ export default function LandingPage() {
             </p>
           </div>
           <div className="rounded-2xl bg-white/20 p-6 shadow-sm transition hover:scale-[1.02] hover:shadow-md">
-            <h3 className="text-xl font-semibold text-white">
+            <div className="text-xl font-semibold text-white">
               Experts in AI-Native Apps
-            </h3>
+            </div>
             <p className="mt-2 text-sm text-gray-100">
               We specialize in building with AI from the ground up—LLM copilots,
               intelligent automations, and smart tools that actually work in
@@ -98,9 +98,9 @@ export default function LandingPage() {
             </p>
           </div>
           <div className="rounded-2xl bg-white/20 p-6 shadow-sm transition hover:scale-[1.02] hover:shadow-md">
-            <h3 className="text-xl font-semibold text-white">
+            <div className="text-xl font-semibold text-white">
               Lean Team and Fast Execution
-            </h3>
+            </div>
             <p className="mt-2 text-sm text-gray-100">
               We’re a small, veteran team with an optimized stack and years of
               collaboration. No middle layers. No drag. Just high-trust,
@@ -111,7 +111,7 @@ export default function LandingPage() {
       </section>
 
       <div id="team" />
-      <section className="section section-medium">
+      <section className="section-medium">
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4 px-4 sm:px-6 lg:grid-cols-2">
           <TeamV2
             name="Spencer Smith"
@@ -164,7 +164,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="section section-short gradient-dark">
+      <section className="section-short gradient-dark">
         <h3 className="h3 mb-4 text-white">Portfolio</h3>
         <div className="mx-auto flex max-w-4xl snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-4">
           {portfolioItems.map((item) => (
@@ -178,7 +178,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="section section-medium gradient-light flex flex-col items-center gap-8">
+      <section className="section-medium gradient-light flex flex-col items-center gap-8">
         <h3 className="h3 text-center">Technologies we are excited about</h3>
         <div className="mx-auto flex max-w-2xl flex-wrap justify-center text-sm text-slate-600">
           {technologies

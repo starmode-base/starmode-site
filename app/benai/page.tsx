@@ -6,13 +6,13 @@ import { BenaiDemo } from "./benai-demo";
 export default function Benai() {
   return (
     <main>
-      <section className="section section-medium">
+      <section className="section-medium">
         <div className="mb-4 flex justify-center">
           <Image src={benai} alt="BenAi Logo" width={500} height={500} />
         </div>
 
         <h2 className="h2 text-center">Navigating Healthcare, Simplified.</h2>
-        <p className="paragraph mt-2 text-lg">
+        <p className="paragraph-1 mt-2 text-lg">
           BenAI is a next-generation customer service platform we developed to
           transform how members understand and interact with their healthcare
           plans. By combining cutting edge AI with clean UX, BenAI helps members
@@ -25,10 +25,10 @@ export default function Benai() {
       </section>
       {/* What We Built & Outcomes */}
 
-      <section className="section section-short gradient-dark">
+      <section className="section-short gradient-dark">
         <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
           <div className="rounded-2xl bg-white/40 p-6 shadow-sm transition-transform duration-300 hover:scale-105 hover:shadow-lg">
-            <h2 className="mb-4 text-2xl font-bold">🔍 What We Built</h2>
+            <div className="mb-4 text-2xl font-bold">🔍 What We Built</div>
             <ul className="list-inside list-disc space-y-2 font-medium text-gray-900">
               <li>AI chatbot for plan-specific Q&A</li>
               <li>Centralized hub for docs & benefits</li>
@@ -38,7 +38,7 @@ export default function Benai() {
             </ul>
           </div>
           <div className="rounded-2xl bg-white/40 p-6 shadow-sm transition-transform duration-300 hover:scale-105 hover:shadow-lg">
-            <h2 className="mb-4 text-2xl font-bold">📈 Outcomes</h2>
+            <div className="mb-4 text-2xl font-bold">📈 Outcomes</div>
             <ul className="list-inside list-disc space-y-2 font-medium text-gray-900">
               <li>Instant answers to member questions</li>
               <li>Less load on customer service teams</li>
@@ -51,7 +51,7 @@ export default function Benai() {
       </section>
 
       {/* Architecture */}
-      <section className="section section-medium">
+      <section className="section-medium">
         <div className="mb-6 flex justify-center">
           <Image
             src={agentFramework}
@@ -77,10 +77,10 @@ export default function Benai() {
       </section>
 
       {/* Call to Action */}
-      <section className="section section-medium gradient-dark">
+      <section className="section-medium gradient-dark">
         <div className="text-center">
-          <h1 className="h1 text-white">Let's Build Together</h1>
-          <p className="paragraph mx-auto mt-2 max-w-2xl text-white">
+          <h1 className="heading-light">Let's Build Together</h1>
+          <p className="paragraph-1 mx-auto mt-2 max-w-2xl text-white">
             BenAI is just one example of how our team helps clients harness AI
             to solve real business problems. Whether you're streamlining
             internal operations or launching AI-first products, we can help you
