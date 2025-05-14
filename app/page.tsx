@@ -2,7 +2,7 @@ import { GradientDark, GradientLight, H1, H3, P1, Section } from "./atoms";
 import { TeamV2 } from "./team";
 import { PortfolioItem } from "./portfolio";
 import mikaelImage from "../public/mikael-lirbank.jpg";
-import spencerImage from "../public/spencer-headshot.jpg";
+import spencerImage from "../public/spencer-smith.jpg";
 import expertSystem from "../public/expert-system-hero.png";
 import benaiDemoImage from "../public/benai/benai-demo-image.png";
 import { technologies } from "./technologies";

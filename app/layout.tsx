@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Inter, Jura } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
-import { Logo, P3 } from "./atoms";
+import { P3 } from "./atoms";
 import Link from "next/link";
+import { StarModeLogo } from "./brand";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -70,13 +71,13 @@ export default function RootLayout({
     >
       <body>
         <header className="my-8 px-4 sm:px-10">
-          <Link className="cursor-pointer" href="/">
-            <Logo />
+          <Link href="/">
+            <StarModeLogo className="m-auto h-auto w-full max-w-[380px] px-10 text-slate-800 sm:px-0" />
           </Link>
         </header>
         {children}
         <footer className="my-8 px-4 sm:px-10">
-          <Logo />
+          <StarModeLogo className="m-auto h-auto w-full max-w-[380px] px-10 text-slate-800 sm:px-0" />
           <P3>© {new Date().getFullYear()} STΛR MODΞ. All rights reserved.</P3>
         </footer>
         <Analytics />
