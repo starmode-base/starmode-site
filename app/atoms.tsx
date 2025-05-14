@@ -1,5 +1,3 @@
-import { StarModeLogoSVG } from "./brand";
-
 export function Header(props: React.HTMLProps<HTMLDivElement>) {
   const { className, ...rest } = props;
 
@@ -158,17 +156,6 @@ export function P3(props: React.HTMLProps<HTMLParagraphElement>) {
       }
       {...rest}
     />
-  );
-}
-
-export function StudioLogo() {
-  return (
-    <div className="text-slate-800">
-      <StarModeLogoSVG className="m-auto h-auto w-full max-w-[380px] px-10 sm:px-0" />
-      <p className="mt-1 text-center text-xs font-medium tracking-[0.3em] uppercase">
-        Studios
-      </p>
-    </div>
   );
 }
 
