@@ -82,7 +82,7 @@ export default function LandingPage() {
         <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 lg:grid-cols-3">
           <div className="rounded-2xl bg-white/20 p-6 shadow-sm transition hover:scale-[1.02] hover:shadow-md">
             <div className="text-xl font-semibold text-white">
-              Full-Stack Product Thinking
+              Full-stack product thinking
             </div>
             <p className="mt-2 text-sm text-slate-100">
               We don’t just build what’s specced—we help define it. From early
@@ -92,7 +92,7 @@ export default function LandingPage() {
           </div>
           <div className="rounded-2xl bg-white/20 p-6 shadow-sm transition hover:scale-[1.02] hover:shadow-md">
             <div className="text-xl font-semibold text-white">
-              Experts in AI-Native Apps
+              Experts in AI-native apps
             </div>
             <p className="mt-2 text-sm text-slate-100">
               We specialize in building with AI from the ground up—LLM copilots,
@@ -103,12 +103,12 @@ export default function LandingPage() {
           </div>
           <div className="rounded-2xl bg-white/20 p-6 shadow-sm transition hover:scale-[1.02] hover:shadow-md">
             <div className="text-xl font-semibold text-white">
-              Lean Team and Fast Execution
+              Lean team and fast execution
             </div>
             <p className="mt-2 text-sm text-slate-100">
               We’re a small, veteran team with an optimized stack and years of
-              collaboration. No middle layers. No drag. Just high-trust,
-              high-velocity execution.
+              collaboration. No middle layers. No drag. Just high-velocity
+              execution.
             </p>
           </div>
         </div>
