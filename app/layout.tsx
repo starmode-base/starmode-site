@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Jura } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import { Logo, P3 } from "./atoms";
+import Link from "next/link";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -67,7 +69,16 @@ export default function RootLayout({
       className={`${inter.variable} ${jura.variable} scroll-smooth bg-slate-50 antialiased`}
     >
       <body>
+        <header className="my-8 px-4 sm:px-10">
+          <Link className="cursor-pointer" href="/">
+            <Logo />
+          </Link>
+        </header>
         {children}
+        <footer className="my-8 px-4 sm:px-10">
+          <Logo />
+          <P3>© {new Date().getFullYear()} STΛR MODΞ. All rights reserved.</P3>
+        </footer>
         <Analytics />
       </body>
     </html>
