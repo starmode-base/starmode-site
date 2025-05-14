@@ -1,4 +1,4 @@
-import { H1, H3, P1 } from "./atoms";
+import { P1 } from "./atoms";
 import { TeamV2 } from "./team";
 import { PortfolioItem } from "./portfolio";
 import mikaelImage from "../public/mikael-lirbank.jpg";
@@ -65,8 +65,8 @@ const portfolioItems = [
 export default function LandingPage() {
   return (
     <main>
-      <section className="section-tall">
-        <H1>We help companies build better AI</H1>
+      <section className="section section-tall">
+        <h1 className="h1">We help companies build better AI</h1>
         <P1 centered>
           We design and deliver full-stack software with AI at the core—built
           for real-world use, not just demos.
@@ -75,7 +75,7 @@ export default function LandingPage() {
           Get in touch
         </a>
       </section>
-      <section className="gradient-dark section-short">
+      <section className="section section-short gradient-dark">
         <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 lg:grid-cols-3">
           <div className="rounded-2xl bg-white/20 p-6 shadow-sm transition hover:scale-[1.02] hover:shadow-md">
             <h3 className="text-xl font-semibold text-white">
@@ -112,7 +112,7 @@ export default function LandingPage() {
       </section>
 
       <div id="team" />
-      <section className="section-medium">
+      <section className="section section-medium">
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4 px-4 sm:px-6 lg:grid-cols-2">
           <TeamV2
             name="Spencer Smith"
@@ -165,10 +165,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="section-short gradient-dark">
-        <H3 centered className="mb-4 text-white">
-          Portfolio
-        </H3>
+      <section className="section section-short gradient-dark">
+        <h3 className="h3 mb-4 text-white">Portfolio</h3>
         <div className="mx-auto flex max-w-4xl snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-4">
           {portfolioItems.map((item) => (
             <div
@@ -181,8 +179,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="section-medium gradient-light flex flex-col items-center gap-8">
-        <H3 centered>Technologies we are excited about</H3>
+      <section className="section section-medium gradient-light flex flex-col items-center gap-8">
+        <h3 className="h3 text-center">Technologies we are excited about</h3>
         <div className="mx-auto flex max-w-2xl flex-wrap justify-center text-sm text-slate-600">
           {technologies
             .toSorted((a, b) => a[0].localeCompare(b[0]))

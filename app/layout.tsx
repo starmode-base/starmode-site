@@ -71,12 +71,12 @@ export default function RootLayout({
       <body>
         <header className="flex flex-col items-center gap-8 px-4 py-8 sm:px-10">
           <Link href="/">
-            <StarModeLogoSVG className="w-[380px] max-w-full fill-slate-800" />
+            <StarModeLogoSVG className="w-[380px] max-w-full fill-slate-800 px-10" />
           </Link>
         </header>
         {children}
         <footer className="flex flex-col items-center gap-8 px-4 py-8 sm:px-10">
-          <StarModeLogoSVG className="w-[380px] max-w-full fill-slate-800" />
+          <StarModeLogoSVG className="w-[380px] max-w-full fill-slate-800 px-10" />
           <p className="text-center text-xs leading-relaxed text-slate-600 sm:text-sm">
             © {new Date().getFullYear()} STΛR MODΞ. All rights reserved.
           </p>

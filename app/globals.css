@@ -29,6 +29,10 @@
   @apply bg-gradient-to-br from-slate-300 to-slate-400;
 }
 
+@utility section {
+  @apply px-4 sm:px-10;
+}
+
 @utility section-short {
   @apply py-10 sm:py-20;
 }
@@ -39,4 +43,16 @@
 
 @utility section-tall {
   @apply py-20 sm:py-48;
+}
+
+@utility h1 {
+  @apply mx-auto max-w-4xl text-center text-5xl font-semibold text-slate-800 sm:text-7xl;
+}
+
+@utility h2 {
+  @apply mx-auto max-w-4xl text-4xl font-medium tracking-tight sm:text-center sm:text-5xl;
+}
+
+@utility h3 {
+  @apply mx-auto text-3xl font-medium tracking-tight text-slate-800 sm:text-center sm:text-4xl;
 }
