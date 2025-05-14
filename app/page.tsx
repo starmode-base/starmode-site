@@ -1,5 +1,5 @@
 import { TeamV2 } from "./team";
-import { PortfolioItem } from "./portfolio";
+import { PortfolioItem, PortfolioItemProps } from "./portfolio";
 import mikaelImage from "../public/mikael-lirbank.jpg";
 import spencerImage from "../public/spencer-smith.jpg";
 import expertSystem from "../public/expert-system-hero.png";
@@ -9,8 +9,8 @@ import { technologies } from "./technologies";
 const portfolioItems = [
   {
     title: "Expert System",
-    subtitle:
-      "Augmented reasoning, to generate world changing insights faster.",
+    // subtitle:
+    //   "Augmented reasoning, to generate world changing insights faster.",
     description: (
       <>
         Expert System processes large volumes of unstructured information—like
@@ -33,14 +33,13 @@ const portfolioItems = [
     ],
     image: expertSystem,
     imageAlt: "AI Bookkeeping Copilot UI",
-    liveUrl: "https://expert-system-rust.vercel.app/",
-    repoUrl: undefined,
-    badge: "Internal Product",
+    url: "https://expert-system-rust.vercel.app/",
+    // badge: "Internal Product",
   },
   {
     title: "BenAi",
-    subtitle:
-      "Navigating healthcare, simplified. Boosting member literacy and plan utilization through AI.",
+    // subtitle:
+    //   "Navigating healthcare, simplified. Boosting member literacy and plan utilization through AI.",
     description: (
       <>
         BenAi is a healthcare-focused customer service copilot. It streamlines
@@ -56,10 +55,10 @@ const portfolioItems = [
     techStack: ["Python", "Next.js", "TypeScript", "OpenAI", "Tailwind CSS"],
     image: benaiDemoImage,
     imageAlt: "BenAi architecture diagram",
-    liveUrl: "/benai",
-    badge: "Client Project",
+    url: "/benai",
+    // badge: "Client Project",
   },
-];
+] satisfies PortfolioItemProps[];
 
 export default function LandingPage() {
   return (
