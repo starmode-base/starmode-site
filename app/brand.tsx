@@ -7,24 +7,16 @@
  * Figma file:
  * https://www.figma.com/file/gt1f3Jz3fRhh7GAcvqplp3/Star-Mode?type=design&node-id=14-2
  */
-export function StarModeIcon(props: React.SVGProps<SVGSVGElement>) {
+export function StarModeIconSVG(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg
-      width="78"
-      height="78"
-      viewBox="0 0 78 78"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-auto w-auto"
-      {...props}
-    >
+    <svg viewBox="0 0 78 78" xmlns="http://www.w3.org/2000/svg" {...props}>
       <path d="M35.22 4.72517C36.4098 1.09161 41.5902 1.09161 42.78 4.72517L49.2619 24.5206C49.794 26.1456 51.3201 27.2458 53.0419 27.2458H74.0178C77.8681 27.2458 79.4689 32.1347 76.354 34.3804L59.3842 46.6146C57.9911 47.6189 57.4082 49.3991 57.9403 51.024L64.4222 70.8195C65.612 74.453 61.4209 77.4746 58.306 75.2289L41.3362 62.9946C39.9431 61.9903 38.0568 61.9903 36.6638 62.9946L19.694 75.2289C16.5791 77.4746 12.388 74.453 13.5778 70.8195L20.0597 51.024C20.5918 49.3991 20.0089 47.6189 18.6158 46.6146L1.64598 34.3804C-1.46892 32.1347 0.131933 27.2458 3.98217 27.2458H24.9581C26.6799 27.2458 28.206 26.1456 28.7381 24.5206L35.22 4.72517Z" />
     </svg>
   );
 }
 
 /**
- * STΛR MODΞ Logo Medium
+ * STΛR MODΞ Logo
  *
  * SVG file:
  * https://github.com/lirbank/starmode/blob/main/apps/starmode-site/public/starmode-logo-medium.svg
