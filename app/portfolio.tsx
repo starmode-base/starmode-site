@@ -1,15 +1,14 @@
 import Image, { StaticImageData } from "next/image";
-import { GitHubIcon } from "./icons";
-import { Social } from "./team";
+import Link from "next/link";
 
-interface PortfolioItemProps {
+export interface PortfolioItemProps {
   title: string;
+  subtitle?: string;
   description: React.ReactNode;
   techStack?: string[];
   image: StaticImageData;
   imageAlt?: string;
-  repoUrl?: string;
-  liveUrl?: string;
+  url: string;
 }
 
 export function PortfolioItem({
@@ -18,24 +17,20 @@ export function PortfolioItem({
   techStack,
   image,
   imageAlt,
-  repoUrl,
-  liveUrl,
+  url,
 }: PortfolioItemProps) {
+  const isExternal = url.startsWith("http");
+
   return (
-    <div className="flex flex-col gap-6 rounded-xl bg-white/5 p-6 shadow-md backdrop-blur-md">
+    <div className="flex h-full flex-col gap-6 rounded-xl bg-white/5 p-6 shadow-md backdrop-blur-md">
       <div className="w-full overflow-hidden rounded-lg">
-        <a
-          href={liveUrl ?? repoUrl ?? "#"}
-          target={liveUrl || repoUrl ? "_blank" : "_self"}
-          rel="noopener noreferrer"
-          className={`cursor-pointer transition hover:opacity-90 ${!liveUrl && !repoUrl ? "pointer-events-none" : ""}`}
-        >
+        <Link href={url} target={isExternal ? "_blank" : undefined}>
           <Image
             src={image}
             alt={imageAlt ?? title}
             className="h-64 w-full rounded-lg object-cover transition hover:opacity-90 sm:h-80"
           />
-        </a>
+        </Link>
       </div>
 
       <div className="flex flex-col gap-4">
@@ -55,19 +50,14 @@ export function PortfolioItem({
         </div>
 
         <div className="flex gap-3 text-sm">
-          {liveUrl ? (
-            <a
-              href={liveUrl}
-              target="_blank"
+          {url ? (
+            <Link
+              href={url}
+              target={isExternal ? "_blank" : undefined}
               className="rounded bg-white px-3 py-1 font-medium text-black"
             >
               View Live
-            </a>
-          ) : null}
-          {repoUrl ? (
-            <div className="rounded bg-white px-3 py-1 font-medium text-black">
-              <Social url={repoUrl} icon={GitHubIcon} />
-            </div>
+            </Link>
           ) : null}
         </div>
       </div>
