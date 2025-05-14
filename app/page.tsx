@@ -22,6 +22,8 @@ export default function LandingPage() {
           Get in touch
         </a>
       </section>
+
+      {/* How we can help */}
       <section className="section-short gradient-dark">
         <h2 className="heading-light">How we can help</h2>
         <p className="paragraph-1 paragraph-light">
@@ -121,57 +123,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="section-short">
-        <h2 className="">What is it like to work with us?</h2>
-        <p className="paragraph-1">
-          We partner with innovative teams to solve hard problems with clarity,
-          speed, and deep technical expertise. Here's what a few of them had to
-          say.
-        </p>
-        <div className="mx-auto flex max-w-2xl flex-col gap-10">
-          <Testimonial
-            project={{
-              name: "FLIR Conservator",
-              url: "https://www.flir.com/products/conservator/",
-              description:
-                "Conservator™ is a powerful cloud-based data lifecycle management (DLM) application that enables data scientists to quickly build image datasets and accelerate AI development.",
-            }}
-            quote="Mikael was a pleasure to work with. Very knowledgable, very competent, very productive."
-            author={{
-              name: "Justin Muncaster",
-              title: "Teledyne FLIR/Muncaster Consulting",
-              avatar: justinImage,
-              url: "https://www.linkedin.com/in/jmuncaster/",
-            }}
-          />
-          <Testimonial
-            project={{
-              name: "SpikeGadgets",
-              url: "https://spikegadgets.com/",
-              description:
-                "SpikeGadgets develops advanced neuroscience tools that combine high-performance, lab-grade hardware with an open-source software platform for science-driven customization.",
-            }}
-            quote={
-              <p>
-                Mikael came to our company and gave a well-organized and highly
-                informative talk to our developers about how to use AI to speed
-                up software development in a practical way. Mikael has a knack
-                for explaining complex ideas in a way that is very accessible,
-                and our entire group was immediately inspired and empowered to
-                use the emerging methodologies he showcased. I was super
-                impressed!
-              </p>
-            }
-            author={{
-              name: "Mattias Karlsson",
-              title: "SpikeGadgets CEO",
-              avatar: mattiasImage,
-              url: "https://www.linkedin.com/in/mattias-karlsson-32100b119/",
-            }}
-          />
-        </div>
-      </section>
       {/* Portfolio */}
       <section className="section-short gradient-dark">
         <h2 className="heading-light">Portfolio</h2>
@@ -235,6 +186,58 @@ export default function LandingPage() {
             image={benaiDemoImage}
             imageAlt="BenAi architecture diagram"
             url="/benai"
+          />
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="section-short">
+        <h2>What is it like to work with us?</h2>
+        <p className="paragraph-1">
+          We partner with innovative teams to solve hard problems with clarity,
+          speed, and deep technical expertise. Here's what a few of them had to
+          say.
+        </p>
+        <div className="mx-auto flex max-w-2xl flex-col gap-10">
+          <Testimonial
+            project={{
+              name: "FLIR Conservator",
+              url: "https://www.flir.com/products/conservator/",
+              description:
+                "Conservator™ is a powerful cloud-based data lifecycle management (DLM) application that enables data scientists to quickly build image datasets and accelerate AI development.",
+            }}
+            quote="Mikael was a pleasure to work with. Very knowledgable, very competent, very productive."
+            author={{
+              name: "Justin Muncaster",
+              title: "Teledyne FLIR/Muncaster Consulting",
+              avatar: justinImage,
+              url: "https://www.linkedin.com/in/jmuncaster/",
+            }}
+          />
+          <Testimonial
+            project={{
+              name: "SpikeGadgets",
+              url: "https://spikegadgets.com/",
+              description:
+                "SpikeGadgets develops advanced neuroscience tools that combine high-performance, lab-grade hardware with an open-source software platform for science-driven customization.",
+            }}
+            quote={
+              <p>
+                Mikael came to our company and gave a well-organized and highly
+                informative talk to our developers about how to use AI to speed
+                up software development in a practical way. Mikael has a knack
+                for explaining complex ideas in a way that is very accessible,
+                and our entire group was immediately inspired and empowered to
+                use the emerging methodologies he showcased. I was super
+                impressed!
+              </p>
+            }
+            author={{
+              name: "Mattias Karlsson",
+              title: "SpikeGadgets CEO",
+              avatar: mattiasImage,
+              url: "https://www.linkedin.com/in/mattias-karlsson-32100b119/",
+            }}
           />
         </div>
       </section>
