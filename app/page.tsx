@@ -16,8 +16,9 @@ export default function LandingPage() {
       <section className="section-tall">
         <h1>We help companies build better AI</h1>
         <p className="paragraph-1">
-          We design and deliver full-stack software with AI at the core—built
-          for real-world use, not just demos.
+          Starmode designs and develops modern web applications with AI at their
+          core. Whether you’re starting from scratch or leveling up an existing
+          product, we help you build and ship faster—with confidence.
         </p>
         <a className="button mx-auto" href="#team">
           Get in touch
@@ -26,12 +27,7 @@ export default function LandingPage() {
 
       {/* How we can help */}
       <section className="section-short gradient-dark">
-        <h2 className="heading-light">How we can help</h2>
-        <p className="paragraph-1 paragraph-light">
-          We design and build AI-native products—from first sketch to production
-          launch. Whether you need strategic thinking, deep technical expertise,
-          or fast, focused execution, we've got you covered.
-        </p>
+        <h2 className="heading-light mb-16">How we can help</h2>
         <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 lg:grid-cols-3">
           <div className="rounded-2xl bg-white/20 p-6 shadow-sm transition hover:scale-[1.02] hover:shadow-md">
             <div className="text-xl font-semibold text-white">
