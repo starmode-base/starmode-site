@@ -84,7 +84,7 @@ export default function LandingPage() {
             <div className="text-xl font-semibold text-white">
               Full-Stack Product Thinking
             </div>
-            <p className="mt-2 text-sm text-gray-100">
+            <p className="mt-2 text-sm text-slate-100">
               We don’t just build what’s specced—we help define it. From early
               concept to launch, we think holistically about product, tech, and
               user experience.
@@ -94,7 +94,7 @@ export default function LandingPage() {
             <div className="text-xl font-semibold text-white">
               Experts in AI-Native Apps
             </div>
-            <p className="mt-2 text-sm text-gray-100">
+            <p className="mt-2 text-sm text-slate-100">
               We specialize in building with AI from the ground up—LLM copilots,
               intelligent automations, and smart tools that actually work in
               production. The AI field is evolving fast, and we will keep your
@@ -105,7 +105,7 @@ export default function LandingPage() {
             <div className="text-xl font-semibold text-white">
               Lean Team and Fast Execution
             </div>
-            <p className="mt-2 text-sm text-gray-100">
+            <p className="mt-2 text-sm text-slate-100">
               We’re a small, veteran team with an optimized stack and years of
               collaboration. No middle layers. No drag. Just high-trust,
               high-velocity execution.
@@ -120,7 +120,7 @@ export default function LandingPage() {
         <p className="paragraph-1">
           Don't be a stranger—we may like AI, but we love people.
         </p>
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4 px-4 sm:px-6 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-5xl gap-20 py-4 sm:grid-cols-2 sm:gap-10">
           <TeamV2
             name="Spencer Smith"
             title="AI Engineer & Product Strategist"

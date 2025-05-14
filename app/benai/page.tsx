@@ -30,7 +30,7 @@ export default function Benai() {
         <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8 sm:grid-cols-2">
           <div className="rounded-2xl bg-white/40 p-6 shadow-sm transition-transform duration-300 hover:scale-105 hover:shadow-lg">
             <div className="mb-4 text-2xl font-bold">🔍 What We Built</div>
-            <ul className="list-inside list-disc space-y-2 font-medium text-gray-900">
+            <ul className="list-inside list-disc space-y-2 font-medium">
               <li>AI chatbot for plan-specific Q&A</li>
               <li>Centralized hub for docs & benefits</li>
               <li>Admin tools for TPA workflows</li>
@@ -40,7 +40,7 @@ export default function Benai() {
           </div>
           <div className="rounded-2xl bg-white/40 p-6 shadow-sm transition-transform duration-300 hover:scale-105 hover:shadow-lg">
             <div className="mb-4 text-2xl font-bold">📈 Outcomes</div>
-            <ul className="list-inside list-disc space-y-2 font-medium text-gray-900">
+            <ul className="list-inside list-disc space-y-2 font-medium">
               <li>Instant answers to member questions</li>
               <li>Less load on customer service teams</li>
               <li>Smarter plan usage by members</li>
