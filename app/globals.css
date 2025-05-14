@@ -46,13 +46,21 @@
 }
 
 @utility h1 {
-  @apply mx-auto max-w-4xl text-center text-5xl font-semibold text-slate-800 sm:text-7xl;
+  @apply mx-auto max-w-4xl text-5xl font-semibold text-slate-800 sm:text-center sm:text-7xl;
 }
 
 @utility h2 {
-  @apply mx-auto max-w-4xl text-4xl font-medium tracking-tight sm:text-center sm:text-5xl;
+  @apply mx-auto max-w-4xl text-4xl font-medium tracking-tight text-slate-800 sm:text-center sm:text-5xl;
+}
+
+@utility h2-light {
+  @apply text-slate-200;
 }
 
 @utility h3 {
   @apply mx-auto text-3xl font-medium tracking-tight text-slate-800 sm:text-center sm:text-4xl;
+}
+
+@utility paragraph {
+  @apply mx-auto my-6 max-w-2xl text-slate-600 sm:text-center sm:text-lg sm:leading-relaxed;
 }

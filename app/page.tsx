@@ -1,4 +1,3 @@
-import { P1 } from "./atoms";
 import { TeamV2 } from "./team";
 import { PortfolioItem } from "./portfolio";
 import mikaelImage from "../public/mikael-lirbank.jpg";
@@ -67,10 +66,10 @@ export default function LandingPage() {
     <main>
       <section className="section section-tall">
         <h1 className="h1">We help companies build better AI</h1>
-        <P1 centered>
+        <p className="paragraph">
           We design and deliver full-stack software with AI at the core—built
           for real-world use, not just demos.
-        </P1>
+        </p>
         <a className="button mx-auto" href="#team">
           Get in touch
         </a>
