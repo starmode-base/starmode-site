@@ -1,13 +1,4 @@
-import {
-  GradientDark,
-  GradientLight,
-  H1,
-  H3,
-  Logo,
-  P1,
-  P3,
-  Section,
-} from "./atoms";
+import { GradientDark, GradientLight, H1, H3, P1, Section } from "./atoms";
 import { TeamV2 } from "./team";
 import { PortfolioItem } from "./portfolio";
 import mikaelImage from "../public/mikael-lirbank.jpg";
