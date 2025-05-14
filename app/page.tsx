@@ -1,4 +1,4 @@
-import { TeamV2 } from "./team";
+import { TeamMember } from "./team";
 import { PortfolioItem } from "./portfolio";
 import mikaelImage from "../public/mikael-lirbank.jpg";
 import spencerImage from "../public/spencer-smith.jpg";
@@ -71,7 +71,7 @@ export default function LandingPage() {
           Don't be a stranger—we may like AI, but we love people.
         </p>
         <div className="mx-auto grid max-w-5xl gap-20 py-4 sm:grid-cols-2 sm:gap-10">
-          <TeamV2
+          <TeamMember
             name="Spencer Smith"
             title="AI Engineer & Product Strategist"
             description={
@@ -95,7 +95,7 @@ export default function LandingPage() {
               email: "mailto:spencer@starmode.dev",
             }}
           />
-          <TeamV2
+          <TeamMember
             name="Mikael Lirbank"
             title="Technical Architect & Lead Engineer"
             description={

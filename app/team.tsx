@@ -7,7 +7,7 @@ import {
   XTwitterIcon,
 } from "./icons";
 
-export function Social(props: { url: string; icon: React.ElementType }) {
+function Social(props: { url: string; icon: React.ElementType }) {
   return (
     <a href={props.url} target="_blank" className="flex items-center gap-2">
       <props.icon className="size-6 sm:size-8" />
@@ -15,7 +15,7 @@ export function Social(props: { url: string; icon: React.ElementType }) {
   );
 }
 
-export function TeamV2(props: {
+export function TeamMember(props: {
   name: string;
   title: string;
   description: string | React.ReactNode;
