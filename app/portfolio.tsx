@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export interface PortfolioItemProps {
   title: string;
+  subtitle?: string;
   description: React.ReactNode;
   techStack?: string[];
   image: StaticImageData;
