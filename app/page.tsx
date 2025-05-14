@@ -163,8 +163,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="section-short gradient-dark">
-        <h3 className="h3 mb-4 text-white">Portfolio</h3>
+      <section className="section-short gradient-dark flex flex-col items-center gap-10">
+        <h3 className="heading-light">Portfolio</h3>
         <div className="mx-auto flex max-w-4xl snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-4">
           {portfolioItems.map((item) => (
             <div
