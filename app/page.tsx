@@ -17,7 +17,7 @@ export default function LandingPage() {
         <h1>We help companies build better AI</h1>
         <p className="paragraph-1">
           Starmode designs and develops modern web applications with AI at their
-          core. Whether you’re starting from scratch or leveling up an existing
+          core. Whether you're starting from scratch or leveling up an existing
           product, we help you build and ship faster—with confidence.
         </p>
         <a className="button mx-auto" href="#team">
@@ -105,7 +105,7 @@ export default function LandingPage() {
                 AI, where he turned early-stage ideas into polished,
                 production-ready products. Mikael has a deep command of modern
                 web technologies and a builder's instinct for clean architecture
-                and long-term maintainability. In an age of “vibe coding,”
+                and long-term maintainability. In an age of "vibe coding,"
                 Mikael brings structure, clarity, and craftsmanship.
               </>
             }
@@ -128,7 +128,7 @@ export default function LandingPage() {
           bring to life—ranging from healthcare copilots to knowledge systems
           for expert users.
         </p>
-        <div className="grid grid-cols-1 gap-4 overflow-x-auto sm:gap-10 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 overflow-x-auto sm:grid-cols-2 lg:grid-cols-3">
           <PortfolioItem
             title="Expert System"
             subtitle="Augmented reasoning, to generate world changing insights faster."
@@ -194,7 +194,7 @@ export default function LandingPage() {
                 It empowers anyone—from product managers to executives—to ask
                 plain-English business questions and get governed, SQL-backed
                 answers with charts in seconds. Robbie integrates tightly with
-                Zillow’s semantic layer and Databricks to generate verifiable
+                Zillow's semantic layer and Databricks to generate verifiable
                 insights through chat, without requiring data science support.
                 It includes live data querying, Slack and web integrations, and
                 a feedback system for improving model output quality.
