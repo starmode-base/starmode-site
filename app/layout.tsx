@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Jura } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import "./globals.css";
-import { P3 } from "./atoms";
 import Link from "next/link";
-import { StarModeLogo } from "./brand";
+import { StarModeLogoSVG } from "./brand";
+import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -70,15 +69,17 @@ export default function RootLayout({
       className={`${inter.variable} ${jura.variable} scroll-smooth bg-slate-50 antialiased`}
     >
       <body>
-        <header className="my-8 px-4 sm:px-10">
+        <header className="flex flex-col items-center gap-8 px-4 py-8 sm:px-10">
           <Link href="/">
-            <StarModeLogo className="m-auto h-auto w-full max-w-[380px] px-10 text-slate-800 sm:px-0" />
+            <StarModeLogoSVG className="w-[380px] max-w-full fill-slate-800" />
           </Link>
         </header>
         {children}
-        <footer className="my-8 px-4 sm:px-10">
-          <StarModeLogo className="m-auto h-auto w-full max-w-[380px] px-10 text-slate-800 sm:px-0" />
-          <P3>© {new Date().getFullYear()} STΛR MODΞ. All rights reserved.</P3>
+        <footer className="flex flex-col items-center gap-8 px-4 py-8 sm:px-10">
+          <StarModeLogoSVG className="w-[380px] max-w-full fill-slate-800" />
+          <p className="text-center text-xs leading-relaxed text-slate-600 sm:text-sm">
+            © {new Date().getFullYear()} STΛR MODΞ. All rights reserved.
+          </p>
         </footer>
         <Analytics />
       </body>
