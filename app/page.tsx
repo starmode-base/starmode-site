@@ -73,8 +73,12 @@ export default function LandingPage() {
           Get in touch
         </a>
       </section>
-      <section className="section-short gradient-dark flex flex-col items-center gap-6">
+      <section className="section-short gradient-dark">
         <h2 className="heading-light">How we can help</h2>
+        <p className="paragraph-1 paragraph-light">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          quos.
+        </p>
         <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 lg:grid-cols-3">
           <div className="rounded-2xl bg-white/20 p-6 shadow-sm transition hover:scale-[1.02] hover:shadow-md">
             <div className="text-xl font-semibold text-white">
@@ -110,12 +114,12 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Team */}
       <section className="section-medium" id="team">
         <h2>Meet the team</h2>
         <p className="paragraph-1">
           Don't be a stranger—we may like AI, but we love people.
         </p>
-
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4 px-4 sm:px-6 lg:grid-cols-2">
           <TeamV2
             name="Spencer Smith"
@@ -141,7 +145,6 @@ export default function LandingPage() {
               email: "mailto:spencer@starmode.dev",
             }}
           />
-
           <TeamV2
             name="Mikael Lirbank"
             title="Technical Architect & Lead Engineer"
@@ -168,20 +171,24 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="section-short gradient-dark flex flex-col items-center gap-10">
+      {/* Portfolio */}
+      <section className="section-short gradient-dark">
         <h2 className="heading-light">Portfolio</h2>
-        <div className="mx-auto flex max-w-4xl snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-4">
+        <p className="paragraph-1 paragraph-light">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          quos.
+        </p>
+
+        <div className="grid grid-cols-1 gap-4 overflow-x-auto sm:gap-10 md:grid-cols-2">
           {portfolioItems.map((item) => (
-            <div
-              key={item.title}
-              className="w-full shrink-0 snap-center sm:max-w-[500px]"
-            >
+            <div key={item.title}>
               <PortfolioItem {...item} />
             </div>
           ))}
         </div>
       </section>
 
+      {/* Technologies */}
       <section className="section-medium gradient-light flex flex-col items-center gap-8">
         <h3 className="text-center">Technologies we are excited about</h3>
         <div className="mx-auto flex max-w-2xl flex-wrap justify-center text-sm text-slate-600">

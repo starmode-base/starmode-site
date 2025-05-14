@@ -21,7 +21,7 @@ export function PortfolioItem({
   const isExternal = url.startsWith("http");
 
   return (
-    <div className="flex flex-col gap-6 rounded-xl bg-white/5 p-6 shadow-md backdrop-blur-md">
+    <div className="flex h-full flex-col gap-6 rounded-xl bg-white/5 p-6 shadow-md backdrop-blur-md">
       <div className="w-full overflow-hidden rounded-lg">
         <Link href={url} target={isExternal ? "_blank" : undefined}>
           <Image
