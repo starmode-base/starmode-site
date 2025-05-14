@@ -3,7 +3,8 @@ import { PortfolioItem } from "./portfolio";
 import mikaelImage from "../public/mikael-lirbank.jpg";
 import spencerImage from "../public/spencer-smith.jpg";
 import expertSystem from "../public/expert-system-hero.png";
-import benaiDemoImage from "../public/benai/benai-demo-image.png";
+import benaiAgentFramework from "../public/benai/benai-agent-framework.png";
+import robbieLogo from "@/public/robbie/robbie-logo.png";
 import mattiasImage from "../public/mattias-karlsson.jpg";
 import justinImage from "../public/justin-muncaster.jpg";
 import { technologies } from "./technologies";
@@ -131,7 +132,7 @@ export default function LandingPage() {
           bring to life—ranging from healthcare copilots to knowledge systems
           for expert users.
         </p>
-        <div className="grid grid-cols-1 gap-4 overflow-x-auto sm:gap-10 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 overflow-x-auto sm:gap-10 md:grid-cols-3">
           <PortfolioItem
             title="Expert System"
             subtitle="Augmented reasoning, to generate world changing insights faster."
@@ -183,9 +184,36 @@ export default function LandingPage() {
               "OpenAI",
               "Tailwind CSS",
             ]}
-            image={benaiDemoImage}
+            image={benaiAgentFramework}
             imageAlt="BenAi architecture diagram"
             url="/benai"
+          />
+
+          <PortfolioItem
+            title="Robbie"
+            subtitle="Conversational BI for faster, trusted decision-making across teams."
+            description={
+              <>
+                Robbie is a conversational analytics copilot built for Zillow.
+                It empowers anyone—from product managers to executives—to ask
+                plain-English business questions and get governed, SQL-backed
+                answers with charts in seconds. Robbie integrates tightly with
+                Zillow’s semantic layer and Databricks to generate verifiable
+                insights through chat, without requiring data science support.
+                It includes live data querying, Slack and web integrations, and
+                a feedback system for improving model output quality.
+              </>
+            }
+            techStack={[
+              "Next.js",
+              "TypeScript",
+              "OpenAI",
+              "Databricks",
+              "Tailwind CSS",
+            ]}
+            image={robbieLogo}
+            imageAlt="Robbie architecture diagram"
+            url="/robbie"
           />
         </div>
       </section>
