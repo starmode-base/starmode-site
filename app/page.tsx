@@ -1,5 +1,5 @@
 import { TeamV2 } from "./team";
-import { PortfolioItem, PortfolioItemProps } from "./portfolio";
+import { PortfolioItem } from "./portfolio";
 import mikaelImage from "../public/mikael-lirbank.jpg";
 import spencerImage from "../public/spencer-smith.jpg";
 import expertSystem from "../public/expert-system-hero.png";
