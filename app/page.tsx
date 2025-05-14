@@ -169,7 +169,7 @@ export default function LandingPage() {
           {portfolioItems.map((item) => (
             <div
               key={item.title}
-              className="w-full shrink-0 snap-center sm:w-[500px]"
+              className="w-full shrink-0 snap-center sm:max-w-[500px]"
             >
               <PortfolioItem {...item} />
             </div>
