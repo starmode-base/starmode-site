@@ -24,7 +24,7 @@ export function PortfolioItem({
       <div className="flex h-full flex-col gap-4 p-4 sm:p-10">
         <h4 className="text-left! text-white!">{title}</h4>
         {/* Enforce height of element to prevent layout shift */}
-        <div className="h-[300px] flex-grow overflow-auto pr-2 text-white">
+        <div className="h-[400px] flex-grow overflow-auto pr-2 text-white">
           <div className="flex-grow text-white">{description}</div>
           {techStack && techStack.length > 0 ? (
             <div className="mt-auto flex flex-wrap gap-2 pt-4 text-xs text-white">
@@ -54,7 +54,7 @@ export function PortfolioItem({
           <Image
             src={image}
             alt={imageAlt}
-            className="h-auto max-h-[300px] w-auto rounded object-contain shadow transition hover:opacity-90"
+            className="h-auto max-h-[400px] w-auto rounded object-contain shadow transition hover:opacity-90"
           />
         </Link>
       </div>
