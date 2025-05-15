@@ -39,13 +39,13 @@ export default function RootLayout({
       className={`${inter.variable} ${jura.variable} scroll-smooth bg-slate-50 antialiased`}
     >
       <body>
-        <header className="flex flex-col items-center gap-8 px-10 py-8">
+        <header className="my-8 flex flex-col items-center gap-8 px-10">
           <Link href="/">
             <StarModeLogoSVG className="w-[380px] max-w-full fill-slate-800" />
           </Link>
         </header>
         {children}
-        <footer className="flex flex-col items-center gap-8 px-10 py-8">
+        <footer className="my-8 flex flex-col items-center gap-8 px-10">
           <StarModeLogoSVG className="w-[380px] max-w-full fill-slate-800" />
           <p className="text-center text-xs leading-relaxed text-slate-600 sm:text-sm">
             © {new Date().getFullYear()} STΛR MODΞ. All rights reserved.
