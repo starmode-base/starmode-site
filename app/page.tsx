@@ -3,7 +3,8 @@ import { PortfolioItem } from "./portfolio";
 import mikaelImage from "../public/mikael-lirbank.jpg";
 import spencerImage from "../public/spencer-smith.jpg";
 import expertSystem from "../public/expert-system-hero.png";
-import benaiDemoImage from "../public/benai/benai-demo-image.png";
+import benaiAgentFramework from "../public/benai/benai-agent-framework.png";
+import robbieLogo from "@/public/robbie/robbie-logo.png";
 import mattiasImage from "../public/mattias-karlsson.jpg";
 import justinImage from "../public/justin-muncaster.jpg";
 import { technologies } from "./technologies";
@@ -15,8 +16,9 @@ export default function LandingPage() {
       <section className="section-tall">
         <h1>We help companies build better AI</h1>
         <p className="paragraph-1">
-          We design and deliver full-stack software with AI at the core—built
-          for real-world use, not just demos.
+          Starmode designs and develops modern web applications with AI at their
+          core. Whether you're starting from scratch or leveling up an existing
+          product, we help you build and ship faster—with confidence.
         </p>
         <a className="button mx-auto" href="#team">
           Get in touch
@@ -25,12 +27,7 @@ export default function LandingPage() {
 
       {/* How we can help */}
       <section className="section-short gradient-dark">
-        <h2 className="heading-light">How we can help</h2>
-        <p className="paragraph-1 paragraph-light">
-          We design and build AI-native products—from first sketch to production
-          launch. Whether you need strategic thinking, deep technical expertise,
-          or fast, focused execution, we've got you covered.
-        </p>
+        <h2 className="heading-light mb-16">How we can help</h2>
         <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 lg:grid-cols-3">
           <div className="rounded-2xl bg-white/20 p-6 shadow-sm transition hover:scale-[1.02] hover:shadow-md">
             <div className="text-xl font-semibold text-white">
@@ -108,7 +105,7 @@ export default function LandingPage() {
                 AI, where he turned early-stage ideas into polished,
                 production-ready products. Mikael has a deep command of modern
                 web technologies and a builder's instinct for clean architecture
-                and long-term maintainability. In an age of “vibe coding,”
+                and long-term maintainability. In an age of "vibe coding,"
                 Mikael brings structure, clarity, and craftsmanship.
               </>
             }
@@ -131,7 +128,7 @@ export default function LandingPage() {
           bring to life—ranging from healthcare copilots to knowledge systems
           for expert users.
         </p>
-        <div className="grid grid-cols-1 gap-4 overflow-x-auto sm:gap-10 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 overflow-x-auto sm:grid-cols-2 lg:grid-cols-3">
           <PortfolioItem
             title="Expert System"
             subtitle="Augmented reasoning, to generate world changing insights faster."
@@ -183,9 +180,36 @@ export default function LandingPage() {
               "OpenAI",
               "Tailwind CSS",
             ]}
-            image={benaiDemoImage}
+            image={benaiAgentFramework}
             imageAlt="BenAi architecture diagram"
             url="/benai"
+          />
+
+          <PortfolioItem
+            title="Robbie"
+            subtitle="Conversational BI for faster, trusted decision-making across teams."
+            description={
+              <>
+                Robbie is a conversational analytics copilot built for Zillow.
+                It empowers anyone—from product managers to executives—to ask
+                plain-English business questions and get governed, SQL-backed
+                answers with charts in seconds. Robbie integrates tightly with
+                Zillow's semantic layer and Databricks to generate verifiable
+                insights through chat, without requiring data science support.
+                It includes live data querying, Slack and web integrations, and
+                a feedback system for improving model output quality.
+              </>
+            }
+            techStack={[
+              "Next.js",
+              "TypeScript",
+              "OpenAI",
+              "Databricks",
+              "Tailwind CSS",
+            ]}
+            image={robbieLogo}
+            imageAlt="Robbie architecture diagram"
+            url="/robbie"
           />
         </div>
       </section>
