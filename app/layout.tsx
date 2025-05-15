@@ -26,12 +26,12 @@ const jura = Jura({
 // <link rel="icon" href="/icon.svg" type="image/svg+xml" sizes="any">
 
 // https://nextjs.org/docs/app/api-reference/functions/generate-metadata#default-value
-const origin =
-  process.env.VERCEL_ENV === "production"
-    ? "https://www.starmode.app"
-    : process.env.VERCEL_ENV === "preview" && process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "http://localhost:3020";
+// const origin =
+//   process.env.VERCEL_ENV === "production"
+//     ? "https://www.starmode.app"
+//     : process.env.VERCEL_ENV === "preview" && process.env.VERCEL_URL
+//       ? `https://${process.env.VERCEL_URL}`
+//       : "http://localhost:3020";
 
 // Examples:
 // https://reflect.app
