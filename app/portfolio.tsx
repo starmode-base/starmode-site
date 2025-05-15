@@ -1,16 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
-export interface PortfolioItemProps {
-  title: string;
-  subtitle?: string;
-  description: React.ReactNode;
-  techStack?: string[];
-  image: StaticImageData;
-  imageAlt?: string;
-  url: string;
-}
-
 export function PortfolioItem({
   title,
   description,
@@ -18,7 +8,15 @@ export function PortfolioItem({
   image,
   imageAlt,
   url,
-}: PortfolioItemProps) {
+}: {
+  title: string;
+  subtitle?: string;
+  description: React.ReactNode;
+  techStack?: string[];
+  image: StaticImageData;
+  imageAlt?: string;
+  url: string;
+}) {
   const isExternal = url.startsWith("http");
 
   return (
