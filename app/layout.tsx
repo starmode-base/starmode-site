@@ -22,7 +22,7 @@ export const metadata = {
   description: "We help companies build better AI",
   icons: ["/starmode-icon.svg", "/starmode-icon.png"],
   openGraph: {
-    url: "https://starmode.app/",
+    url: "https://starmode.dev/",
     siteName: "STΛR MODΞ",
     images: ["/starmode-og.png"],
   },
