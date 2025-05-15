@@ -42,19 +42,17 @@ const origin =
 
 export const metadata = {
   // https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
-  metadataBase: new URL(origin),
-  title: "STΛR MODΞ Studios",
-  description: "AI-Powered Applications. Built End to End.",
-  icons: ["/starmode-icon.svg"],
+  // metadataBase: new URL(origin),
+  title: "STΛR MODΞ",
+  description: "We help companies build better AI",
+  icons: ["/starmode-icon.svg", "/starmode-icon.png"],
   openGraph: {
-    url: origin,
-    siteName: "STΛR MODΞ Studios",
-    title: "AI-Powered Applications. Built End to End.",
-    type: "website",
-    description: `STΛR MODΞ Studios designs and develops modern web applications with
-            AI at their core. From early-stage prototypes to fully deployed
-            systems, we can build the entire stack—fast.`,
-    locale: "en_US",
+    // url: origin,
+    // siteName: "STΛR MODΞ",
+    // title: "AI-Powered Applications. Built End to End.",
+    // type: "website",
+    // description: `STΛR MODΞ designs and develops modern web applications with AI at their core. Whether you're starting from scratch or leveling up an existing product, we help you build and ship faster—with confidence.`,
+    // locale: "en_US",
   },
 } satisfies Metadata;
 
