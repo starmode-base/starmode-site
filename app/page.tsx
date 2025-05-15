@@ -1,3 +1,4 @@
+"use client";
 import { TeamMember } from "./team";
 import { PortfolioItem } from "./portfolio";
 import mikaelImage from "../public/mikael-lirbank.jpg";
@@ -9,6 +10,7 @@ import mattiasImage from "../public/mattias-karlsson.jpg";
 import justinImage from "../public/justin-muncaster.jpg";
 import { technologies } from "./technologies";
 import { Testimonial } from "./testimonial";
+import { VapiButton } from "@/public/vapi/vapi-components";
 
 export default function LandingPage() {
   return (
@@ -20,9 +22,9 @@ export default function LandingPage() {
           their core. Whether you're starting from scratch or leveling up an
           existing product, we help you build and ship faster—with confidence.
         </p>
-        <a className="button mx-auto" href="#team">
-          Get in touch
-        </a>
+        <div className="mx-auto mt-6 flex justify-center">
+          <VapiButton />
+        </div>
       </section>
 
       {/* How we can help */}
