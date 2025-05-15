@@ -159,7 +159,7 @@ export default function LandingPage() {
           url="https://expert-system-rust.vercel.app/"
         />
       </section>
-      <section className="section-short" />
+      <div className="py-10" />
       <section className="section-short bg-[url(/bg-pattern.png)]">
         <PortfolioItem
           title="BenAi"
@@ -189,7 +189,7 @@ export default function LandingPage() {
           url="/benai"
         />
       </section>
-      <section className="section-short" />
+      <div className="py-10" />
       <section className="section-short bg-[url(/bg-pattern.png)]">
         <PortfolioItem
           title="Robbie"
