@@ -47,8 +47,9 @@ export const metadata = {
   description: "We help companies build better AI",
   icons: ["/starmode-icon.svg", "/starmode-icon.png"],
   openGraph: {
-    // url: origin,
+    // url: "https://starmode.app/",
     // siteName: "STΛR MODΞ",
+    images: ["/starmode-og.png"],
     // title: "AI-Powered Applications. Built End to End.",
     // type: "website",
     // description: `STΛR MODΞ designs and develops modern web applications with AI at their core. Whether you're starting from scratch or leveling up an existing product, we help you build and ship faster—with confidence.`,
