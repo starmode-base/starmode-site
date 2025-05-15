@@ -1,5 +1,5 @@
 import { TeamMember } from "./team";
-import { PortfolioItem } from "./portfolio";
+import { PortfolioItem, PortfolioItem2 } from "./portfolio";
 import mikaelImage from "../public/mikael-lirbank.jpg";
 import spencerImage from "../public/spencer-smith.jpg";
 import expertSystem from "../public/expert-system-hero.png";
@@ -119,6 +119,104 @@ export default function LandingPage() {
             }}
           />
         </div>
+      </section>
+
+      {/* Portfolio */}
+      <section className="section-short bg-[url(/bg-pattern.png)] px-4 sm:px-10">
+        <h2 className="text-white!">Portfolio</h2>
+        <p className="paragraph-1 text-white!">
+          A few examples of the AI-powered tools and platforms we've helped
+          bring to life—ranging from healthcare copilots to knowledge systems
+          for expert users.
+        </p>
+
+        <PortfolioItem2
+          title="Expert System"
+          subtitle="Augmented reasoning, to generate world changing insights faster."
+          description={
+            <>
+              Expert System processes large volumes of unstructured
+              information—like earnings transcripts, scientific research, and
+              technical documentation—and distills them into concise, structured
+              takeaway cards. These takeaways serve as an intermediate layer of
+              understanding, enabling our AI to reason over them and surface
+              deeper insights, connections, and hypotheses. The result is a
+              system that augments human reasoning over a vast amount of data,
+              with clarity and context. Useful for investors and people who
+              think for a living.
+            </>
+          }
+          techStack={[
+            "TanStack",
+            "TypeScript",
+            "OpenAI",
+            "Drizzle ORM",
+            "PostgreSQL",
+            "Tailwind CSS",
+          ]}
+          image={expertSystem}
+          imageAlt="AI Bookkeeping Copilot UI"
+          url="https://expert-system-rust.vercel.app/"
+        />
+      </section>
+      <section className="section-short" />
+      <section className="section-short bg-[url(/bg-pattern.png)]">
+        <PortfolioItem2
+          title="BenAi"
+          subtitle="Navigating healthcare, simplified. Boosting member literacy and plan utilization through AI."
+          description={
+            <>
+              BenAi is a healthcare-focused customer service copilot. It
+              streamlines insurance plan inquiries, enabling members to
+              instantly access plan details and make smarter healthcare
+              decisions. With a combination of an AI chat assistant and a
+              centralized service portal, BenAi improves support for both
+              members and third-party administrators. Features include a Member
+              Chat-Bot for real-time plan Q&A, a Customer Service Co-Pilot for
+              agents, and an Enrollment Scenario Planner to help members select
+              the most cost-effective plans.
+            </>
+          }
+          techStack={[
+            "Python",
+            "Next.js",
+            "TypeScript",
+            "OpenAI",
+            "Tailwind CSS",
+          ]}
+          image={benaiAgentFramework}
+          imageAlt="BenAi architecture diagram"
+          url="/benai"
+        />
+      </section>
+      <section className="section-short" />
+      <section className="section-short bg-[url(/bg-pattern.png)]">
+        <PortfolioItem2
+          title="Robbie"
+          subtitle="Conversational BI for faster, trusted decision-making across teams."
+          description={
+            <>
+              Robbie is a conversational analytics copilot built for Zillow. It
+              empowers anyone—from product managers to executives—to ask
+              plain-English business questions and get governed, SQL-backed
+              answers with charts in seconds. Robbie integrates tightly with
+              Zillow's semantic layer and Databricks to generate verifiable
+              insights through chat, without requiring data science support. It
+              includes live data querying, Slack and web integrations, and a
+              feedback system for improving model output quality.
+            </>
+          }
+          techStack={[
+            "Next.js",
+            "TypeScript",
+            "OpenAI",
+            "Databricks",
+            "Tailwind CSS",
+          ]}
+          image={robbieLogo}
+          imageAlt="Robbie architecture diagram"
+          url="/robbie"
+        />
       </section>
 
       {/* Portfolio */}
