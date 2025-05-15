@@ -20,36 +20,41 @@ export function PortfolioItem({
   const isExternal = url.startsWith("http");
 
   return (
-    <div className="-mx-4 grid max-w-4xl overflow-hidden rounded sm:mx-auto sm:grid-cols-2 sm:bg-white/5 sm:shadow-md sm:backdrop-blur-md">
-      <div className="flex flex-col gap-4 p-4 sm:p-10">
+    <div className="-mx-4 grid h-full max-w-4xl overflow-hidden rounded sm:mx-auto sm:grid-cols-2 sm:bg-white/5 sm:shadow-md sm:backdrop-blur-md">
+      <div className="flex h-full flex-col gap-4 p-4 sm:p-10">
         <h4 className="text-left! text-white!">{title}</h4>
-        <div className="text-white">{description}</div>
-        <div className="flex flex-wrap gap-2 text-xs text-white">
-          {techStack?.map((tech) => (
-            <div
-              key={tech}
-              className="rounded bg-slate-600 px-3 py-1 font-mono"
-            >
-              {tech}
+        {/* Enforce height of element to prevent layout shift */}
+        <div className="h-[300px] flex-grow overflow-auto pr-2 text-white">
+          <div className="flex-grow text-white">{description}</div>
+          {techStack && techStack.length > 0 ? (
+            <div className="mt-auto flex flex-wrap gap-2 pt-4 text-xs text-white">
+              {techStack.map((tech) => (
+                <div
+                  key={tech}
+                  className="rounded bg-slate-600 px-3 py-1 font-mono"
+                >
+                  {tech}
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <div className="flex gap-3 text-sm">
-          <Link
-            href={url}
-            target={isExternal ? "_blank" : undefined}
-            className="rounded bg-white px-3 py-1 font-medium text-slate-800 shadow"
-          >
-            View Live
-          </Link>
+          ) : null}
+          <div className="mt-4 flex gap-3 text-sm">
+            <Link
+              href={url}
+              target={isExternal ? "_blank" : undefined}
+              className="rounded bg-white px-3 py-1 font-medium text-slate-800 shadow"
+            >
+              View Live
+            </Link>
+          </div>
         </div>
       </div>
-      <div className="hidden bg-white py-20 pl-10 sm:flex">
+      <div className="hidden bg-white py-10 pl-10 sm:flex sm:items-center sm:justify-center">
         <Link href={url} target={isExternal ? "_blank" : undefined}>
           <Image
             src={image}
             alt={imageAlt}
-            className="h-full w-auto rounded object-cover object-left shadow transition hover:opacity-90"
+            className="h-auto max-h-[300px] w-auto rounded object-contain shadow transition hover:opacity-90"
           />
         </Link>
       </div>
