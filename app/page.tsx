@@ -131,6 +131,33 @@ export default function LandingPage() {
           for expert users.
         </p>
         <PortfolioItem
+          title="Scoutbee ISS"
+          subtitle="Augmented reasoning, to generate world changing insights faster."
+          description={
+            <>
+              An AI-powered supplier search engine built for Fortune 50
+              procurement teams. Instant Supplier Search (ISS) enables buyers to
+              find and evaluate suppliers across any category with
+              natural-language queries and rich filtering. Designed for speed,
+              precision, and scale in high-stakes sourcing workflows.
+            </>
+          }
+          techStack={[
+            "OpenAI",
+            "Evals",
+            "Jupyter",
+            "Inngest",
+            "Helicone",
+            "PostgreSQL",
+          ]}
+          image={scoutbeeIss}
+          imageAlt="Scoutbee ISS"
+          url="https://scoutbee-iss.vercel.app/"
+        />
+      </section>
+      <div className="py-10" />
+      <section className="section-short bg-[url(/bg-pattern.png)] px-4 sm:px-10">
+        <PortfolioItem
           title="Expert System"
           subtitle="Augmented reasoning, to generate world changing insights faster."
           description={
@@ -157,26 +184,6 @@ export default function LandingPage() {
           image={expertSystem}
           imageAlt="Expert System screenshot"
           url="https://expert-system.starmode.dev/"
-        />
-      </section>
-      <div className="py-10" />
-      <section className="section-short bg-[url(/bg-pattern.png)] px-4 sm:px-10">
-        <PortfolioItem
-          title="Scoutbee ISS"
-          subtitle="Augmented reasoning, to generate world changing insights faster."
-          description={
-            <>
-              An AI-powered supplier search engine built for Fortune 50
-              procurement teams. Instant Supplier Search (ISS) enables buyers to
-              find and evaluate suppliers across any category with
-              natural-language queries and rich filtering. Designed for speed,
-              precision, and scale in high-stakes sourcing workflows.
-            </>
-          }
-          techStack={["OpenAI", "Inngest", "Helicone", "PostgreSQL", "Jupyter"]}
-          image={scoutbeeIss}
-          imageAlt="Scoutbee ISS"
-          url="https://scoutbee-iss.vercel.app/"
         />
       </section>
       <div className="py-10" />
