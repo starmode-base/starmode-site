@@ -16,9 +16,9 @@ export default function LandingPage() {
       <section className="section-tall">
         <h1>We help companies build better AI</h1>
         <p className="paragraph-1">
-          Starmode designs and develops modern web applications with AI at their
-          core. Whether you're starting from scratch or leveling up an existing
-          product, we help you build and ship faster—with confidence.
+          STΛR MODΞ designs and develops modern web applications with AI at
+          their core. Whether you're starting from scratch or leveling up an
+          existing product, we help you build and ship faster—with confidence.
         </p>
         <a className="button mx-auto" href="#team">
           Get in touch

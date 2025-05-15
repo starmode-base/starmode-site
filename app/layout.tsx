@@ -51,7 +51,7 @@ export const metadata = {
     siteName: "STΛR MODΞ Studios",
     title: "AI-Powered Applications. Built End to End.",
     type: "website",
-    description: `Starmode Studios designs and develops modern web applications with
+    description: `STΛR MODΞ Studios designs and develops modern web applications with
             AI at their core. From early-stage prototypes to fully deployed
             systems, we can build the entire stack—fast.`,
     locale: "en_US",
