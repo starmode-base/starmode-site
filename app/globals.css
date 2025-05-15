@@ -48,7 +48,7 @@ section {
 }
 
 @utility section-tall {
-  @apply py-20 sm:py-48;
+  @apply my-20 sm:my-48;
 }
 
 /* Headings */
