@@ -14,7 +14,7 @@ export function PortfolioItem({
   description: React.ReactNode;
   techStack?: string[];
   image: StaticImageData;
-  imageAlt?: string;
+  imageAlt: string;
   url: string;
 }) {
   const isExternal = url.startsWith("http");
@@ -48,7 +48,7 @@ export function PortfolioItem({
         <Link href={url} target={isExternal ? "_blank" : undefined}>
           <Image
             src={image}
-            alt={imageAlt ?? title}
+            alt={imageAlt}
             className="h-full w-auto rounded object-cover object-left shadow transition hover:opacity-90"
           />
         </Link>

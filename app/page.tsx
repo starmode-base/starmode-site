@@ -3,6 +3,7 @@ import { PortfolioItem } from "./portfolio";
 import mikaelImage from "../public/mikael-lirbank.jpg";
 import spencerImage from "../public/spencer-smith.jpg";
 import expertSystem from "../public/expert-system-hero.png";
+import scoutbeeIss from "../public/scoutbee-iss.png";
 import benaiAgentFramework from "../public/benai/benai-agent-framework.png";
 import robbieLogo from "@/public/robbie/robbie-logo.png";
 import mattiasImage from "../public/mattias-karlsson.jpg";
@@ -129,7 +130,6 @@ export default function LandingPage() {
           bring to life—ranging from healthcare copilots to knowledge systems
           for expert users.
         </p>
-
         <PortfolioItem
           title="Expert System"
           subtitle="Augmented reasoning, to generate world changing insights faster."
@@ -155,8 +155,28 @@ export default function LandingPage() {
             "Tailwind CSS",
           ]}
           image={expertSystem}
-          imageAlt="AI Bookkeeping Copilot UI"
-          url="https://expert-system-rust.vercel.app/"
+          imageAlt="Expert System screenshot"
+          url="https://expert-system.starmode.dev/"
+        />
+      </section>
+      <div className="py-10" />
+      <section className="section-short bg-[url(/bg-pattern.png)] px-4 sm:px-10">
+        <PortfolioItem
+          title="Scoutbee ISS"
+          subtitle="Augmented reasoning, to generate world changing insights faster."
+          description={
+            <>
+              An AI-powered supplier search engine built for Fortune 50
+              procurement teams. Instant Supplier Search (ISS) enables buyers to
+              find and evaluate suppliers across any category with
+              natural-language queries and rich filtering. Designed for speed,
+              precision, and scale in high-stakes sourcing workflows.
+            </>
+          }
+          techStack={["OpenAI", "Inngest", "Helicone", "PostgreSQL", "Jupyter"]}
+          image={scoutbeeIss}
+          imageAlt="Scoutbee ISS"
+          url="https://scoutbee-iss.vercel.app/"
         />
       </section>
       <div className="py-10" />
