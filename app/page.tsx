@@ -11,14 +11,13 @@ import mattiasImage from "../public/mattias-karlsson.jpg";
 import justinImage from "../public/justin-muncaster.jpg";
 import { technologies } from "./technologies";
 import { Testimonial } from "./testimonial";
-import { metadata } from "./layout";
 import { VapiButton } from "@/public/vapi/vapi-components";
 
 export default function LandingPage() {
   return (
     <main>
       <section className="section-tall">
-        <h1>{metadata.description}</h1>
+        <h1>We help companies build better AI</h1>
         <p className="paragraph-1">
           STΛR MODΞ designs and develops modern web applications with AI at
           their core. Whether you're starting from scratch or leveling up an
