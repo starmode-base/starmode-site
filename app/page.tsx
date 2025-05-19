@@ -4,19 +4,21 @@ import { PortfolioItem } from "./portfolio";
 import mikaelImage from "../public/mikael-lirbank.jpg";
 import spencerImage from "../public/spencer-smith.jpg";
 import expertSystem from "../public/expert-system-hero.png";
+import scoutbeeIss from "../public/scoutbee-iss.png";
 import benaiAgentFramework from "../public/benai/benai-agent-framework.png";
 import robbieLogo from "@/public/robbie/robbie-logo.png";
 import mattiasImage from "../public/mattias-karlsson.jpg";
 import justinImage from "../public/justin-muncaster.jpg";
 import { technologies } from "./technologies";
 import { Testimonial } from "./testimonial";
+import { metadata } from "./layout";
 import { VapiButton } from "@/public/vapi/vapi-components";
 
 export default function LandingPage() {
   return (
     <main>
       <section className="section-tall">
-        <h1>We help companies build better AI</h1>
+        <h1>{metadata.description}</h1>
         <p className="paragraph-1">
           STΛR MODΞ designs and develops modern web applications with AI at
           their core. Whether you're starting from scratch or leveling up an
@@ -123,96 +125,112 @@ export default function LandingPage() {
       </section>
 
       {/* Portfolio */}
-      <section className="section-short gradient-dark">
-        <h2 className="heading-light">Portfolio</h2>
-        <p className="paragraph-1 paragraph-light">
+
+      <section className="section-short bg-[url(/bg-pattern.png)] px-4 sm:px-10">
+        <h2 className="text-white!">Portfolio</h2>
+        <p className="paragraph-1 text-white!">
           A few examples of the AI-powered tools and platforms we've helped
           bring to life—ranging from healthcare copilots to knowledge systems
           for expert users.
         </p>
-        <div className="grid grid-cols-1 gap-4 overflow-x-auto sm:grid-cols-2 lg:grid-cols-3">
-          <PortfolioItem
-            title="Expert System"
-            subtitle="Augmented reasoning, to generate world changing insights faster."
-            description={
-              <>
-                Expert System processes large volumes of unstructured
-                information—like earnings transcripts, scientific research, and
-                technical documentation—and distills them into concise,
-                structured takeaway cards. These takeaways serve as an
-                intermediate layer of understanding, enabling our AI to reason
-                over them and surface deeper insights, connections, and
-                hypotheses. The result is a system that augments human reasoning
-                over a vast amount of data, with clarity and context. Useful for
-                investors and people who think for a living.
-              </>
-            }
-            techStack={[
-              "TanStack",
-              "TypeScript",
-              "OpenAI",
-              "Drizzle ORM",
-              "PostgreSQL",
-              "Tailwind CSS",
-            ]}
-            image={expertSystem}
-            imageAlt="AI Bookkeeping Copilot UI"
-            url="https://expert-system-rust.vercel.app/"
-          />
-          <PortfolioItem
-            title="BenAi"
-            subtitle="Navigating healthcare, simplified. Boosting member literacy and plan utilization through AI."
-            description={
-              <>
-                BenAi is a healthcare-focused customer service copilot. It
-                streamlines insurance plan inquiries, enabling members to
-                instantly access plan details and make smarter healthcare
-                decisions. With a combination of an AI chat assistant and a
-                centralized service portal, BenAi improves support for both
-                members and third-party administrators. Features include a
-                Member Chat-Bot for real-time plan Q&A, a Customer Service
-                Co-Pilot for agents, and an Enrollment Scenario Planner to help
-                members select the most cost-effective plans.
-              </>
-            }
-            techStack={[
-              "Python",
-              "Next.js",
-              "TypeScript",
-              "OpenAI",
-              "Tailwind CSS",
-            ]}
-            image={benaiAgentFramework}
-            imageAlt="BenAi architecture diagram"
-            url="/benai"
-          />
 
-          <PortfolioItem
-            title="Robbie"
-            subtitle="Conversational BI for faster, trusted decision-making across teams."
-            description={
-              <>
-                Robbie is a conversational analytics copilot built for Zillow.
-                It empowers anyone—from product managers to executives—to ask
-                plain-English business questions and get governed, SQL-backed
-                answers with charts in seconds. Robbie integrates tightly with
-                Zillow's semantic layer and Databricks to generate verifiable
-                insights through chat, without requiring data science support.
-                It includes live data querying, Slack and web integrations, and
-                a feedback system for improving model output quality.
-              </>
-            }
-            techStack={[
-              "Next.js",
-              "TypeScript",
-              "OpenAI",
-              "Databricks",
-              "Tailwind CSS",
-            ]}
-            image={robbieLogo}
-            imageAlt="Robbie architecture diagram"
-            url="/robbie"
-          />
+        {/* Slider container */}
+        <div className="relative mt-6">
+          <div className="scrollbar-hide flex snap-x snap-mandatory space-x-6 overflow-x-auto scroll-smooth pb-4">
+            {/* Each slide */}
+            <div className="h-full w-full flex-shrink-0 snap-center sm:w-3/4 lg:w-1/2">
+              <PortfolioItem
+                title="Scoutbee ISS"
+                description={
+                  <>
+                    An AI-powered supplier search engine built for Fortune 50
+                    procurement teams. Instant Supplier Search (ISS) enables
+                    buyers to find and evaluate suppliers across any category
+                    with natural-language queries and rich filtering. Designed
+                    for speed, precision, and scale in high-stakes sourcing
+                    workflows.
+                  </>
+                }
+                techStack={[
+                  "OpenAI",
+                  "Evals",
+                  "Jupyter",
+                  "Inngest",
+                  "Helicone",
+                  "PostgreSQL",
+                ]}
+                image={scoutbeeIss}
+                imageAlt="Scoutbee ISS"
+                url="https://scoutbee-iss.vercel.app/"
+              />
+            </div>
+
+            <div className="h-full w-full flex-shrink-0 snap-center sm:w-3/4 lg:w-1/2">
+              <PortfolioItem
+                title="Expert System"
+                description={
+                  <>
+                    Expert System processes unstructured information and
+                    transforms it into structured, actionable insights. It
+                    creates an intermediate layer of understanding through
+                    concise takeaway cards, enabling AI to surface connections
+                    and hypotheses that would be difficult to discover manually.
+                    A powerful tool for investors and researchers needing to
+                    analyze large volumes of data.
+                  </>
+                }
+                techStack={["OpenAI", "Inngest", "PostgreSQL", "TanStack"]}
+                image={expertSystem}
+                imageAlt="Expert System screenshot"
+                url="https://expert-system.starmode.dev/"
+              />
+            </div>
+
+            <div className="h-full w-full flex-shrink-0 snap-center sm:w-3/4 lg:w-1/2">
+              <div className="flex h-full flex-col">
+                <PortfolioItem
+                  title="BenAi"
+                  description={
+                    <>
+                      BenAi streamlines healthcare plan navigation with an AI
+                      assistant that instantly answers member questions and
+                      helps them make informed decisions. It combines a chat
+                      interface with a service portal to improve support
+                      efficiency for both members and administrators, making
+                      complex healthcare information accessible and actionable.
+                    </>
+                  }
+                  techStack={["OpenAI", "Python", "Next.JS", "Tailwind"]}
+                  image={benaiAgentFramework}
+                  imageAlt="BenAi architecture diagram"
+                  url="/benai"
+                />
+              </div>
+            </div>
+
+            <div className="h-full w-full flex-shrink-0 snap-center sm:w-3/4 lg:w-1/2">
+              <div className="flex h-full flex-col">
+                <PortfolioItem
+                  title="Robbie"
+                  description={
+                    <>
+                      Robbie transforms business intelligence through
+                      conversation, allowing anyone to ask plain-English
+                      questions and receive data-backed answers with
+                      visualizations in seconds. Built for Zillow, it integrates
+                      with their semantic layer and Databricks to deliver
+                      verified insights without requiring data science
+                      expertise.
+                    </>
+                  }
+                  techStack={["OpenAI", "Python", "Vue", "Pinecone"]}
+                  image={robbieLogo}
+                  imageAlt="Robbie architecture diagram"
+                  url="/robbie"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
