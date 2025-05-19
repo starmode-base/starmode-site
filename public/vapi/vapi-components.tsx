@@ -5,11 +5,11 @@ export function VapiButton() {
   const { status, startCall, endCall } = useVapi();
 
   const buttonStyles = {
-    base: "flex items-center justify-center gap-3 rounded-xl px-8 py-4 text-2xl font-medium shadow-md transition-all duration-300",
+    base: "flex items-center justify-center gap-3 rounded-xl border-2 border-dashed border-white px-8 py-4 text-2xl font-medium shadow-md transition-all duration-300",
     connecting: "bg-gray-500",
     connected:
       "bg-emerald-600 hover:bg-emerald-700 animate-pulse border-2 border-emerald-400",
-    inactive: "bg-black hover:bg-gray-700",
+    inactive: "bg-gray-800 hover:bg-gray-700",
   };
 
   const getButtonClass = () => {

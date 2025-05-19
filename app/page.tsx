@@ -217,9 +217,8 @@ export default function LandingPage() {
                       conversation, allowing anyone to ask plain-English
                       questions and receive data-backed answers with
                       visualizations in seconds. Built for Zillow, it integrates
-                      with their semantic layer and Databricks to deliver
-                      verified insights without requiring data science
-                      expertise.
+                      with their semantic layer to deliver instant analytics
+                      without requiring data science expertise.
                     </>
                   }
                   techStack={["OpenAI", "Python", "Vue", "Pinecone"]}
