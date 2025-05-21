@@ -12,8 +12,19 @@ import justinImage from "../public/justin-muncaster.jpg";
 import { technologies } from "./technologies";
 import { Testimonial } from "./testimonial";
 import { VapiButton } from "@/public/vapi/vapi-components";
+import { useNotifyUI } from "@/lib/ably";
+import { useState } from "react";
+import { testPubSub } from "@/lib/ably-server";
 
 export default function LandingPage() {
+  const clientId = "123";
+  const [message, setMessage] = useState("");
+
+  useNotifyUI(clientId, (message) => {
+    console.log(message);
+    setMessage(message.data as string);
+  });
+
   return (
     <main>
       <section className="section-tall">
@@ -28,9 +39,26 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <section>
+        <h1>Test</h1>
+
+        <div className="flex flex-col items-center justify-center gap-2">
+          <p className="text-black-100 text-sm">Client ID: {clientId}</p>
+          <p className="text-black-100 text-sm">Message: {message}</p>
+
+          <button
+            className="rounded-md bg-black px-4 py-2 text-white"
+            onClick={() => testPubSub(clientId, "Hello World")}
+          >
+            Publish
+          </button>
+        </div>
+      </section>
+
       {/* How we can help */}
       <section className="section-short gradient-dark">
         <h2 className="heading-light mb-16">How we can help</h2>
+
         <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 lg:grid-cols-3">
           <div className="rounded-2xl bg-white/20 p-6 shadow-sm transition hover:scale-[1.02] hover:shadow-md">
             <div className="text-xl font-semibold text-white">
