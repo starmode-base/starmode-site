@@ -24,7 +24,8 @@
     "react-dom": "^19.1.0",
     "react-player": "^2.16.0",
     "tiny-invariant": "^1.3.3",
-    "vapi": "^0.1.0"
+    "vapi": "^0.1.0",
+    "zod": "^3.25.20"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
