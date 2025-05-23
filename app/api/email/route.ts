@@ -6,11 +6,11 @@ import { publishNotifyUI } from "@/lib/ably-lib";
 // Define your Zod schema - adjust according to your actual schema
 const VapiNavigateTransactionsBody = z.object({
   message: z.object({
-    assistant: z.object({
-      metadata: z.object({
-        tabId: z.string(),
-      }),
-    }),
+    //     assistant: z.object({
+    //       metadata: z.object({
+    //         tabId: z.string(),
+    //       }),
+    //     }),
     toolCalls: z.array(
       z.object({
         id: z.string(),
@@ -35,13 +35,13 @@ export async function POST(request: Request) {
 
   try {
     const parsed = VapiNavigateTransactionsBody.parse(body);
-    const tabId = parsed.message.assistant.metadata.tabId;
+    // const tabId = parsed.message.assistant.metadata.tabId;
     const [toolCall] = parsed.message.toolCalls;
 
     console.log("toolCall", toolCall);
 
     // Publish to tab
-    await publishNotifyUI(tabId, "navigate");
+    await publishNotifyUI("123", "navigate");
 
     // Return success response
     return NextResponse.json({
