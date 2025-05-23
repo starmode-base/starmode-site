@@ -50,7 +50,7 @@ export const createAssistantConfig = (): CreateAssistantDTO => {
         {
           type: "function",
           function: {
-            name: "Email Action",
+            name: "email-action",
             strict: true,
             description: `This function displays a modal that allows the user to email a human team member.`,
             parameters: {
