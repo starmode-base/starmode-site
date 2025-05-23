@@ -20,7 +20,7 @@ const rawEnv = {
   API_NINJA: process.env.API_NINJA,
   VAPI_SECRET: process.env.VAPI_SECRET,
   VAPI_PUBLIC_KEY: process.env.VAPI_PUBLIC_KEY,
-  VERCEL_AUTOMATION_BYPASS_SECRET: process.env.VERCEL_AUTOMATION_BYPASS_SECRET,
+  VERCEL_AUTOMATION_BYPASS_SECRET: "jFwE7EgqIqgtkYwM2RmqGXkTE5fGd7gl",
 
   /**
    * Platform environment variables
