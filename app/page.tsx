@@ -66,8 +66,8 @@ interface Message {
 
 export default function LandingPage() {
   const clientId = "123";
-  const [showEmailModal, setShowEmailModal] = useState(true);
-  const [message, setMessage] = useState("I would like to recieve more info.");
+  const [showEmailModal, setShowEmailModal] = useState(false);
+  const [message, setMessage] = useState("");
 
   useNotifyUI(clientId, (message) => {
     console.log(message);

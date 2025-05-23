@@ -41,6 +41,8 @@ export async function POST(request: Request) {
 
     invariant(toolCall, "Tool call is required");
 
+    console.log("toolCall", toolCall);
+
     const message = {
       type: "email",
       content: toolCall.function.arguments.emailContent,
