@@ -1,3 +1,4 @@
+import { ensureEnv } from "@/lib/env-client";
 import { CreateAssistantDTO } from "@vapi-ai/web/dist/api";
 
 export const createAssistantConfig = (): CreateAssistantDTO => {
@@ -70,6 +71,11 @@ export const createAssistantConfig = (): CreateAssistantDTO => {
           },
           server: {
             url: new URL("api/email", location.origin).href,
+            headers: {
+              "x-vercel-protection-bypass": ensureEnv(
+                "VERCEL_AUTOMATION_BYPASS_SECRET",
+              ),
+            },
           },
         },
       ],
