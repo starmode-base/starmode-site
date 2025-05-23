@@ -1,4 +1,4 @@
-import { createTokenRequest } from "@/lib/ably-server";
+import { createTokenRequest } from "@/lib/ably-lib";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
