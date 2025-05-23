@@ -49,6 +49,7 @@ export async function POST(request: Request) {
     };
 
     // Publish to tab
+    // TODO: make clientID dynamic
     await publishNotifyUI("123", JSON.stringify(message));
 
     // Return success response

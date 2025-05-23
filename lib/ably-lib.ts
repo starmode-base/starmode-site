@@ -12,6 +12,7 @@ export const createTokenRequest = async (clientId: string) => {
 
   const tokenRequest = await ably.auth.createTokenRequest({
     clientId,
+    // TODO: update capabilities
     capability: {
       [makeChannelName(clientId)]: ["subscribe"],
     },
@@ -30,6 +31,7 @@ export const makeChannelName = (clientId: string) => {
 /**
  * Ably event name
  */
+// TODO: update event name
 const eventName = `invalidate-cache`;
 
 /**

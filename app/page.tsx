@@ -62,9 +62,8 @@ interface Message {
   content: string;
 }
 
-// TODO: Create email modal
-
 export default function LandingPage() {
+  // TODO: make clientID dynamic
   const clientId = "123";
   const [showEmailModal, setShowEmailModal] = useState(false);
   const [message, setMessage] = useState("");
