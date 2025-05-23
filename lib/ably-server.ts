@@ -1,7 +1,7 @@
 "use server";
 import * as Ably from "ably";
 import { ensureEnv } from "./env-client";
-import { makeChannelName, publishNotifyUI } from "./ably-lib";
+import { makeChannelName } from "./ably-lib";
 
 /**
  * Create a token request for the Ably client
@@ -20,9 +20,4 @@ export const createTokenRequest = async (clientId: string) => {
   });
 
   return tokenRequest;
-};
-
-export const testPubSub = async (clientId: string, message: string) => {
-  console.log("testPubSub", clientId, message);
-  await publishNotifyUI(clientId, message);
 };

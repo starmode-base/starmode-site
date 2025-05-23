@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { ensureEnv } from "@/lib/env-client";
 import { z } from "zod"; // Assuming you're using Zod for validation
 import { publishNotifyUI } from "@/lib/ably-lib";
+import invariant from "tiny-invariant";
 
 // Define your Zod schema - adjust according to your actual schema
 const VapiNavigateTransactionsBody = z.object({
@@ -38,16 +39,21 @@ export async function POST(request: Request) {
     // const tabId = parsed.message.assistant.metadata.tabId;
     const [toolCall] = parsed.message.toolCalls;
 
-    console.log("toolCall", toolCall);
+    invariant(toolCall, "Tool call is required");
+
+    const message = {
+      type: "email",
+      content: toolCall.function.arguments.emailContent,
+    };
 
     // Publish to tab
-    await publishNotifyUI("123", "navigate");
+    await publishNotifyUI("123", JSON.stringify(message));
 
     // Return success response
     return NextResponse.json({
       results: [
         {
-          toolCallId: toolCall?.id,
+          toolCallId: toolCall.id,
           result: "OK",
         },
       ],
