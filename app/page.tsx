@@ -1,6 +1,6 @@
 "use client";
 import { TeamMember } from "./team";
-import { PortfolioItem } from "./portfolio";
+import { CollapsiblePortfolioList } from "./portfolio";
 import mikaelImage from "../public/mikael-lirbank.jpg";
 import spencerImage from "../public/spencer-smith.jpg";
 import expertSystem from "../public/expert-system-hero.png";
@@ -67,6 +67,81 @@ export default function LandingPage() {
   const clientId = "123";
   const [showEmailModal, setShowEmailModal] = useState(false);
   const [message, setMessage] = useState("");
+
+  const portfolioCards = [
+    {
+      title: "Scoutbee ISS",
+      description: (
+        <>
+          An AI‑powered supplier search engine built for Fortune 50 procurement
+          teams. Instant Supplier Search (ISS) enables buyers to find and
+          evaluate suppliers across any category with natural‑language queries
+          and rich filtering. Designed for speed, precision, and scale in
+          high‑stakes sourcing workflows.
+        </>
+      ),
+      techStack: [
+        "OpenAI",
+        "Evals",
+        "Jupyter",
+        "Inngest",
+        "Helicone",
+        "PostgreSQL",
+      ],
+      image: scoutbeeIss,
+      imageAlt: "Scoutbee ISS",
+      url: "https://scoutbee-iss.vercel.app/",
+    },
+    {
+      title: "Expert System",
+      description: (
+        <>
+          Expert System processes unstructured information and transforms it
+          into structured, actionable insights. It creates an intermediate layer
+          of understanding through concise takeaway cards, enabling AI to
+          surface connections and hypotheses that would be difficult to discover
+          manually. A powerful tool for investors and researchers needing to
+          analyze large volumes of data.
+        </>
+      ),
+      techStack: ["OpenAI", "Inngest", "PostgreSQL", "TanStack"],
+      image: expertSystem,
+      imageAlt: "Expert System screenshot",
+      url: "https://expert-system.starmode.dev/",
+    },
+    {
+      title: "BenAi",
+      description: (
+        <>
+          BenAi streamlines healthcare plan navigation with an AI assistant that
+          instantly answers member questions and helps them make informed
+          decisions. It combines a chat interface with a service portal to
+          improve support efficiency for both members and administrators, making
+          complex healthcare information accessible and actionable.
+        </>
+      ),
+      techStack: ["OpenAI", "Python", "Next.JS", "Tailwind"],
+      image: benaiAgentFramework,
+      imageAlt: "BenAi architecture diagram",
+      url: "/benai",
+    },
+    {
+      title: "Robbie",
+      description: (
+        <>
+          Robbie transforms business intelligence through conversation, allowing
+          anyone to ask plain‑English questions and receive data‑backed answers
+          with visualizations in seconds. Built for Zillow, it integrates with
+          their semantic layer to deliver instant analytics without requiring
+          data‑science expertise.
+        </>
+      ),
+      techStack: ["OpenAI", "Python", "Vue", "Pinecone"],
+      image: robbieLogo,
+      imageAlt: "Robbie architecture diagram",
+      url: "/robbie",
+    },
+  ];
 
   useNotifyUI(clientId, (message) => {
     console.log(message);
@@ -211,104 +286,8 @@ export default function LandingPage() {
             for expert users.
           </p>
 
-          {/* Slider container */}
-          <div className="relative mt-6">
-            <div className="scrollbar-hide flex snap-x snap-mandatory space-x-6 overflow-x-auto scroll-smooth pb-4">
-              {/* Each slide */}
-              <div className="h-full w-full flex-shrink-0 snap-center sm:w-3/4 lg:w-1/2">
-                <PortfolioItem
-                  title="Scoutbee ISS"
-                  description={
-                    <>
-                      An AI-powered supplier search engine built for Fortune 50
-                      procurement teams. Instant Supplier Search (ISS) enables
-                      buyers to find and evaluate suppliers across any category
-                      with natural-language queries and rich filtering. Designed
-                      for speed, precision, and scale in high-stakes sourcing
-                      workflows.
-                    </>
-                  }
-                  techStack={[
-                    "OpenAI",
-                    "Evals",
-                    "Jupyter",
-                    "Inngest",
-                    "Helicone",
-                    "PostgreSQL",
-                  ]}
-                  image={scoutbeeIss}
-                  imageAlt="Scoutbee ISS"
-                  url="https://scoutbee-iss.vercel.app/"
-                />
-              </div>
-
-              <div className="h-full w-full flex-shrink-0 snap-center sm:w-3/4 lg:w-1/2">
-                <PortfolioItem
-                  title="Expert System"
-                  description={
-                    <>
-                      Expert System processes unstructured information and
-                      transforms it into structured, actionable insights. It
-                      creates an intermediate layer of understanding through
-                      concise takeaway cards, enabling AI to surface connections
-                      and hypotheses that would be difficult to discover
-                      manually. A powerful tool for investors and researchers
-                      needing to analyze large volumes of data.
-                    </>
-                  }
-                  techStack={["OpenAI", "Inngest", "PostgreSQL", "TanStack"]}
-                  image={expertSystem}
-                  imageAlt="Expert System screenshot"
-                  url="https://expert-system.starmode.dev/"
-                />
-              </div>
-
-              <div className="h-full w-full flex-shrink-0 snap-center sm:w-3/4 lg:w-1/2">
-                <div className="flex h-full flex-col">
-                  <PortfolioItem
-                    title="BenAi"
-                    description={
-                      <>
-                        BenAi streamlines healthcare plan navigation with an AI
-                        assistant that instantly answers member questions and
-                        helps them make informed decisions. It combines a chat
-                        interface with a service portal to improve support
-                        efficiency for both members and administrators, making
-                        complex healthcare information accessible and
-                        actionable.
-                      </>
-                    }
-                    techStack={["OpenAI", "Python", "Next.JS", "Tailwind"]}
-                    image={benaiAgentFramework}
-                    imageAlt="BenAi architecture diagram"
-                    url="/benai"
-                  />
-                </div>
-              </div>
-
-              <div className="h-full w-full flex-shrink-0 snap-center sm:w-3/4 lg:w-1/2">
-                <div className="flex h-full flex-col">
-                  <PortfolioItem
-                    title="Robbie"
-                    description={
-                      <>
-                        Robbie transforms business intelligence through
-                        conversation, allowing anyone to ask plain-English
-                        questions and receive data-backed answers with
-                        visualizations in seconds. Built for Zillow, it
-                        integrates with their semantic layer to deliver instant
-                        analytics without requiring data science expertise.
-                      </>
-                    }
-                    techStack={["OpenAI", "Python", "Vue", "Pinecone"]}
-                    image={robbieLogo}
-                    imageAlt="Robbie architecture diagram"
-                    url="/robbie"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Collapsible portfolio list */}
+          <CollapsiblePortfolioList cards={portfolioCards} />
         </section>
 
         {/* Testimonials */}
