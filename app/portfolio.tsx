@@ -19,9 +19,9 @@ export function PortfolioItem({
   const isExternal = url.startsWith("http");
 
   return (
-    <div className="grid h-full overflow-hidden rounded p-6 sm:mx-auto md:grid-cols-2">
-      <div className="flex h-full flex-col gap-6 sm:p-4">
-        <div className="max-h-[400px] flex-grow overflow-auto pr-2 text-white sm:max-h-[300px]">
+    <div className="grid h-full overflow-hidden rounded px-6 py-4 sm:mx-auto md:grid-cols-2">
+      <div className="flex h-full flex-col gap-6 sm:px-4">
+        <div className="flex-grow overflow-auto pr-2 text-white sm:max-h-[300px]">
           <div className="flex-grow text-white">{description}</div>
           {techStack && techStack.length > 0 ? (
             <div className="mt-auto flex flex-wrap gap-2 pt-4 text-xs text-white">
@@ -99,7 +99,9 @@ export function CollapsiblePortfolioList({
             <span className="text-xl font-semibold text-white">
               {card.title}
             </span>
-            <span className="text-white">{openIndex === idx ? "▾" : "▸"}</span>
+            <span className="text-2xl text-white">
+              {openIndex === idx ? "▾" : "▸"}
+            </span>
           </button>
 
           {/* Expanded content */}
