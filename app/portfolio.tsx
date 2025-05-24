@@ -21,8 +21,7 @@ export function PortfolioItem({
   return (
     <div className="grid h-full overflow-hidden rounded p-6 sm:mx-auto md:grid-cols-2">
       <div className="flex h-full flex-col gap-6 sm:p-4">
-        {/* Enforce height of element to prevent layout shift */}
-        <div className="max-h-[300px] flex-grow overflow-auto pr-2 text-white">
+        <div className="max-h-[400px] flex-grow overflow-auto pr-2 text-white sm:max-h-[300px]">
           <div className="flex-grow text-white">{description}</div>
           {techStack && techStack.length > 0 ? (
             <div className="mt-auto flex flex-wrap gap-2 pt-4 text-xs text-white">
