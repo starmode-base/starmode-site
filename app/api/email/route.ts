@@ -27,6 +27,7 @@ const VapiNavigateTransactionsBody = z.object({
 
 export async function POST(request: Request) {
   // Verify the Vapi secret
+  console.log("x-vapi-secret", request.headers.get("x-vapi-secret"));
   if (request.headers.get("x-vapi-secret") !== ensureEnv("VAPI_SECRET")) {
     return new NextResponse("Unauthorized", { status: 401 });
   }
