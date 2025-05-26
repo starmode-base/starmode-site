@@ -125,7 +125,7 @@ export const createAssistantConfig = (): CreateAssistantDTO => {
             },
           },
           server: {
-            url: new URL("api/email", location.origin).href,
+            url: new URL("api/navigate", location.origin).href,
             headers: {
               "x-vercel-protection-bypass": ensureEnv(
                 "VERCEL_AUTOMATION_BYPASS_SECRET",
