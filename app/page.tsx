@@ -150,9 +150,16 @@ export default function LandingPage() {
 
       if (parsedData.type === "email") {
         setShowEmailModal(true);
+        setMessage(parsedData.content);
       }
 
-      setMessage(parsedData.content);
+      if (parsedData.type === "navigate") {
+        const section = parsedData.content;
+        const sectionElement = document.getElementById(section);
+        if (sectionElement) {
+          sectionElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }
     } catch (err) {
       console.error(err);
     }
@@ -168,7 +175,7 @@ export default function LandingPage() {
         }}
       />
       <main>
-        <section className="section-tall">
+        <section className="section-tall" id="hero">
           <h1>We help companies build better AI</h1>
           <p className="paragraph-1">
             STΛR MODΞ designs and develops modern web applications with AI at
@@ -181,7 +188,7 @@ export default function LandingPage() {
         </section>
 
         {/* How we can help */}
-        <section className="section-short gradient-dark">
+        <section className="section-short gradient-dark" id="how-we-can-help">
           <h2 className="heading-light mb-16">How we can help</h2>
 
           <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 lg:grid-cols-3">
@@ -278,7 +285,10 @@ export default function LandingPage() {
 
         {/* Portfolio */}
 
-        <section className="section-short bg-[url(/bg-pattern.png)] px-4 sm:px-10">
+        <section
+          className="section-short bg-[url(/bg-pattern.png)] px-4 sm:px-10"
+          id="portfolio"
+        >
           <h2 className="text-white!">Portfolio</h2>
           <p className="paragraph-1 text-white!">
             A few examples of the AI-powered tools and platforms we've helped
@@ -291,7 +301,7 @@ export default function LandingPage() {
         </section>
 
         {/* Testimonials */}
-        <section className="section-short">
+        <section className="section-short" id="testimonials">
           <h2>What is it like to work with us?</h2>
           <p className="paragraph-1">
             We partner with innovative teams to solve hard problems with
@@ -343,7 +353,10 @@ export default function LandingPage() {
         </section>
 
         {/* Technologies */}
-        <section className="section-medium gradient-light flex flex-col items-center gap-8">
+        <section
+          className="section-medium gradient-light flex flex-col items-center gap-8"
+          id="technologies"
+        >
           <h3 className="text-center">Technologies we are excited about</h3>
           <div className="mx-auto flex max-w-2xl flex-wrap justify-center text-sm text-slate-600">
             {technologies

@@ -88,6 +88,51 @@ export const createAssistantConfig = (): CreateAssistantDTO => {
             },
           },
         },
+        {
+          type: "function",
+          function: {
+            name: "navagate-actoin",
+            strict: true,
+            description: `This function navigates the user to a specific section on the Starmode Landing Page.
+            When the user ask about a specific aspect of Starmode, you should use this function to navigate them to the relevant section.
+            The sections contiain the same information that is provided in the provided CONTEXT.
+            When you navigate the user to a section, you should also provide a short summary of the section.
+            `,
+            parameters: {
+              type: "object",
+              properties: {
+                section: {
+                  description: `
+                    The section parameter is the name of the section to navigate to.
+                    The section must be one of the following:
+                    - "how-we-can-help" - The section that provides some more detail about our services.
+                    - "team" - The section that shows the team behind Starmode. Specifically the founding partners, Spencer and Mikael.
+                    - "portfolio" - The section that shows our portfolio of work.
+                    - "testimonials" - The section that shows what our customers say about us.
+                    - "technologies" - The section that shows the technologies we use.
+                `,
+                  type: "string",
+                  enum: [
+                    "how-we-can-help",
+                    "team",
+                    "portfolio",
+                    "testimonials",
+                    "technologies",
+                  ],
+                },
+              },
+              required: ["section"],
+            },
+          },
+          server: {
+            url: new URL("api/email", location.origin).href,
+            headers: {
+              "x-vercel-protection-bypass": ensureEnv(
+                "VERCEL_AUTOMATION_BYPASS_SECRET",
+              ),
+            },
+          },
+        },
       ],
       provider: "openai",
       temperature: 0.5,
