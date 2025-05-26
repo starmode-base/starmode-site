@@ -29,6 +29,10 @@ export async function POST(request: Request) {
   // Verify the Vapi secret
   console.log("x-vapi-secret", request.headers.get("x-vapi-secret"));
   if (request.headers.get("x-vapi-secret") !== ensureEnv("VAPI_SECRET")) {
+    console.log("Unauthorized");
+    console.log("VAPI_SECRET", ensureEnv("VAPI_SECRET"));
+    console.log("provided VAPI_SECRET", request.headers.get("x-vapi-secret"));
+
     return new NextResponse("Unauthorized", { status: 401 });
   }
 
