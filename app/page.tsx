@@ -30,24 +30,24 @@ function EmailModal({ show, message, onClose }: EmailModalProps) {
   )}`;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-      <div className="relative w-full max-w-md rounded-xl bg-white p-6 shadow-lg">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+      <div className="relative mx-auto w-full max-w-md rounded-xl bg-white p-4 shadow-lg md:p-6">
         {/* Close (X) button */}
         <button
-          className="absolute top-4 right-4 text-xl font-bold text-gray-500 hover:text-gray-800"
+          className="absolute top-2 right-2 p-2 text-xl font-bold text-gray-500 hover:text-gray-800 md:top-4 md:right-4"
           onClick={onClose}
           aria-label="Close modal"
         >
           ×
         </button>
 
-        <p className="my-6 text-sm whitespace-pre-wrap text-gray-700">
+        <p className="my-4 text-sm whitespace-pre-wrap text-gray-700 md:my-6 md:text-base">
           {message}
         </p>
 
         <a
           href={mailtoHref}
-          className="inline-block rounded-md bg-black px-4 py-2 text-center text-white shadow-sm transition hover:bg-gray-800"
+          className="block w-full rounded-md bg-black px-4 py-3 text-center text-white shadow-sm transition hover:bg-gray-800 md:inline-block md:w-auto md:py-2"
           onClick={onClose}
         >
           Send
