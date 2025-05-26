@@ -3,10 +3,7 @@ import { TeamMember } from "./team";
 import { CollapsiblePortfolioList } from "./portfolio";
 import mikaelImage from "../public/mikael-lirbank.jpg";
 import spencerImage from "../public/spencer-smith.jpg";
-import expertSystem from "../public/expert-system-hero.png";
-import scoutbeeIss from "../public/scoutbee-iss.png";
-import benaiAgentFramework from "../public/benai/benai-agent-framework.png";
-import robbieLogo from "@/public/robbie/robbie-logo.png";
+import { portfolioCards } from "@/lib/portfolio-cards";
 import mattiasImage from "../public/mattias-karlsson.jpg";
 import justinImage from "../public/justin-muncaster.jpg";
 import { technologies } from "./technologies";
@@ -30,24 +27,24 @@ function EmailModal({ show, message, onClose }: EmailModalProps) {
   )}`;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-      <div className="relative w-full max-w-md rounded-xl bg-white p-6 shadow-lg">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+      <div className="relative mx-auto w-full max-w-md rounded-xl bg-white p-4 shadow-lg md:p-6">
         {/* Close (X) button */}
         <button
-          className="absolute top-4 right-4 text-xl font-bold text-gray-500 hover:text-gray-800"
+          className="absolute top-2 right-2 p-2 text-xl font-bold text-gray-500 hover:text-gray-800 md:top-4 md:right-4"
           onClick={onClose}
           aria-label="Close modal"
         >
           ×
         </button>
 
-        <p className="my-6 text-sm whitespace-pre-wrap text-gray-700">
+        <p className="my-4 text-sm whitespace-pre-wrap text-gray-700 md:my-6 md:text-base">
           {message}
         </p>
 
         <a
           href={mailtoHref}
-          className="inline-block rounded-md bg-black px-4 py-2 text-center text-white shadow-sm transition hover:bg-gray-800"
+          className="block w-full rounded-md bg-black px-4 py-3 text-center text-white shadow-sm transition hover:bg-gray-800 md:inline-block md:w-auto md:py-2"
           onClick={onClose}
         >
           Send
@@ -68,81 +65,6 @@ export default function LandingPage() {
   const [showEmailModal, setShowEmailModal] = useState(false);
   const [message, setMessage] = useState("");
 
-  const portfolioCards = [
-    {
-      title: "Scoutbee ISS",
-      description: (
-        <>
-          An AI‑powered supplier search engine built for Fortune 50 procurement
-          teams. Instant Supplier Search (ISS) enables buyers to find and
-          evaluate suppliers across any category with natural‑language queries
-          and rich filtering. Designed for speed, precision, and scale in
-          high‑stakes sourcing workflows.
-        </>
-      ),
-      techStack: [
-        "OpenAI",
-        "Evals",
-        "Jupyter",
-        "Inngest",
-        "Helicone",
-        "PostgreSQL",
-      ],
-      image: scoutbeeIss,
-      imageAlt: "Scoutbee ISS",
-      url: "https://scoutbee-iss.vercel.app/",
-    },
-    {
-      title: "Expert System",
-      description: (
-        <>
-          Expert System processes unstructured information and transforms it
-          into structured, actionable insights. It creates an intermediate layer
-          of understanding through concise takeaway cards, enabling AI to
-          surface connections and hypotheses that would be difficult to discover
-          manually. A powerful tool for investors and researchers needing to
-          analyze large volumes of data.
-        </>
-      ),
-      techStack: ["OpenAI", "Inngest", "PostgreSQL", "TanStack"],
-      image: expertSystem,
-      imageAlt: "Expert System screenshot",
-      url: "https://expert-system.starmode.dev/",
-    },
-    {
-      title: "BenAi",
-      description: (
-        <>
-          BenAi streamlines healthcare plan navigation with an AI assistant that
-          instantly answers member questions and helps them make informed
-          decisions. It combines a chat interface with a service portal to
-          improve support efficiency for both members and administrators, making
-          complex healthcare information accessible and actionable.
-        </>
-      ),
-      techStack: ["OpenAI", "Python", "Next.JS", "Tailwind"],
-      image: benaiAgentFramework,
-      imageAlt: "BenAi architecture diagram",
-      url: "/benai",
-    },
-    {
-      title: "Robbie",
-      description: (
-        <>
-          Robbie transforms business intelligence through conversation, allowing
-          anyone to ask plain‑English questions and receive data‑backed answers
-          with visualizations in seconds. Built for Zillow, it integrates with
-          their semantic layer to deliver instant analytics without requiring
-          data‑science expertise.
-        </>
-      ),
-      techStack: ["OpenAI", "Python", "Vue", "Pinecone"],
-      image: robbieLogo,
-      imageAlt: "Robbie architecture diagram",
-      url: "/robbie",
-    },
-  ];
-
   useNotifyUI(clientId, (message) => {
     console.log(message);
     try {
@@ -150,9 +72,16 @@ export default function LandingPage() {
 
       if (parsedData.type === "email") {
         setShowEmailModal(true);
+        setMessage(parsedData.content);
       }
 
-      setMessage(parsedData.content);
+      if (parsedData.type === "navigate") {
+        const section = parsedData.content;
+        const sectionElement = document.getElementById(section);
+        if (sectionElement) {
+          sectionElement.scrollIntoView({ behavior: "smooth" });
+        }
+      }
     } catch (err) {
       console.error(err);
     }
@@ -168,7 +97,7 @@ export default function LandingPage() {
         }}
       />
       <main>
-        <section className="section-tall">
+        <section className="section-tall" id="hero">
           <h1>We help companies build better AI</h1>
           <p className="paragraph-1">
             STΛR MODΞ designs and develops modern web applications with AI at
@@ -181,7 +110,7 @@ export default function LandingPage() {
         </section>
 
         {/* How we can help */}
-        <section className="section-short gradient-dark">
+        <section className="section-short gradient-dark" id="how-we-can-help">
           <h2 className="heading-light mb-16">How we can help</h2>
 
           <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 lg:grid-cols-3">
@@ -278,7 +207,10 @@ export default function LandingPage() {
 
         {/* Portfolio */}
 
-        <section className="section-short bg-[url(/bg-pattern.png)] px-4 sm:px-10">
+        <section
+          className="section-short bg-[url(/bg-pattern.png)] px-4 sm:px-10"
+          id="portfolio"
+        >
           <h2 className="text-white!">Portfolio</h2>
           <p className="paragraph-1 text-white!">
             A few examples of the AI-powered tools and platforms we've helped
@@ -291,7 +223,7 @@ export default function LandingPage() {
         </section>
 
         {/* Testimonials */}
-        <section className="section-short">
+        <section className="section-short" id="testimonials">
           <h2>What is it like to work with us?</h2>
           <p className="paragraph-1">
             We partner with innovative teams to solve hard problems with
@@ -343,7 +275,10 @@ export default function LandingPage() {
         </section>
 
         {/* Technologies */}
-        <section className="section-medium gradient-light flex flex-col items-center gap-8">
+        <section
+          className="section-medium gradient-light flex flex-col items-center gap-8"
+          id="technologies"
+        >
           <h3 className="text-center">Technologies we are excited about</h3>
           <div className="mx-auto flex max-w-2xl flex-wrap justify-center text-sm text-slate-600">
             {technologies
