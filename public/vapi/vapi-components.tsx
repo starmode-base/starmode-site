@@ -26,7 +26,7 @@ export function VapiButton() {
     <div className="relative">
       {/* Purple glow animation wrapper */}
       {status === "disconnected" && (
-        <div className="absolute -inset-1 animate-pulse rounded-xl bg-gradient-to-r from-purple-400 via-purple-300 to-purple-400 opacity-75 blur-lg" />
+        <div className="absolute -inset-2 animate-pulse rounded-xl bg-gradient-to-r from-purple-400 via-purple-300 to-purple-400 opacity-75 blur-md" />
       )}
 
       <button
