@@ -4,14 +4,13 @@ import { z } from "zod"; // Assuming you're using Zod for validation
 import { publishNotifyUI } from "@/lib/ably-lib";
 import invariant from "tiny-invariant";
 
-// Define your Zod schema - adjust according to your actual schema
 const VapiNavigateTransactionsBody = z.object({
   message: z.object({
-    //     assistant: z.object({
-    //       metadata: z.object({
-    //         tabId: z.string(),
-    //       }),
-    //     }),
+    assistant: z.object({
+      metadata: z.object({
+        tabId: z.string(),
+      }),
+    }),
     toolCalls: z.array(
       z.object({
         id: z.string(),
@@ -42,7 +41,7 @@ export async function POST(request: Request) {
 
   try {
     const parsed = VapiNavigateTransactionsBody.parse(body);
-    // const tabId = parsed.message.assistant.metadata.tabId;
+    const tabId = parsed.message.assistant.metadata.tabId;
     const [toolCall] = parsed.message.toolCalls;
 
     invariant(toolCall, "Tool call is required");
@@ -55,8 +54,7 @@ export async function POST(request: Request) {
     };
 
     // Publish to tab
-    // TODO: make clientID dynamic
-    await publishNotifyUI("123", JSON.stringify(message));
+    await publishNotifyUI(tabId, JSON.stringify(message));
 
     // Return success response
     return NextResponse.json({

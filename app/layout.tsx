@@ -35,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <PubSubProvider clientId="123">
+    <PubSubProvider>
       <html
         lang="en"
         className={`${inter.variable} ${jura.variable} scroll-smooth bg-slate-50 antialiased`}

@@ -19,7 +19,7 @@ const getVapi = lazySingleton(() => {
   return new Vapi(ensureClientEnv("NEXT_PUBLIC_VAPI_PUBLIC_KEY"));
 });
 
-export const useVapi = () => {
+export const useVapi = (tabId: string) => {
   const vapi = getVapi();
 
   console.log("vapi", vapi);
@@ -42,7 +42,7 @@ export const useVapi = () => {
   const startCall = async () => {
     console.log("startCall");
     setStatus("connecting");
-    await vapi.start(createAssistantConfig());
+    await vapi.start(createAssistantConfig(tabId));
   };
 
   const endCall = () => {
