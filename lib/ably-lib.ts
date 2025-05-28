@@ -10,12 +10,7 @@ import { ensureEnv } from "./env-client";
 export const createTokenRequest = async () => {
   const ably = new Ably.Rest(ensureEnv("ABLY_API_KEY"));
 
-  const tokenRequest = await ably.auth.createTokenRequest({
-    // TODO: Mikael, any tab can subscribe to this capability, is this correct?
-    capability: {
-      [makeChannelName("*")]: ["subscribe"],
-    },
-  });
+  const tokenRequest = await ably.auth.createTokenRequest();
 
   return tokenRequest;
 };
