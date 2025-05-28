@@ -1,8 +1,9 @@
 import { Mic } from "lucide-react";
 import { useVapi } from "./vapi";
+import { getTabId } from "@/lib/tab-id";
 
 export function VapiButton() {
-  const { status, startCall, endCall } = useVapi();
+  const { status, startCall, endCall } = useVapi(getTabId());
 
   const buttonStyles = {
     base: "flex items-center justify-center gap-3 rounded-xl border-2 border-dashed border-white px-8 py-4 text-2xl font-medium shadow-md transition-all duration-300",
