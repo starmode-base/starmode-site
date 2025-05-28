@@ -4,7 +4,6 @@ import { z } from "zod"; // Assuming you're using Zod for validation
 import { publishNotifyUI } from "@/lib/ably-lib";
 import invariant from "tiny-invariant";
 
-// Define your Zod schema - adjust according to your actual schema
 const VapiNavigateTransactionsBody = z.object({
   message: z.object({
     assistant: z.object({
