@@ -40,6 +40,7 @@ export function PubSubProvider(
  *
  * https://ably.com/docs/getting-started/react#useChannel
  */
-export function useNotifyUI(clientId: string, callback: AblyMessageCallback) {
-  return useChannel(makeChannelName(clientId), callback);
+export function useNotifyUI(tabId: string, callback: AblyMessageCallback) {
+  console.log("useNotifyUI", tabId);
+  return useChannel(makeChannelName(tabId), callback);
 }

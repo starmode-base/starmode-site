@@ -11,6 +11,7 @@ import { Testimonial } from "./testimonial";
 import { VapiButton } from "@/public/vapi/vapi-components";
 import { useNotifyUI } from "@/lib/ably";
 import { useState } from "react";
+import { getTabId } from "@/lib/tab-id";
 
 interface EmailModalProps {
   show: boolean;
@@ -60,8 +61,7 @@ interface Message {
 }
 
 export default function LandingPage() {
-  // TODO: make clientID dynamic
-  const clientId = "123";
+  const clientId = getTabId();
   const [showEmailModal, setShowEmailModal] = useState(false);
   const [message, setMessage] = useState("");
 
