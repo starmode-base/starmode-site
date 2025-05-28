@@ -24,11 +24,11 @@ const client = new Ably.Realtime({
  * https://ably.com/docs/getting-started/react#AblyProvider
  */
 export function PubSubProvider(
-  props: React.PropsWithChildren<{ clientId: string }>,
+  props: React.PropsWithChildren<{ tabId: string }>,
 ) {
   return (
     <AblyProvider client={client}>
-      <ChannelProvider channelName={makeChannelName(props.clientId)}>
+      <ChannelProvider channelName={makeChannelName(props.tabId)}>
         {props.children}
       </ChannelProvider>
     </AblyProvider>
