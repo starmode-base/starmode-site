@@ -104,7 +104,7 @@ export default function LandingPage() {
             their core. Whether you're starting from scratch or leveling up an
             existing product, we help you build and ship faster—with confidence.
           </p>
-          <div className="mx-auto mt-6 flex justify-center">
+          <div className="mx-auto mt-12 flex justify-center">
             <VapiButton />
           </div>
         </section>
@@ -130,9 +130,9 @@ export default function LandingPage() {
               </div>
               <p className="mt-2 text-sm text-slate-100">
                 We specialize in building with AI from the ground up—LLM
-                copilots, intelligent automations, and smart tools that actually
-                work in production. The AI field is evolving fast, and we will
-                keep your application on the frontier.
+                copilots, automated workflows, and AI agents that actually work
+                in production. The AI field is evolving fast, and we will keep
+                your application on the frontier.
               </p>
             </div>
             <div className="rounded-2xl bg-white/20 p-6 shadow-sm transition hover:scale-[1.02] hover:shadow-md">
