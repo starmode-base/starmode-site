@@ -3,6 +3,7 @@ import { ensureClientEnv } from "@/lib/env-client";
 import { useEffect, useState } from "react";
 import Vapi from "@vapi-ai/web";
 import { createAssistantConfig } from "./assistant-config";
+import { getTabId } from "@/lib/tab-id";
 
 /**
  * Create a lazy singleton from a factory function
@@ -42,7 +43,7 @@ export const useVapi = () => {
   const startCall = async () => {
     console.log("startCall");
     setStatus("connecting");
-    await vapi.start(createAssistantConfig());
+    await vapi.start(createAssistantConfig(getTabId()));
   };
 
   const endCall = () => {

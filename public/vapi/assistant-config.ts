@@ -1,11 +1,10 @@
 import { VapiGenerateEmailBody } from "@/app/api/email/route";
 import { ensureEnv } from "@/lib/env-client";
-import { getTabId } from "@/lib/tab-id";
 import { CreateAssistantDTO } from "@vapi-ai/web/dist/api";
 
-export const createAssistantConfig = (): CreateAssistantDTO => {
+export const createAssistantConfig = (tabId: string): CreateAssistantDTO => {
   const metadata: VapiGenerateEmailBody["message"]["assistant"]["metadata"] = {
-    tabId: getTabId(),
+    tabId,
   };
 
   return {
