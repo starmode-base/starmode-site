@@ -7,6 +7,7 @@ import {
   useChannel,
 } from "ably/react";
 import { makeChannelName } from "./ably-lib";
+import { getTabId } from "./tab-id";
 
 /**
  * Ably client
@@ -23,13 +24,12 @@ const client = new Ably.Realtime({
  *
  * https://ably.com/docs/getting-started/react#AblyProvider
  */
-export function PubSubProvider(
-  props: React.PropsWithChildren<{ tabId: string }>,
-) {
+export function PubSubProvider({ children }: { children: React.ReactNode }) {
+  const tabId = getTabId();
   return (
     <AblyProvider client={client}>
-      <ChannelProvider channelName={makeChannelName(props.tabId)}>
-        {props.children}
+      <ChannelProvider channelName={makeChannelName(tabId)}>
+        {children}
       </ChannelProvider>
     </AblyProvider>
   );

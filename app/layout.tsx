@@ -1,4 +1,3 @@
-"use client";
 import type { Metadata } from "next";
 import { Inter, Jura } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
@@ -6,7 +5,6 @@ import Link from "next/link";
 import { StarModeLogoSVG } from "./brand";
 import "./globals.css";
 import { PubSubProvider } from "@/lib/ably";
-import { getTabId } from "@/lib/tab-id";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -37,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <PubSubProvider tabId={getTabId()}>
+    <PubSubProvider>
       <html
         lang="en"
         className={`${inter.variable} ${jura.variable} scroll-smooth bg-slate-50 antialiased`}
