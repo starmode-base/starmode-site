@@ -170,7 +170,5 @@ export const createAssistantConfig = (tabId: string): CreateAssistantDTO => {
         onNumberSeconds: 0.5,
       },
     },
-    clientMessages: [], // Added to support @vapi-ai/web@2.3.0 (from 2.2.7)
-    serverMessages: [], // Added to support @vapi-ai/web@2.3.0 (from 2.2.7)
   };
 };
