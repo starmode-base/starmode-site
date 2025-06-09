@@ -41,6 +41,5 @@ export function PubSubProvider({ children }: { children: React.ReactNode }) {
  * https://ably.com/docs/getting-started/react#useChannel
  */
 export function useNotifyUI(tabId: string, callback: AblyMessageCallback) {
-  console.log("useNotifyUI", tabId);
   return useChannel(makeChannelName(tabId), callback);
 }

@@ -22,8 +22,6 @@ const getVapi = lazySingleton(() => {
 export const useVapi = (tabId: string) => {
   const vapi = getVapi();
 
-  console.log("vapi", vapi);
-
   const [status, setStatus] = useState<
     "disconnected" | "connecting" | "connected"
   >("disconnected");
@@ -40,7 +38,6 @@ export const useVapi = (tabId: string) => {
   }, [vapi]);
 
   const startCall = async () => {
-    console.log("startCall");
     setStatus("connecting");
     await vapi.start(createAssistantConfig(tabId));
   };

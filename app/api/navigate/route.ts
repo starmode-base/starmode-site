@@ -46,8 +46,6 @@ export async function POST(request: Request) {
 
     invariant(toolCall, "Tool call is required");
 
-    console.log("toolCall", toolCall);
-
     const message = {
       type: "navigate",
       content: toolCall.function.arguments.section,

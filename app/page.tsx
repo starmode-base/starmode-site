@@ -66,7 +66,6 @@ export default function LandingPage() {
   const [message, setMessage] = useState("");
 
   useNotifyUI(clientId, (message) => {
-    console.log(message);
     try {
       const parsedData = JSON.parse(message.data as string) as Message;
 
