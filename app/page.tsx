@@ -205,7 +205,6 @@ export default function LandingPage() {
         </section>
 
         {/* Portfolio */}
-
         <section
           className="section-short bg-[url(/bg-pattern.png)] px-4 sm:px-10"
           id="portfolio"
@@ -270,6 +269,71 @@ export default function LandingPage() {
                 url: "https://www.linkedin.com/in/mattias-karlsson-32100b119/",
               }}
             />
+          </div>
+        </section>
+
+        {/* Open source */}
+        <section className="section-short gradient-dark" id="open-source">
+          <h2 className="heading-light">Open source</h2>
+          <p className="paragraph-1 paragraph-light">
+            We're proud to share our work with the community.
+          </p>
+
+          <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 lg:grid-cols-2">
+            <div className="flex flex-col gap-2 rounded bg-white/95 p-6 text-sm">
+              <div className="text-xl font-semibold">Neon testing</div>
+              <p>
+                A Vitest utility for automated integration tests with{" "}
+                <a
+                  href="https://neon.com/"
+                  target="_blank"
+                  className="underline"
+                >
+                  Neon
+                </a>
+                .
+              </p>
+              <a
+                href="https://www.npmjs.com/package/neon-testing"
+                target="_blank"
+                className="w-fit underline"
+              >
+                npmjs.com/package/neon-testing
+              </a>
+              <a
+                href="https://github.com/starmode-base/neon-testing"
+                target="_blank"
+                className="w-fit underline"
+              >
+                github.com/starmode-base/neon-testing
+              </a>
+            </div>
+            <div className="flex flex-col gap-2 rounded bg-white/95 p-6 text-sm">
+              <div className="text-xl font-semibold">PimDB</div>
+              <p>
+                A lightweight, persisted in-memory database built from the
+                ground up for the browser. PimDB provides fast and efficient
+                text indexing with substring, n-gram, and sorted indexes,
+                enabling quick lookups for partial and exact matches. It's{" "}
+                <strong>4,000x+ faster</strong> than Array.filter for sorted
+                lookups and <strong>700x+ faster</strong> for substring searches
+                on a dataset of 100,000 documents.
+              </p>
+              <a
+                href="https://www.npmjs.com/package/pimdb"
+                target="_blank"
+                className="w-fit underline"
+              >
+                npmjs.com/package/neon-testing
+              </a>
+              <a
+                href="https://github.com/lirbank/pimdb"
+                target="_blank"
+                className="w-fit underline"
+              >
+                github.com/starmode-base/neon-testing
+              </a>
+            </div>
           </div>
         </section>
 
