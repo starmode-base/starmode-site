@@ -279,7 +279,7 @@ export default function LandingPage() {
             We're proud to share our work with the community.
           </p>
 
-          <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 lg:grid-cols-2">
+          <div className="mx-auto grid max-w-4xl gap-6 lg:grid-cols-2">
             <div className="flex flex-col gap-2 rounded bg-white/95 p-6 text-sm">
               <div className="text-xl font-semibold">Neon testing</div>
               <p>
@@ -326,7 +326,7 @@ export default function LandingPage() {
                 github.com/lirbank/google-calendar-url
               </a>
             </div>
-            <div className="col-span-2 flex flex-col gap-2 rounded bg-white/95 p-6 text-sm">
+            <div className="flex flex-col gap-2 rounded bg-white/95 p-6 text-sm lg:col-span-2">
               <div className="text-xl font-semibold">PimDB</div>
               <p>
                 A lightweight, persisted in-memory database built from the
