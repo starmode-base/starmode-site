@@ -309,7 +309,7 @@ export default function LandingPage() {
               </a>
             </div>
             <div className="flex flex-col gap-2 rounded bg-white/95 p-6 text-sm">
-              <div className="text-xl font-semibold">Neon testing</div>
+              <div className="text-xl font-semibold">Google Calendar URL</div>
               <p>Generate shareable URLs for adding Google Calendar events.</p>
               <a
                 href="https://www.npmjs.com/package/google-calendar-url"
