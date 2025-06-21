@@ -309,6 +309,24 @@ export default function LandingPage() {
               </a>
             </div>
             <div className="flex flex-col gap-2 rounded bg-white/95 p-6 text-sm">
+              <div className="text-xl font-semibold">Neon testing</div>
+              <p>Generate shareable URLs for adding Google Calendar events.</p>
+              <a
+                href="https://www.npmjs.com/package/google-calendar-url"
+                target="_blank"
+                className="w-fit underline"
+              >
+                npmjs.com/package/google-calendar-url
+              </a>
+              <a
+                href="https://github.com/lirbank/google-calendar-url"
+                target="_blank"
+                className="w-fit underline"
+              >
+                github.com/lirbank/google-calendar-url
+              </a>
+            </div>
+            <div className="col-span-2 flex flex-col gap-2 rounded bg-white/95 p-6 text-sm">
               <div className="text-xl font-semibold">PimDB</div>
               <p>
                 A lightweight, persisted in-memory database built from the
