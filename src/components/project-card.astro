@@ -1,0 +1,77 @@
+---
+import type { Project } from "../data/projects";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+
+const statusColors: Record<string, string> = {
+  stable: "bg-green-100 text-green-700 border-green-200",
+  alpha: "bg-amber-100 text-amber-700 border-amber-200",
+  "pre-alpha": "bg-orange-100 text-orange-700 border-orange-200",
+};
+
+// Apps use semibold title, libraries/templates use mono
+const titleClass =
+  project.type === "app"
+    ? "text-base font-semibold text-stone-900"
+    : "font-mono text-base text-stone-900";
+
+// Templates don't show status badges
+const showStatus = project.type !== "template" && project.status !== "stable";
+
+// Site link label varies by type
+const siteLinkLabel = project.type === "template" ? "Demo" : "Visit";
+---
+
+<div
+  class="group -mx-4 flex items-start justify-between rounded border-b border-stone-100 px-4 py-4 transition-colors hover:bg-stone-100/50"
+>
+  <div class="flex-1">
+    <div class="mb-1 flex items-center gap-3">
+      <h3 class={titleClass}>
+        {project.displayName}
+      </h3>
+      {
+        showStatus && (
+          <span
+            class={`rounded border px-2 py-0.5 text-xs ${statusColors[project.status]}`}
+          >
+            {project.status}
+          </span>
+        )
+      }
+    </div>
+    <p class="text-sm text-stone-500">{project.description}</p>
+  </div>
+  <div class="ml-4 flex gap-3 text-sm">
+    <a
+      href={project.github}
+      class="hover:text-cerise text-stone-500 underline-offset-2 transition-colors hover:underline"
+    >
+      GitHub
+    </a>
+    {
+      project.npm && (
+        <a
+          href={project.npm}
+          class="hover:text-cerise text-stone-500 underline-offset-2 transition-colors hover:underline"
+        >
+          npm
+        </a>
+      )
+    }
+    {
+      project.site && (
+        <a
+          href={project.site}
+          class="hover:text-cerise text-stone-500 underline-offset-2 transition-colors hover:underline"
+        >
+          {siteLinkLabel}
+        </a>
+      )
+    }
+  </div>
+</div>

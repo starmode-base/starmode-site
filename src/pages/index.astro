@@ -1,13 +1,8 @@
 ---
 import "../styles/global.css";
 import RainbowNotch from "../components/rainbow-notch.astro";
-import { libraries, apps, templates, type Project } from "../data/projects";
-
-const statusColors: Record<string, string> = {
-  stable: "bg-green-100 text-green-700 border-green-200",
-  alpha: "bg-amber-100 text-amber-700 border-amber-200",
-  "pre-alpha": "bg-orange-100 text-orange-700 border-orange-200",
-};
+import ProjectCard from "../components/project-card.astro";
+import { libraries, apps, templates } from "../data/projects";
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -50,43 +45,7 @@ const statusColors: Record<string, string> = {
           Apps
         </h2>
         <div class="mb-12 space-y-4">
-          {
-            apps.map((project: Project) => (
-              <div class="group -mx-4 flex items-start justify-between rounded border-b border-stone-100 px-4 py-4 transition-colors hover:bg-stone-100/50">
-                <div class="flex-1">
-                  <div class="mb-1 flex items-center gap-3">
-                    <h3 class="text-base font-semibold text-stone-900">
-                      {project.displayName}
-                    </h3>
-                    {project.status !== "stable" && (
-                      <span
-                        class={`rounded border px-2 py-0.5 text-xs ${statusColors[project.status]}`}
-                      >
-                        {project.status}
-                      </span>
-                    )}
-                  </div>
-                  <p class="text-sm text-stone-500">{project.description}</p>
-                </div>
-                <div class="ml-4 flex gap-3 text-sm">
-                  <a
-                    href={project.github}
-                    class="hover:text-cerise text-stone-500 underline-offset-2 transition-colors hover:underline"
-                  >
-                    GitHub
-                  </a>
-                  {project.site && (
-                    <a
-                      href={project.site}
-                      class="hover:text-cerise text-stone-500 underline-offset-2 transition-colors hover:underline"
-                    >
-                      Visit
-                    </a>
-                  )}
-                </div>
-              </div>
-            ))
-          }
+          {apps.map((project) => <ProjectCard project={project} />)}
         </div>
 
         <!-- Libraries -->
@@ -96,43 +55,7 @@ const statusColors: Record<string, string> = {
           Libraries
         </h2>
         <div class="mb-12 space-y-4">
-          {
-            libraries.map((project: Project) => (
-              <div class="group -mx-4 flex items-start justify-between rounded border-b border-stone-100 px-4 py-4 transition-colors hover:bg-stone-100/50">
-                <div class="flex-1">
-                  <div class="mb-1 flex items-center gap-3">
-                    <h3 class="font-mono text-base text-stone-900">
-                      {project.displayName}
-                    </h3>
-                    {project.status !== "stable" && (
-                      <span
-                        class={`rounded border px-2 py-0.5 text-xs ${statusColors[project.status]}`}
-                      >
-                        {project.status}
-                      </span>
-                    )}
-                  </div>
-                  <p class="text-sm text-stone-500">{project.description}</p>
-                </div>
-                <div class="ml-4 flex gap-3 text-sm">
-                  <a
-                    href={project.github}
-                    class="hover:text-cerise text-stone-500 underline-offset-2 transition-colors hover:underline"
-                  >
-                    GitHub
-                  </a>
-                  {project.npm && (
-                    <a
-                      href={project.npm}
-                      class="hover:text-cerise text-stone-500 underline-offset-2 transition-colors hover:underline"
-                    >
-                      npm
-                    </a>
-                  )}
-                </div>
-              </div>
-            ))
-          }
+          {libraries.map((project) => <ProjectCard project={project} />)}
         </div>
 
         <!-- Templates -->
@@ -142,36 +65,7 @@ const statusColors: Record<string, string> = {
           Templates
         </h2>
         <div class="space-y-4">
-          {
-            templates.map((project: Project) => (
-              <div class="group -mx-4 flex items-start justify-between rounded border-b border-stone-100 px-4 py-4 transition-colors hover:bg-stone-100/50">
-                <div class="flex-1">
-                  <div class="mb-1 flex items-center gap-3">
-                    <h3 class="font-mono text-base text-stone-900">
-                      {project.displayName}
-                    </h3>
-                  </div>
-                  <p class="text-sm text-stone-500">{project.description}</p>
-                </div>
-                <div class="ml-4 flex gap-3 text-sm">
-                  <a
-                    href={project.github}
-                    class="hover:text-cerise text-stone-500 underline-offset-2 transition-colors hover:underline"
-                  >
-                    GitHub
-                  </a>
-                  {project.site && (
-                    <a
-                      href={project.site}
-                      class="hover:text-cerise text-stone-500 underline-offset-2 transition-colors hover:underline"
-                    >
-                      Demo
-                    </a>
-                  )}
-                </div>
-              </div>
-            ))
-          }
+          {templates.map((project) => <ProjectCard project={project} />)}
         </div>
       </section>
 

@@ -11,7 +11,7 @@ const Tag = href ? "a" : "div";
 
 <div class="flex justify-center">
   <Tag
-    href={href}
+    {...href ? { href } : {}}
     class:list={[
       "flex h-2 overflow-hidden",
       variant === "hanging" ? "rounded-b-sm" : "rounded-xs",
