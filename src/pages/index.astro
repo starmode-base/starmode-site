@@ -3,6 +3,7 @@ import "../styles/global.css";
 import RainbowNotch from "../components/rainbow-notch.astro";
 import ProjectCard from "../components/project-card.astro";
 import { libraries, apps, templates } from "../data/projects";
+import metadata from "../../metadata.json";
 
 // Project categories
 const categories = [
@@ -23,15 +24,12 @@ const socialLinks = [
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/starmode-icon.svg" />
+    <link rel="icon" type="image/svg+xml" href={metadata.browserIcon} />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>STΛR MODΞ — A quality-focused software collective</title>
-    <meta
-      name="description"
-      content="A quality-focused software collective. We care deeply about first-class experiences for users, developers, and LLMs alike."
-    />
-    <meta property="og:image" content="https://starmode.dev/starmode-og.png" />
+    <title>{metadata.name}</title>
+    <meta name="description" content={metadata.description} />
+    <meta property="og:image" content={metadata.shareCard} />
   </head>
   <body class="font-display bg-stone-50 text-stone-900 antialiased">
     <!-- Rainbow Notch -->
@@ -45,12 +43,12 @@ const socialLinks = [
         <div class="px-10">
           <img
             src="/starmode-logo.svg"
-            alt="STΛR MODΞ"
+            alt={metadata.name}
             class="h-auto w-full max-w-xl"
           />
         </div>
         <p class="text-center font-light text-stone-600 sm:text-xl">
-          A quality-focused software collective
+          {metadata.tagline}
         </p>
       </section>
 
@@ -101,7 +99,7 @@ const socialLinks = [
               ))
             }
           </div>
-          <p>© 2025 STΛR MODΞ</p>
+          <p>© 2025 {metadata.name}</p>
         </div>
       </footer>
     </main>
