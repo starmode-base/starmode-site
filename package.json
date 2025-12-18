@@ -9,7 +9,8 @@
     "build": "prettier --check . && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "og": "npx @resvg/resvg-js-cli --fit-width 2400 public/starmode-og.svg public/starmode-og.png"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",

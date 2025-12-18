@@ -1,3 +1,9 @@
+# STΛR MODΞ website
+
+https://www.starmode.dev/
+
+---
+
 # Astro Starter Kit: Minimal
 
 ```sh
