@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+/* Design Tokens */
+@theme {
+  /* Accent color */
+  --color-cerise: #de3163;
+
+  /* Progress Pride flag colors */
+  --color-pride-red: #e40303;
+  --color-pride-orange: #ff8c00;
+  --color-pride-yellow: #ffed00;
+  --color-pride-green: #008026;
+  --color-pride-blue: #004dff;
+  --color-pride-purple: #750787;
+  --color-pride-black: #000000;
+  --color-pride-brown: #613915;
+  --color-pride-pink: #ffafc8;
+  --color-pride-cyan: #74d7ee;
+  --color-pride-white: #ffffff;
+
+  /* Typography */
+  --font-display: "Inter", system-ui, sans-serif;
+}
+
+/* Inter font */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/inter/v18/UcCo3FwrK3iLTcviYwY.woff2")
+    format("woff2");
+}

@@ -1,16 +1,231 @@
 ---
+import "../styles/global.css";
+import RainbowNotch from "../components/rainbow-notch.astro";
+import { libraries, apps, templates, type Project } from "../data/projects";
 
+const statusColors: Record<string, string> = {
+  stable: "bg-green-100 text-green-700 border-green-200",
+  alpha: "bg-amber-100 text-amber-700 border-amber-200",
+  "pre-alpha": "bg-orange-100 text-orange-700 border-orange-200",
+};
 ---
 
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/starmode-icon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>STΛR MODΞ — A quality-focused software collective</title>
+    <meta
+      name="description"
+      content="STΛR MODΞ is a quality-focused software collective building libraries and apps."
+    />
   </head>
-  <body>
-    <h1>Astro</h1>
+  <body class="font-display bg-stone-50 text-stone-900 antialiased">
+    <!-- Rainbow Notch -->
+    <RainbowNotch href="#inclusion" />
+
+    <main>
+      <!-- Hero -->
+      <section class="flex flex-col items-center justify-center px-6 py-24">
+        <img
+          src="/starmode-logo.svg"
+          alt="STΛR MODΞ"
+          class="mb-8 h-auto w-full max-w-xl"
+        />
+        <p
+          class="mb-4 max-w-2xl text-center text-xl font-light text-stone-600 md:text-2xl"
+        >
+          A quality-focused software collective
+        </p>
+      </section>
+
+      <!-- Projects -->
+      <section class="mx-auto max-w-4xl px-6 py-16">
+        <!-- Apps -->
+        <h2
+          class="text-cerise mb-6 border-b border-stone-200 pb-2 text-xs font-bold tracking-widest uppercase"
+        >
+          Apps
+        </h2>
+        <div class="mb-12 space-y-4">
+          {
+            apps.map((project: Project) => (
+              <div class="group -mx-4 flex items-start justify-between rounded border-b border-stone-100 px-4 py-4 transition-colors hover:bg-stone-100/50">
+                <div class="flex-1">
+                  <div class="mb-1 flex items-center gap-3">
+                    <h3 class="text-base font-semibold text-stone-900">
+                      {project.displayName}
+                    </h3>
+                    {project.status !== "stable" && (
+                      <span
+                        class={`rounded border px-2 py-0.5 text-xs ${statusColors[project.status]}`}
+                      >
+                        {project.status}
+                      </span>
+                    )}
+                  </div>
+                  <p class="text-sm text-stone-500">{project.description}</p>
+                </div>
+                <div class="ml-4 flex gap-3 text-sm">
+                  <a
+                    href={project.github}
+                    class="hover:text-cerise text-stone-400 underline-offset-2 transition-colors hover:underline"
+                  >
+                    GitHub
+                  </a>
+                  {project.site && (
+                    <a
+                      href={project.site}
+                      class="hover:text-cerise text-stone-400 underline-offset-2 transition-colors hover:underline"
+                    >
+                      Visit
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+
+        <!-- Libraries -->
+        <h2
+          class="text-cerise mb-6 border-b border-stone-200 pb-2 text-xs font-bold tracking-widest uppercase"
+        >
+          Libraries
+        </h2>
+        <div class="mb-12 space-y-4">
+          {
+            libraries.map((project: Project) => (
+              <div class="group -mx-4 flex items-start justify-between rounded border-b border-stone-100 px-4 py-4 transition-colors hover:bg-stone-100/50">
+                <div class="flex-1">
+                  <div class="mb-1 flex items-center gap-3">
+                    <h3 class="font-mono text-base text-stone-900">
+                      {project.displayName}
+                    </h3>
+                    {project.status !== "stable" && (
+                      <span
+                        class={`rounded border px-2 py-0.5 text-xs ${statusColors[project.status]}`}
+                      >
+                        {project.status}
+                      </span>
+                    )}
+                  </div>
+                  <p class="text-sm text-stone-500">{project.description}</p>
+                </div>
+                <div class="ml-4 flex gap-3 text-sm">
+                  <a
+                    href={project.github}
+                    class="hover:text-cerise text-stone-400 underline-offset-2 transition-colors hover:underline"
+                  >
+                    GitHub
+                  </a>
+                  {project.npm && (
+                    <a
+                      href={project.npm}
+                      class="hover:text-cerise text-stone-400 underline-offset-2 transition-colors hover:underline"
+                    >
+                      npm
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+
+        <!-- Templates -->
+        <h2
+          class="text-cerise mb-6 border-b border-stone-200 pb-2 text-xs font-bold tracking-widest uppercase"
+        >
+          Templates
+        </h2>
+        <div class="space-y-4">
+          {
+            templates.map((project: Project) => (
+              <div class="group -mx-4 flex items-start justify-between rounded border-b border-stone-100 px-4 py-4 transition-colors hover:bg-stone-100/50">
+                <div class="flex-1">
+                  <div class="mb-1 flex items-center gap-3">
+                    <h3 class="font-mono text-base text-stone-900">
+                      {project.displayName}
+                    </h3>
+                  </div>
+                  <p class="text-sm text-stone-500">{project.description}</p>
+                </div>
+                <div class="ml-4 flex gap-3 text-sm">
+                  <a
+                    href={project.github}
+                    class="hover:text-cerise text-stone-400 underline-offset-2 transition-colors hover:underline"
+                  >
+                    GitHub
+                  </a>
+                  {project.site && (
+                    <a
+                      href={project.site}
+                      class="hover:text-cerise text-stone-400 underline-offset-2 transition-colors hover:underline"
+                    >
+                      Demo
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <!-- Inclusion -->
+      <section id="inclusion" class="mx-auto max-w-4xl px-6 py-16">
+        <div class="flex flex-col items-start gap-6">
+          <RainbowNotch variant="inline" />
+          <div>
+            <h2 class="mb-3 text-lg font-semibold text-stone-900">Inclusion</h2>
+            <p class="max-w-2xl text-sm leading-relaxed text-stone-500">
+              Everyone deserves to feel safe, respected, and welcome—everywhere,
+              always. That means creating an environment where people can
+              contribute openly, ask questions freely, and be themselves. It
+              also means calling out discrimination and exclusionary
+              behavior—silence isn't neutrality.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="mt-12 bg-stone-100 px-6 py-12">
+        <div
+          class="mx-auto flex max-w-4xl flex-col items-center justify-between gap-6 md:flex-row"
+        >
+          <div class="flex items-center gap-6 text-sm text-stone-500">
+            <a
+              href="https://discord.gg/pspADbEW"
+              class="hover:text-cerise transition-colors"
+            >
+              Discord
+            </a>
+            <a
+              href="https://github.com/starmode-base"
+              class="hover:text-cerise transition-colors"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://bsky.app/profile/lirbank.com"
+              class="hover:text-cerise transition-colors"
+            >
+              Bluesky
+            </a>
+            <a
+              href="https://x.com/MikaelLirbank"
+              class="hover:text-cerise transition-colors"
+            >
+              Twitter
+            </a>
+          </div>
+          <p class="text-sm text-stone-400">© 2025 STΛR MODΞ</p>
+        </div>
+      </footer>
+    </main>
   </body>
 </html>
