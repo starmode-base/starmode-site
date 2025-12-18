@@ -3,6 +3,21 @@ import "../styles/global.css";
 import RainbowNotch from "../components/rainbow-notch.astro";
 import ProjectCard from "../components/project-card.astro";
 import { libraries, apps, templates } from "../data/projects";
+
+// Project categories
+const categories = [
+  { title: "Apps", projects: apps },
+  { title: "Libraries", projects: libraries },
+  { title: "Templates", projects: templates },
+];
+
+// Social links
+const socialLinks = [
+  { label: "Discord", href: "https://discord.gg/pspADbEW" },
+  { label: "GitHub", href: "https://github.com/starmode-base" },
+  { label: "Bluesky", href: "https://bsky.app/profile/lirbank.com" },
+  { label: "Twitter", href: "https://x.com/MikaelLirbank" },
+];
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -41,35 +56,18 @@ import { libraries, apps, templates } from "../data/projects";
 
       <!-- Projects -->
       <section class="mx-auto flex max-w-4xl flex-col gap-16 px-6">
-        <!-- Apps -->
-        <div class="flex flex-col gap-10">
-          <h2
-            class="text-cerise border-b border-stone-200 pb-2 text-xs font-bold tracking-widest uppercase"
-          >
-            Apps
-          </h2>
-          {apps.map((project) => <ProjectCard project={project} />)}
-        </div>
-
-        <!-- Libraries -->
-        <div class="flex flex-col gap-10">
-          <h2
-            class="text-cerise border-b border-stone-200 pb-2 text-xs font-bold tracking-widest uppercase"
-          >
-            Libraries
-          </h2>
-          {libraries.map((project) => <ProjectCard project={project} />)}
-        </div>
-
-        <!-- Templates -->
-        <div class="flex flex-col gap-10">
-          <h2
-            class="text-cerise border-b border-stone-200 pb-2 text-xs font-bold tracking-widest uppercase"
-          >
-            Templates
-          </h2>
-          {templates.map((project) => <ProjectCard project={project} />)}
-        </div>
+        {
+          categories.map(({ title, projects }) => (
+            <div class="flex flex-col gap-10">
+              <h2 class="text-cerise border-b border-stone-200 pb-2 text-xs font-bold tracking-widest uppercase">
+                {title}
+              </h2>
+              {projects.map((project) => (
+                <ProjectCard project={project} />
+              ))}
+            </div>
+          ))
+        }
       </section>
 
       <!-- Inclusion -->
@@ -95,30 +93,13 @@ import { libraries, apps, templates } from "../data/projects";
           class="mx-auto flex max-w-4xl flex-col items-center justify-between gap-6 px-6 py-12 text-sm text-stone-600 sm:flex-row"
         >
           <div class="flex items-center gap-6">
-            <a
-              href="https://discord.gg/pspADbEW"
-              class="hover:text-cerise transition-colors"
-            >
-              Discord
-            </a>
-            <a
-              href="https://github.com/starmode-base"
-              class="hover:text-cerise transition-colors"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://bsky.app/profile/lirbank.com"
-              class="hover:text-cerise transition-colors"
-            >
-              Bluesky
-            </a>
-            <a
-              href="https://x.com/MikaelLirbank"
-              class="hover:text-cerise transition-colors"
-            >
-              Twitter
-            </a>
+            {
+              socialLinks.map(({ label, href }) => (
+                <a href={href} class="hover:text-cerise transition-colors">
+                  {label}
+                </a>
+              ))
+            }
           </div>
           <p>© 2025 STΛR MODΞ</p>
         </div>
