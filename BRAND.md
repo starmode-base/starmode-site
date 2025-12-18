@@ -6,7 +6,7 @@
 
 ## Taglines
 
-**Hero:** A quality-focused software collective.
+**Hero:** A quality-focused software collective
 
 **Description:** A quality-focused software collective. We care deeply about first-class experiences for users, developers, and LLMs alike.
 
@@ -23,7 +23,7 @@
 
 - **Background:** `stone-50`
 - **Text:** `stone-900` — headings, titles, logo
-- **Text muted:** `stone-500` — secondary text, links, descriptions
+- **Text muted:** `stone-600` — secondary text, links, descriptions
 - **Accent:** `cerise` — highlights, hover states
 
 ## Links

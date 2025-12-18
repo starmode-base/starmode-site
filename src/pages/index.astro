@@ -14,7 +14,7 @@ import { libraries, apps, templates } from "../data/projects";
     <title>STΛR MODΞ — A quality-focused software collective</title>
     <meta
       name="description"
-      content="STΛR MODΞ is a quality-focused software collective building libraries and apps."
+      content="A quality-focused software collective. We care deeply about first-class experiences for users, developers, and LLMs alike."
     />
   </head>
   <body class="font-display bg-stone-50 text-stone-900 antialiased">
@@ -23,59 +23,59 @@ import { libraries, apps, templates } from "../data/projects";
 
     <main>
       <!-- Hero -->
-      <section class="flex flex-col items-center justify-center px-6 py-24">
+      <section
+        class="mx-auto flex max-w-4xl flex-col items-center gap-8 px-6 py-32"
+      >
         <img
           src="/starmode-logo.svg"
           alt="STΛR MODΞ"
-          class="mb-8 h-auto w-full max-w-xl"
+          class="h-auto w-full max-w-xl"
         />
-        <p
-          class="mb-4 max-w-2xl text-center text-xl font-light text-stone-500 md:text-2xl"
-        >
+        <p class="text-center text-xl font-light text-stone-600 sm:text-2xl">
           A quality-focused software collective
         </p>
       </section>
 
       <!-- Projects -->
-      <section class="mx-auto max-w-4xl px-6 py-16">
+      <section class="mx-auto flex max-w-4xl flex-col gap-16 px-6">
         <!-- Apps -->
-        <h2
-          class="text-cerise mb-6 border-b border-stone-200 pb-2 text-xs font-bold tracking-widest uppercase"
-        >
-          Apps
-        </h2>
-        <div class="mb-12 space-y-4">
+        <div class="flex flex-col gap-10">
+          <h2
+            class="text-cerise border-b border-stone-200 pb-2 text-xs font-bold tracking-widest uppercase"
+          >
+            Apps
+          </h2>
           {apps.map((project) => <ProjectCard project={project} />)}
         </div>
 
         <!-- Libraries -->
-        <h2
-          class="text-cerise mb-6 border-b border-stone-200 pb-2 text-xs font-bold tracking-widest uppercase"
-        >
-          Libraries
-        </h2>
-        <div class="mb-12 space-y-4">
+        <div class="flex flex-col gap-10">
+          <h2
+            class="text-cerise border-b border-stone-200 pb-2 text-xs font-bold tracking-widest uppercase"
+          >
+            Libraries
+          </h2>
           {libraries.map((project) => <ProjectCard project={project} />)}
         </div>
 
         <!-- Templates -->
-        <h2
-          class="text-cerise mb-6 border-b border-stone-200 pb-2 text-xs font-bold tracking-widest uppercase"
-        >
-          Templates
-        </h2>
-        <div class="space-y-4">
+        <div class="flex flex-col gap-10">
+          <h2
+            class="text-cerise border-b border-stone-200 pb-2 text-xs font-bold tracking-widest uppercase"
+          >
+            Templates
+          </h2>
           {templates.map((project) => <ProjectCard project={project} />)}
         </div>
       </section>
 
       <!-- Inclusion -->
-      <section id="inclusion" class="mx-auto max-w-4xl px-6 py-16">
+      <section id="inclusion" class="mx-auto max-w-4xl px-6 py-28">
         <div class="flex flex-col items-start gap-6">
           <RainbowNotch variant="inline" />
           <div>
             <h2 class="mb-3 text-lg font-semibold text-stone-900">Inclusion</h2>
-            <p class="max-w-2xl text-sm leading-relaxed text-stone-500">
+            <p class="max-w-2xl text-sm leading-relaxed text-stone-600">
               Everyone deserves to feel safe, respected, and welcome—everywhere,
               always. That means creating an environment where people can
               contribute openly, ask questions freely, and be themselves. It
@@ -87,11 +87,11 @@ import { libraries, apps, templates } from "../data/projects";
       </section>
 
       <!-- Footer -->
-      <footer class="mt-12 bg-stone-100 px-6 py-12">
+      <footer class="bg-stone-100">
         <div
-          class="mx-auto flex max-w-4xl flex-col items-center justify-between gap-6 md:flex-row"
+          class="mx-auto flex max-w-4xl flex-col items-center justify-between gap-6 px-6 py-12 text-sm text-stone-600 md:flex-row"
         >
-          <div class="flex items-center gap-6 text-sm text-stone-500">
+          <div class="flex items-center gap-6">
             <a
               href="https://discord.gg/pspADbEW"
               class="hover:text-cerise transition-colors"
@@ -117,7 +117,7 @@ import { libraries, apps, templates } from "../data/projects";
               Twitter
             </a>
           </div>
-          <p class="text-sm text-stone-500">© 2025 STΛR MODΞ</p>
+          <p>© 2025 STΛR MODΞ</p>
         </div>
       </footer>
     </main>
