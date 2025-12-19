@@ -13,6 +13,6 @@ export const people: Person[] = [
   {
     name: "Spencer Smith",
     role: "Contributor",
-    website: "https://www.linkedin.com/in/spencergsmith6/",
+    website: "https://github.com/spencer-g-smith",
   },
 ];
