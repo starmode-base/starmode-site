@@ -32,6 +32,6 @@ Update these when branding changes:
 
 - **Website:** https://www.starmode.dev
 - **GitHub:** https://github.com/starmode-base
-- **Discord:** https://discord.gg/pspADbEW
+- **Discord:** https://discord.gg/zqmZJmZAQ7
 - **LinkedIn:** https://www.linkedin.com/company/starmode/?viewAsMember=true
 - **LinkedIn:** https://www.linkedin.com/in/mikaellirbank/
