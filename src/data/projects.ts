@@ -1,5 +1,5 @@
 export type ProjectType = "library" | "app" | "template";
-export type ProjectStatus = "pre-alpha";
+export type ProjectStatus = "pre-alpha" | "alpha" | "beta";
 
 export interface Project {
   name: string;
@@ -36,6 +36,7 @@ export const projects: Project[] = [
     displayName: "pimdb",
     description: "Lightweight persisted in-memory database.",
     type: "library",
+    status: "alpha",
     github: "https://github.com/lirbank/pimdb",
     npm: "https://www.npmjs.com/package/pimdb",
   },
