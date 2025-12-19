@@ -19,7 +19,7 @@
   --color-pride-white: #ffffff;
 
   /* Typography */
-  --font-sans: "Inter", sans-serif;
+  --font-sans: Inter, sans-serif;
 }
 
 /* Inter font
@@ -54,4 +54,50 @@
     U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
     U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
     U+2215, U+FEFF, U+FFFD;
+}
+
+/*
+ * Typography Utilities
+ * These are the ONLY allowed typography combinations. Do not introduce
+ * new variants without careful consideration — constraints create harmony.
+ */
+
+/* Hero tagline — light weight, scales up on larger screens */
+@utility token-tagline {
+  @apply font-light text-stone-600 sm:text-xl;
+}
+
+/* Category labels — uppercase accent, used for section dividers */
+@utility token-label {
+  @apply text-cerise text-xs font-bold tracking-widest uppercase;
+}
+
+/* Section headings — prominent but not hero-level */
+@utility token-heading {
+  @apply text-lg font-semibold text-stone-900;
+}
+
+/* Titles — names, app titles, inline emphasis */
+@utility token-title {
+  @apply text-base font-semibold text-stone-900;
+}
+
+/* Monospace titles — library/package names */
+@utility token-title-mono {
+  @apply font-mono text-base text-stone-900;
+}
+
+/* Body text — descriptions, roles, links */
+@utility token-body {
+  @apply text-sm text-stone-600;
+}
+
+/* Body relaxed — longer paragraphs needing more line height */
+@utility token-body-relaxed {
+  @apply text-sm leading-relaxed text-stone-600;
+}
+
+/* Links — subtle until hovered */
+@utility token-link {
+  @apply hover:text-cerise transition-colors;
 }

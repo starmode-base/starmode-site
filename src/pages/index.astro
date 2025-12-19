@@ -56,7 +56,7 @@ const socialLinks = [
           class="h-auto w-full max-w-xl"
         />
       </div>
-      <p class="text-center font-light text-stone-600 sm:text-xl">
+      <p class="token-tagline text-center">
         {metadata.tagline}
       </p>
     </header>
@@ -70,7 +70,7 @@ const socialLinks = [
         {
           categories.map(({ title, projects }) => (
             <div class="flex flex-col gap-10">
-              <h3 class="text-cerise border-b border-stone-200 pb-2 text-xs font-bold tracking-widest uppercase">
+              <h3 class="token-label border-b border-stone-200 pb-2">
                 {title}
               </h3>
               {projects.map((project) => (
@@ -83,25 +83,21 @@ const socialLinks = [
 
       <!-- Contributors -->
       <section class="flex w-full max-w-4xl flex-col gap-6 px-6">
-        <h2 class="text-lg font-semibold">Contributors</h2>
+        <h2 class="token-heading">Contributors</h2>
         <div class="flex flex-wrap gap-12">
           {
             people.map((person) => (
               <div class="flex flex-col gap-1">
-                <h3 class="text-base font-semibold">
+                <h3 class="token-title">
                   {person.website ? (
-                    <a
-                      href={person.website}
-                      class="hover:text-cerise transition-colors"
-                      target="_blank"
-                    >
+                    <a href={person.website} class="token-link" target="_blank">
                       {person.name}
                     </a>
                   ) : (
                     person.name
                   )}
                 </h3>
-                <p class="text-sm text-stone-600">{person.role}</p>
+                <p class="token-body">{person.role}</p>
               </div>
             ))
           }
@@ -112,8 +108,8 @@ const socialLinks = [
       <section id="inclusion" class="w-full max-w-4xl px-6">
         <div class="flex flex-col items-start gap-6">
           <RainbowNotch variant="inline" />
-          <h2 class="text-lg font-semibold text-stone-900">Inclusion</h2>
-          <p class="max-w-2xl text-sm leading-relaxed text-stone-600">
+          <h2 class="token-heading">Inclusion</h2>
+          <p class="token-body-relaxed max-w-2xl">
             Everyone deserves to feel safe, respected, and welcome—everywhere,
             always. That means creating an environment where people can
             contribute openly, ask questions freely, and be themselves. It also
@@ -126,12 +122,12 @@ const socialLinks = [
       <!-- Footer -->
       <footer class="w-full bg-stone-100">
         <div
-          class="mx-auto flex max-w-4xl flex-col items-center justify-between gap-6 px-6 py-12 text-sm text-stone-600 sm:flex-row"
+          class="token-body mx-auto flex max-w-4xl flex-col items-center justify-between gap-6 px-6 py-12 sm:flex-row"
         >
           <div class="flex items-center gap-6">
             {
               socialLinks.map(({ label, href }) => (
-                <a href={href} class="hover:text-cerise transition-colors">
+                <a href={href} class="token-link">
                   {label}
                 </a>
               ))
