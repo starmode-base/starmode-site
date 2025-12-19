@@ -3,6 +3,7 @@ import "../styles/global.css";
 import RainbowNotch from "../components/rainbow-notch.astro";
 import ProjectCard from "../components/project-card.astro";
 import { libraries, apps, templates } from "../data/projects";
+import { people } from "../data/people";
 import metadata from "../../metadata.json";
 
 // Project categories
@@ -35,31 +36,34 @@ const socialLinks = [
     <!-- Rainbow Notch -->
     <RainbowNotch href="#inclusion" />
 
-    <main>
+    <header
+      class="mx-auto flex w-full max-w-4xl flex-col items-center gap-4 px-6 py-16 sm:gap-8 sm:py-32"
+    >
+      <h1 class="sr-only">{metadata.name}</h1>
+      <div class="px-10">
+        <img
+          src="/starmode-logo.svg"
+          alt={metadata.name}
+          class="h-auto w-full max-w-xl"
+        />
+      </div>
+      <p class="text-center font-light text-stone-600 sm:text-xl">
+        {metadata.tagline}
+      </p>
+    </header>
+
+    <main class="flex flex-col items-center gap-28">
       <!-- Hero -->
-      <section
-        class="mx-auto flex max-w-4xl flex-col items-center gap-4 px-6 py-16 sm:gap-8 sm:py-32"
-      >
-        <div class="px-10">
-          <img
-            src="/starmode-logo.svg"
-            alt={metadata.name}
-            class="h-auto w-full max-w-xl"
-          />
-        </div>
-        <p class="text-center font-light text-stone-600 sm:text-xl">
-          {metadata.tagline}
-        </p>
-      </section>
 
       <!-- Projects -->
-      <section class="mx-auto flex max-w-4xl flex-col gap-16 px-6">
+      <section class="flex w-full max-w-4xl flex-col gap-16 px-6">
+        <h2 class="sr-only">Projects</h2>
         {
           categories.map(({ title, projects }) => (
             <div class="flex flex-col gap-10">
-              <h2 class="text-cerise border-b border-stone-200 pb-2 text-xs font-bold tracking-widest uppercase">
+              <h3 class="text-cerise border-b border-stone-200 pb-2 text-xs font-bold tracking-widest uppercase">
                 {title}
-              </h2>
+              </h3>
               {projects.map((project) => (
                 <ProjectCard project={project} />
               ))}
@@ -69,24 +73,49 @@ const socialLinks = [
       </section>
 
       <!-- Inclusion -->
-      <section id="inclusion" class="mx-auto max-w-4xl px-6 py-28">
+      <section id="inclusion" class="w-full max-w-4xl px-6">
         <div class="flex flex-col items-start gap-6">
           <RainbowNotch variant="inline" />
-          <div>
-            <h2 class="mb-3 text-lg font-semibold text-stone-900">Inclusion</h2>
-            <p class="max-w-2xl text-sm leading-relaxed text-stone-600">
-              Everyone deserves to feel safe, respected, and welcome—everywhere,
-              always. That means creating an environment where people can
-              contribute openly, ask questions freely, and be themselves. It
-              also means calling out discrimination and exclusionary
-              behavior—silence isn't neutrality.
-            </p>
-          </div>
+          <h2 class="text-lg font-semibold text-stone-900">Inclusion</h2>
+          <p class="max-w-2xl text-sm leading-relaxed text-stone-600">
+            Everyone deserves to feel safe, respected, and welcome—everywhere,
+            always. That means creating an environment where people can
+            contribute openly, ask questions freely, and be themselves. It also
+            means calling out discrimination and exclusionary behavior—silence
+            isn't neutrality.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contributors -->
+      <section class="flex w-full max-w-4xl flex-col gap-6 px-6">
+        <h2 class="text-lg font-semibold">Contributors</h2>
+        <div class="flex flex-wrap gap-12">
+          {
+            people.map((person) => (
+              <div class="flex flex-col gap-1">
+                <h3 class="text-base font-semibold">
+                  {person.website ? (
+                    <a
+                      href={person.website}
+                      class="hover:text-cerise transition-colors"
+                      target="_blank"
+                    >
+                      {person.name}
+                    </a>
+                  ) : (
+                    person.name
+                  )}
+                </h3>
+                <p class="text-sm text-stone-600">{person.role}</p>
+              </div>
+            ))
+          }
         </div>
       </section>
 
       <!-- Footer -->
-      <footer class="bg-stone-100">
+      <footer class="w-full bg-stone-100">
         <div
           class="mx-auto flex max-w-4xl flex-col items-center justify-between gap-6 px-6 py-12 text-sm text-stone-600 sm:flex-row"
         >
