@@ -22,13 +22,15 @@
   --font-sans: Inter, sans-serif;
 }
 
-/* Inter font
-   To update: Go to https://fonts.google.com/specimen/Inter, select all weights
-   and styles, copy the Latin @font-face blocks from the generated CSS:
-   https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap
-   Also update the preload link in index.astro when changing the normal font URL. */
+/*
+ * Inter font
+ * To update: Go to https://fonts.google.com/specimen/Inter, select all weights
+ * and styles, copy the Latin @font-face blocks from the generated CSS:
+ * https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap
+ * Also update the preload link in index.astro when changing the normal font URL.
+ */
 
-/* latin */
+/* Latin (normal) */
 @font-face {
   font-family: "Inter";
   font-style: normal;
@@ -42,7 +44,7 @@
     U+2215, U+FEFF, U+FFFD;
 }
 
-/* latin */
+/* Latin (italic) */
 @font-face {
   font-family: "Inter";
   font-style: italic;
@@ -57,47 +59,47 @@
 }
 
 /*
- * Typography Utilities
- * These are the ONLY allowed typography combinations. Do not introduce
- * new variants without careful consideration — constraints create harmony.
+ * Design Token Utilities
+ * These are the ONLY allowed combinations. Do not introduce new variants
+ * without careful consideration — constraints create harmony.
  */
 
-/* Hero tagline — light weight, scales up on larger screens */
+/* Hero tagline */
 @utility token-tagline {
   @apply font-light text-stone-600 sm:text-xl;
 }
 
-/* Category labels — uppercase accent, used for section dividers */
+/* Category labels */
 @utility token-label {
   @apply text-cerise text-xs font-bold tracking-widest uppercase;
 }
 
-/* Section headings — prominent but not hero-level */
+/* Section headings */
 @utility token-heading {
   @apply text-lg font-semibold text-stone-900;
 }
 
-/* Titles — names, app titles, inline emphasis */
+/* Titles */
 @utility token-title {
   @apply text-base font-semibold text-stone-900;
 }
 
-/* Monospace titles — library/package names */
+/* Monospace titles */
 @utility token-title-mono {
   @apply font-mono text-base text-stone-900;
 }
 
-/* Body text — descriptions, roles, links */
+/* Body text */
 @utility token-body {
   @apply text-sm text-stone-600;
 }
 
-/* Body relaxed — longer paragraphs needing more line height */
+/* Body text (relaxed) */
 @utility token-body-relaxed {
   @apply text-sm leading-relaxed text-stone-600;
 }
 
-/* Links — subtle until hovered */
+/* Links */
 @utility token-link {
   @apply hover:text-cerise transition-colors;
 }
