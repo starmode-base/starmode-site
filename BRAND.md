@@ -19,11 +19,11 @@
 
 ## Colors
 
-**Palette:** Stone & cerise
+**Palette:** Slate & cerise
 
-- **Background:** `stone-50`
-- **Text:** `stone-900` — headings, titles, logo
-- **Text muted:** `stone-600` — secondary text, links, descriptions
+- **Background:** `slate-50` (#f8fafc)
+- **Text:** `slate-800` (#1e293b) — headings, titles, logo
+- **Text muted:** `slate-600` (#475569) — secondary text, links, descriptions
 - **Accent:** `cerise` — highlights, hover states
 
 ## Links

@@ -1,5 +1,5 @@
 export type ProjectType = "library" | "app" | "template";
-export type ProjectStatus = "pre-alpha" | "alpha" | "beta";
+export type ProjectStatus = "alpha" | "beta" | "rc";
 
 export interface Project {
   name: string;
@@ -19,7 +19,7 @@ export const projects: Project[] = [
     displayName: "@starmode/auth",
     description: "The LLM-friendly auth library. Passkeys + OTP.",
     type: "library",
-    status: "pre-alpha",
+    status: "alpha",
     github: "https://github.com/starmode-base/auth",
     npm: "https://www.npmjs.com/package/@starmode/auth",
   },
@@ -56,7 +56,7 @@ export const projects: Project[] = [
     description:
       "A nano CRM for independent consultants and founders who value fewer, stronger relationships.",
     type: "app",
-    status: "pre-alpha",
+    status: "alpha",
     github: "https://github.com/starmode-base/touch",
     site: "https://touch.starmode.dev",
   },
@@ -66,7 +66,7 @@ export const projects: Project[] = [
     description:
       "The first humanless bookkeeper. AI-first accounting without humans behind the scenes.",
     type: "app",
-    status: "pre-alpha",
+    status: "alpha",
     github: "https://github.com/starmode-base/heartbeats",
     site: "https://heartbeats.co",
   },

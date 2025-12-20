@@ -66,7 +66,7 @@
 
 /* Hero tagline */
 @utility token-tagline {
-  @apply font-light text-stone-600 sm:text-xl;
+  @apply font-light text-slate-600 sm:text-xl;
 }
 
 /* Category labels */
@@ -76,27 +76,27 @@
 
 /* Section headings */
 @utility token-heading {
-  @apply text-lg font-semibold text-stone-900;
+  @apply text-lg font-semibold text-slate-800;
 }
 
 /* Titles */
 @utility token-title {
-  @apply text-base font-semibold text-stone-900;
+  @apply text-base font-semibold text-slate-800;
 }
 
 /* Monospace titles */
 @utility token-title-mono {
-  @apply font-mono text-base text-stone-900;
+  @apply font-mono text-base text-slate-800;
 }
 
 /* Body text */
 @utility token-body {
-  @apply text-sm text-stone-600;
+  @apply text-sm text-slate-600;
 }
 
 /* Body text (relaxed) */
 @utility token-body-relaxed {
-  @apply text-sm leading-relaxed text-stone-600;
+  @apply text-sm leading-relaxed text-slate-600;
 }
 
 /* Links */

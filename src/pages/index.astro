@@ -39,26 +39,44 @@ const socialLinks = [
     <meta name="description" content={metadata.description} />
     <meta property="og:image" content={metadata.shareCard} />
   </head>
-  <body class="bg-stone-50 text-stone-900 antialiased">
+  <body class="bg-slate-50 text-slate-800 antialiased">
     <!-- Rainbow Notch -->
-    <RainbowNotch href="#inclusion" />
+    <div class="fixed inset-x-0 bottom-0">
+      <RainbowNotch href="#inclusion" />
+    </div>
 
-    <header
-      class="mx-auto flex w-full max-w-4xl flex-col items-center gap-4 px-6 py-16 sm:gap-8 sm:py-32"
-    >
-      <h1 class="sr-only">{metadata.name}</h1>
-      <div class="px-10">
+    <!-- Header -->
+    <header>
+      <!-- Logo -->
+      <div class="flex justify-center px-16 pt-8">
         <img
           src="/starmode-logo.svg"
           alt={metadata.name}
           width="728"
           height="74"
-          class="h-auto w-full max-w-xl"
+          class="h-auto w-full max-w-sm"
         />
       </div>
-      <p class="token-tagline text-center">
-        {metadata.tagline}
-      </p>
+
+      <!-- Hero -->
+      <div
+        class="mx-auto flex w-full max-w-4xl flex-col items-center gap-6 px-6 py-16 sm:py-48"
+      >
+        <h1 class="sr-only">{metadata.name}</h1>
+        <p
+          class="mx-auto max-w-4xl text-center text-5xl font-extrabold tracking-tight text-slate-800 sm:text-7xl"
+        >
+          <!-- {metadata.tagline} -->
+          A software collective
+        </p>
+        <p
+          class="mx-auto max-w-lg text-center text-slate-600 sm:text-center sm:text-lg sm:leading-relaxed"
+        >
+          <!-- {metadata.description} -->
+          We care deeply about first-class experiences for users, developers, and
+          LLMs alike.
+        </p>
+      </div>
     </header>
 
     <main class="flex flex-col items-center gap-28">
@@ -70,7 +88,7 @@ const socialLinks = [
         {
           categories.map(({ title, projects }) => (
             <div class="flex flex-col gap-10">
-              <h3 class="token-label border-b border-stone-200 pb-2">
+              <h3 class="token-label border-b border-slate-200 pb-2">
                 {title}
               </h3>
               {projects.map((project) => (
@@ -120,7 +138,7 @@ const socialLinks = [
       </section>
 
       <!-- Footer -->
-      <footer class="w-full bg-stone-100">
+      <footer class="w-full bg-slate-100">
         <div
           class="token-body mx-auto flex max-w-4xl flex-col items-center justify-between gap-6 px-6 py-12 sm:flex-row"
         >
