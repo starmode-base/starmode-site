@@ -29,6 +29,7 @@ const siteLinkLabel = project.type === "template" ? "Demo" : "Visit";
       }
     </div>
     <p class="token-body">{project.description}</p>
+    <p class="mt-1 text-sm text-slate-500">by {project.owner}</p>
   </div>
   <div class="token-body ml-4 flex gap-3">
     <a href={project.github} class="token-link">GitHub</a>

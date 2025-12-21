@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import RainbowNotch from "../components/rainbow-notch.astro";
 import ProjectCard from "../components/project-card.astro";
-import { libraries, apps, templates, research } from "../data/projects";
+import { libraries, apps, templates } from "../data/projects";
 import { people } from "../data/people";
 import metadata from "../../metadata.json";
 
@@ -11,7 +11,6 @@ const categories = [
   { title: "Apps", projects: apps },
   { title: "Libraries", projects: libraries },
   { title: "Templates", projects: templates },
-  { title: "Research", projects: research },
 ];
 
 // Social links
@@ -26,7 +25,6 @@ const socialLinks = [
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
-    <!-- Preload Inter normal (must match src URL in global.css @font-face) -->
     <link
       rel="preload"
       href="https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcviYwYZ8UA3.woff2"
@@ -67,22 +65,18 @@ const socialLinks = [
         <p
           class="mx-auto max-w-4xl text-center text-5xl font-extrabold tracking-tight text-slate-800 sm:text-7xl"
         >
-          <!-- {metadata.tagline} -->
           A software collective
         </p>
         <p
           class="mx-auto max-w-lg text-center text-slate-600 sm:text-center sm:text-lg sm:leading-relaxed"
         >
-          <!-- {metadata.description} -->
-          We care deeply about first-class experiences for users, developers, and
-          LLMs alike.
+          We care deeply about first-class experiences for users, developers,
+          and LLMs alike.
         </p>
       </div>
     </header>
 
     <main class="flex flex-col items-center gap-28">
-      <!-- Hero -->
-
       <!-- Projects -->
       <section class="flex w-full max-w-4xl flex-col gap-16 px-6">
         <h2 class="sr-only">Projects</h2>
@@ -100,24 +94,26 @@ const socialLinks = [
         }
       </section>
 
-      <!-- Discord CTA: Variant 3 - Cerise Accent Banner -->
-      <section class="bg-cerise_ w-full bg-slate-100 py-28">
+      <!-- Discord CTA: Variant 1 - Minimal Centered -->
+      <section class="w-full bg-slate-800 px-6 py-20">
         <div
-          class="mx-auto flex max-w-4xl flex-col items-center gap-8 px-6 sm:flex-row sm:justify-between"
+          class="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center"
         >
-          <div class="flex flex-col gap-3 text-center sm:text-left">
-            <h2 class="text-2xl font-bold sm:text-3xl">Join us on Discord</h2>
-            <p class="text-slate-600">
-              Get help with your projects, collaborate, contribute, and learn.
-            </p>
-            <p class="text-slate-600">
-              We're friendly folks who love working on AI, code, design, and
-              marketing.
-            </p>
-          </div>
+          <p
+            class="text-sm font-medium tracking-widest text-slate-400 uppercase"
+          >
+            Join the conversation
+          </p>
+          <h2 class="text-3xl font-bold text-white sm:text-4xl">
+            Let's build something together
+          </h2>
+          <p class="mt-2 text-slate-300">
+            Questions, ideas, or just want to hang out? Our Discord is where it
+            happens.
+          </p>
           <a
             href="https://discord.gg/zqmZJmZAQ7"
-            class="text-cerise inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-8 py-4 font-bold shadow-lg transition-transform hover:scale-105"
+            class="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-8 py-3 font-semibold text-slate-800 transition-transform hover:scale-105"
           >
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
               <path
@@ -129,26 +125,24 @@ const socialLinks = [
         </div>
       </section>
 
-      <!-- Collective -->
+      <!-- Contributors -->
       <section class="flex w-full max-w-4xl flex-col gap-6 px-6">
-        <h2 class="token-heading">Collective</h2>
-        <div class="flex flex-wrap gap-10">
+        <h2 class="token-heading">Contributors</h2>
+        <div class="flex flex-wrap gap-12">
           {
             people.map((person) => (
-              <a
-                href={person.website || `https://github.com/${person.github}`}
-                class="group flex flex-col items-center gap-3"
-                target="_blank"
-              >
-                <img
-                  src={`https://github.com/${person.github}.png`}
-                  alt={person.name}
-                  class="h-20 w-20 rounded-full bg-slate-200 transition-transform group-hover:scale-105"
-                />
-                <span class="token-title group-hover:text-cerise transition-colors">
-                  {person.name}
-                </span>
-              </a>
+              <div class="flex flex-col gap-1">
+                <h3 class="token-title">
+                  {person.website ? (
+                    <a href={person.website} class="token-link" target="_blank">
+                      {person.name}
+                    </a>
+                  ) : (
+                    person.name
+                  )}
+                </h3>
+                <p class="token-body">{person.github}</p>
+              </div>
             ))
           }
         </div>

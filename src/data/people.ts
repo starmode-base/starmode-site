@@ -1,18 +1,18 @@
 export interface Person {
   name: string;
-  role: string;
+  github: string;
   website?: string;
 }
 
 export const people: Person[] = [
   {
     name: "Mikael Lirbank",
-    role: "Founder, maintainer",
+    github: "lirbank",
     website: "https://www.lirbank.com/",
   },
   {
     name: "Spencer Smith",
-    role: "Contributor",
+    github: "spencer-g-smith",
     website: "https://github.com/spencer-g-smith",
   },
 ];
