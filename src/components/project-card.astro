@@ -1,17 +1,18 @@
 ---
-import type { Project } from "../data/projects";
+import type { Project, ProjectCategory } from "../data/projects";
 
 interface Props {
   project: Project;
+  category: ProjectCategory;
 }
 
-const { project } = Astro.props;
+const { project, category } = Astro.props;
 
 // Apps use semibold title, libraries/templates use mono
-const titleClass = project.type === "app" ? "token-title" : "token-title-mono";
+const titleClass = category === "Apps" ? "token-title" : "token-title-mono";
 
 // Site link label varies by type
-const siteLinkLabel = project.type === "template" ? "Demo" : "Visit";
+const siteLinkLabel = category === "Templates" ? "Demo" : "Visit";
 ---
 
 <div class="group flex justify-between">
