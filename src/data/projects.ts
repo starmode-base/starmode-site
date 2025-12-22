@@ -56,17 +56,6 @@ export const projects: Project[] = [
 
   // Apps
   {
-    name: "touch",
-    displayName: "Touch",
-    description:
-      "A nano CRM for independent consultants and founders who value fewer, stronger relationships.",
-    type: "research",
-    status: "alpha",
-    owner: "Mikael Lirbank",
-    github: "https://github.com/starmode-base/touch",
-    site: "https://touch.starmode.dev",
-  },
-  {
     name: "heartbeats",
     displayName: "Heartbeats",
     description:
@@ -97,6 +86,17 @@ export const projects: Project[] = [
     type: "research",
     owner: "Spencer Smith",
     github: "https://github.com/starmode-base/expert-system",
+  },
+  {
+    name: "touch",
+    displayName: "Touch",
+    description:
+      "A nano CRM with E2EE and Passkeys for independent consultants and founders who value fewer, stronger relationships.",
+    type: "research",
+    status: "alpha",
+    owner: "Mikael Lirbank",
+    github: "https://github.com/starmode-base/touch",
+    site: "https://touch.starmode.dev",
   },
 ];
 

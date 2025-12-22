@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import RainbowNotch from "../components/rainbow-notch.astro";
 import ProjectCard from "../components/project-card.astro";
-import { libraries, apps, templates } from "../data/projects";
+import { libraries, apps, templates, research } from "../data/projects";
 import { people } from "../data/people";
 import metadata from "../../metadata.json";
 
@@ -11,6 +11,7 @@ const categories = [
   { title: "Apps", projects: apps },
   { title: "Libraries", projects: libraries },
   { title: "Templates", projects: templates },
+  { title: "Research", projects: research },
 ];
 
 // Social links
@@ -99,29 +100,6 @@ const socialLinks = [
         }
       </section>
 
-      <!-- Contributors -->
-      <section class="flex w-full max-w-4xl flex-col gap-6 px-6">
-        <h2 class="token-heading">Contributors</h2>
-        <div class="flex flex-wrap gap-12">
-          {
-            people.map((person) => (
-              <div class="flex flex-col gap-1">
-                <h3 class="token-title">
-                  {person.website ? (
-                    <a href={person.website} class="token-link" target="_blank">
-                      {person.name}
-                    </a>
-                  ) : (
-                    person.name
-                  )}
-                </h3>
-                <p class="token-body">{person.github}</p>
-              </div>
-            ))
-          }
-        </div>
-      </section>
-
       <!-- Contribute CTA -->
       <!-- Want to build with us? Say hi on Discord." -->
       <section
@@ -144,6 +122,31 @@ const socialLinks = [
           >
             Join Discord
           </a>
+        </div>
+      </section>
+
+      <!-- Collective -->
+      <section class="flex w-full max-w-4xl flex-col gap-6 px-6">
+        <h2 class="token-heading">Collective</h2>
+        <div class="flex flex-wrap gap-10">
+          {
+            people.map((person) => (
+              <a
+                href={person.website || `https://github.com/${person.github}`}
+                class="group flex flex-col items-center gap-3"
+                target="_blank"
+              >
+                <img
+                  src={`https://github.com/${person.github}.png`}
+                  alt={person.name}
+                  class="h-20 w-20 rounded-full bg-slate-200 transition-transform group-hover:scale-105"
+                />
+                <span class="token-title group-hover:text-cerise transition-colors">
+                  {person.name}
+                </span>
+              </a>
+            ))
+          }
         </div>
       </section>
 

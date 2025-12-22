@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import RainbowNotch from "../components/rainbow-notch.astro";
 import ProjectCard from "../components/project-card.astro";
-import { libraries, apps, templates } from "../data/projects";
+import { libraries, apps, templates, research } from "../data/projects";
 import { people } from "../data/people";
 import metadata from "../../metadata.json";
 
@@ -11,6 +11,7 @@ const categories = [
   { title: "Apps", projects: apps },
   { title: "Libraries", projects: libraries },
   { title: "Templates", projects: templates },
+  { title: "Research", projects: research },
 ];
 
 // Social links
@@ -25,6 +26,7 @@ const socialLinks = [
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
+    <!-- Preload Inter normal (must match src URL in global.css @font-face) -->
     <link
       rel="preload"
       href="https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcviYwYZ8UA3.woff2"
@@ -65,18 +67,22 @@ const socialLinks = [
         <p
           class="mx-auto max-w-4xl text-center text-5xl font-extrabold tracking-tight text-slate-800 sm:text-7xl"
         >
+          <!-- {metadata.tagline} -->
           A software collective
         </p>
         <p
           class="mx-auto max-w-lg text-center text-slate-600 sm:text-center sm:text-lg sm:leading-relaxed"
         >
-          We care deeply about first-class experiences for users, developers,
-          and LLMs alike.
+          <!-- {metadata.description} -->
+          We care deeply about first-class experiences for users, developers, and
+          LLMs alike.
         </p>
       </div>
     </header>
 
     <main class="flex flex-col items-center gap-28">
+      <!-- Hero -->
+
       <!-- Projects -->
       <section class="flex w-full max-w-4xl flex-col gap-16 px-6">
         <h2 class="sr-only">Projects</h2>
@@ -203,24 +209,26 @@ const socialLinks = [
         </div>
       </section>
 
-      <!-- Contributors -->
+      <!-- Collective -->
       <section class="flex w-full max-w-4xl flex-col gap-6 px-6">
-        <h2 class="token-heading">Contributors</h2>
-        <div class="flex flex-wrap gap-12">
+        <h2 class="token-heading">Collective</h2>
+        <div class="flex flex-wrap gap-10">
           {
             people.map((person) => (
-              <div class="flex flex-col gap-1">
-                <h3 class="token-title">
-                  {person.website ? (
-                    <a href={person.website} class="token-link" target="_blank">
-                      {person.name}
-                    </a>
-                  ) : (
-                    person.name
-                  )}
-                </h3>
-                <p class="token-body">{person.github}</p>
-              </div>
+              <a
+                href={person.website || `https://github.com/${person.github}`}
+                class="group flex flex-col items-center gap-3"
+                target="_blank"
+              >
+                <img
+                  src={`https://github.com/${person.github}.png`}
+                  alt={person.name}
+                  class="h-20 w-20 rounded-full bg-slate-200 transition-transform group-hover:scale-105"
+                />
+                <span class="token-title group-hover:text-cerise transition-colors">
+                  {person.name}
+                </span>
+              </a>
             ))
           }
         </div>
