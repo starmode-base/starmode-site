@@ -1,6 +1,6 @@
 type ProjectStatus = "alpha" | "beta" | "rc";
 
-interface Project {
+export interface Project {
   name: string;
   displayName: string;
   description: string;
