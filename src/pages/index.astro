@@ -31,6 +31,13 @@ const socialLinks = [
     <title>{metadata.name}</title>
     <meta name="description" content={metadata.description} />
     <meta property="og:image" content={metadata.shareCard} />
+    <script>
+      import { configure } from "onedollarstats";
+
+      configure({
+        trackLocalhostAs: "www.starmode.dev",
+      });
+    </script>
   </head>
   <body class="bg-slate-50 text-slate-800 antialiased">
     <!-- Rainbow Notch -->
@@ -194,14 +201,5 @@ const socialLinks = [
         </div>
       </footer>
     </main>
-
-    <!-- Analytics -->
-    <script>
-      import { configure } from "onedollarstats";
-
-      configure({
-        trackLocalhostAs: "www.starmode.dev",
-      });
-    </script>
   </body>
 </html>
