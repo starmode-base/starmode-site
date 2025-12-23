@@ -2,6 +2,11 @@
 
 https://www.starmode.dev/
 
+## Services
+
+- https://app.netlify.com/projects/helpful-cobbler-137f12
+- https://onedollarstats.com/analytics/dashboard/www.starmode.dev
+
 ---
 
 # Astro Starter Kit: Minimal

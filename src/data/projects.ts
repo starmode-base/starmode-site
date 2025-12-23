@@ -1,6 +1,6 @@
-export type ProjectStatus = "alpha" | "beta" | "rc";
+type ProjectStatus = "alpha" | "beta" | "rc";
 
-export interface Project {
+interface Project {
   name: string;
   displayName: string;
   description: string;
