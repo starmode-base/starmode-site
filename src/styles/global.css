@@ -103,3 +103,13 @@
 @utility token-link {
   @apply hover:text-cerise transition-colors;
 }
+
+@layer base {
+  section-group {
+    @apply flex flex-col items-center gap-28 py-28;
+  }
+
+  section {
+    @apply flex w-full max-w-4xl flex-col px-6;
+  }
+}

@@ -47,9 +47,11 @@ const socialLinks = [
     </div>
 
     <!-- Header -->
-    <header>
-      <!-- Logo -->
-      <div class="flex justify-center px-16 pt-8">
+    <header
+      class="flex flex-col items-center gap-6 px-6 py-16 text-center sm:py-28"
+    >
+      <h1 class="sr-only">{metadata.name}</h1>
+      <div class="px-8">
         <img
           src="/starmode-logo.svg"
           alt={metadata.name}
@@ -58,58 +60,45 @@ const socialLinks = [
           class="h-auto w-full max-w-sm"
         />
       </div>
-
-      <!-- Hero -->
-      <div
-        class="mx-auto flex w-full max-w-4xl flex-col items-center gap-6 px-6 py-16 sm:py-48"
-      >
-        <h1 class="sr-only">{metadata.name}</h1>
-        <p
-          class="mx-auto max-w-4xl text-center text-5xl font-extrabold tracking-tight text-slate-800 sm:text-7xl"
-        >
-          <!-- {metadata.tagline} -->
-          A software collective
-        </p>
-        <p
-          class="mx-auto max-w-lg text-center text-slate-600 sm:text-center sm:text-lg sm:leading-relaxed"
-        >
-          <!-- {metadata.description} -->
-          We care deeply about first-class experiences for users, developers, and
-          LLMs alike.
-        </p>
-      </div>
+      <p class="text-5xl font-extrabold tracking-tight sm:text-7xl">
+        <!-- {metadata.tagline} -->
+        A software collective
+      </p>
+      <p class="max-w-lg text-slate-600 sm:text-lg sm:leading-relaxed">
+        <!-- {metadata.description} -->
+        We care deeply about first-class experiences for users, developers, and LLMs
+        alike.
+      </p>
     </header>
 
-    <main class="flex flex-col items-center gap-28">
-      <!-- Hero -->
+    <!-- Main -->
+    <main>
+      <section-group class="pt-0">
+        <!-- Projects -->
+        <section class="gap-16">
+          <h2 class="sr-only">Projects</h2>
+          {
+            (
+              Object.entries(projects) as [
+                ProjectCategory,
+                (typeof projects)[ProjectCategory],
+              ][]
+            ).map(([category, items]) => (
+              <div class="flex flex-col gap-10">
+                <h3 class="token-label border-b border-slate-200 pb-2">
+                  {category}
+                </h3>
+                {items.map((project) => (
+                  <ProjectCard project={project} category={category} />
+                ))}
+              </div>
+            ))
+          }
+        </section>
+      </section-group>
 
-      <!-- Projects -->
-      <section class="flex w-full max-w-4xl flex-col gap-16 px-6">
-        <h2 class="sr-only">Projects</h2>
-        {
-          (
-            Object.entries(projects) as [
-              ProjectCategory,
-              (typeof projects)[ProjectCategory],
-            ][]
-          ).map(([category, items]) => (
-            <div class="flex flex-col gap-10">
-              <h3 class="token-label border-b border-slate-200 pb-2">
-                {category}
-              </h3>
-              {items.map((project) => (
-                <ProjectCard project={project} category={category} />
-              ))}
-            </div>
-          ))
-        }
-      </section>
-
-      <!-- Discord CTA: Variant 3 - Cerise Accent Banner -->
-      <section class="bg-cerise_ w-full bg-slate-100 py-28">
-        <div
-          class="mx-auto flex max-w-4xl flex-col items-center gap-8 px-6 sm:flex-row sm:justify-between"
-        >
+      <section-group class="bg-slate-100">
+        <section class="items-center gap-6 sm:flex-row sm:justify-between">
           <div class="flex flex-col gap-3 text-center sm:text-left">
             <span
               class="text-cerise text-sm font-bold tracking-widest uppercase"
@@ -118,9 +107,6 @@ const socialLinks = [
             <h2 class="text-2xl font-bold sm:text-3xl">
               Talk about your projects, collaborate, contribute, and learn
             </h2>
-            <!-- <p class="text-slate-600">
-
-            </p> -->
             <p class="text-slate-600">
               We're friendly folks who love talking about AI, code, design, and
               marketing. Our Discord server is a low-key space for
@@ -128,46 +114,45 @@ const socialLinks = [
               care about the same things you do.
             </p>
           </div>
-          <!-- Retro sci-fi button with chamfered corners -->
           <a
             href="https://discord.gg/zqmZJmZAQ7"
             class="inline-flex shrink-0 items-center gap-3 bg-slate-900 px-8 py-4 font-mono text-sm font-bold tracking-wider text-slate-100 uppercase transition-colors hover:bg-slate-800 hover:text-white"
             style="clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);"
           >
-            <DiscordIcon class="h-5 w-5" />
+            <DiscordIcon class="size-5" />
             <span>Enter Discord</span>
           </a>
-        </div>
-      </section>
+        </section>
+      </section-group>
 
-      <!-- Collective -->
-      <section class="flex w-full max-w-4xl flex-col gap-6 px-6">
-        <h2 class="token-heading">Collective</h2>
-        <div class="flex flex-wrap gap-10">
-          {
-            people.map((person) => (
-              <a
-                href={person.website || `https://github.com/${person.github}`}
-                class="group flex flex-col items-center gap-3"
-                target="_blank"
-              >
-                <img
-                  src={`https://github.com/${person.github}.png`}
-                  alt={person.name}
-                  class="h-20 w-20 rounded-full bg-slate-200 transition-transform group-hover:scale-105"
-                />
-                <span class="token-title group-hover:text-cerise transition-colors">
-                  {person.name}
-                </span>
-              </a>
-            ))
-          }
-        </div>
-      </section>
+      <section-group>
+        <!-- Collective -->
+        <section class="gap-6">
+          <h2 class="token-heading">Collective</h2>
+          <div class="flex flex-wrap gap-10">
+            {
+              people.map((person) => (
+                <a
+                  href={person.website || `https://github.com/${person.github}`}
+                  class="group flex flex-col items-center gap-3"
+                  target="_blank"
+                >
+                  <img
+                    src={`https://github.com/${person.github}.png`}
+                    alt={person.name}
+                    class="h-20 w-20 rounded-full bg-slate-200 transition-transform group-hover:scale-105"
+                  />
+                  <span class="token-title group-hover:text-cerise transition-colors">
+                    {person.name}
+                  </span>
+                </a>
+              ))
+            }
+          </div>
+        </section>
 
-      <!-- Inclusion -->
-      <section id="inclusion" class="w-full max-w-4xl px-6">
-        <div class="flex flex-col items-start gap-6">
+        <!-- Inclusion -->
+        <section id="inclusion" class="items-start gap-6">
           <RainbowNotch variant="inline" />
           <h2 class="token-heading">Inclusion</h2>
           <p class="token-body-relaxed max-w-2xl">
@@ -177,14 +162,14 @@ const socialLinks = [
             means calling out discrimination and exclusionary behavior—silence
             isn't neutrality.
           </p>
-        </div>
-      </section>
+        </section>
+      </section-group>
+    </main>
 
-      <!-- Footer -->
-      <footer class="w-full bg-slate-100">
-        <div
-          class="token-body mx-auto flex max-w-4xl flex-col items-center justify-between gap-6 px-6 py-12 sm:flex-row"
-        >
+    <!-- Footer -->
+    <footer>
+      <section-group class="bg-slate-100 py-12">
+        <section class="token-body justify-between gap-6 sm:flex-row">
           <div class="flex items-center gap-6">
             {
               socialLinks.map(({ label, href }) => (
@@ -195,8 +180,8 @@ const socialLinks = [
             }
           </div>
           <p>© 2025 {metadata.name}</p>
-        </div>
-      </footer>
-    </main>
+        </section>
+      </section-group>
+    </footer>
   </body>
 </html>
