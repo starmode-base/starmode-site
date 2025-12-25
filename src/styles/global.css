@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Design Tokens */
+/* Design tokens */
 @theme {
   /* Accent color */
   --color-cerise: #de3163;
@@ -58,23 +58,21 @@
     U+2215, U+FEFF, U+FFFD;
 }
 
+/* Section layout */
+@layer base {
+  section-group {
+    @apply flex flex-col items-center gap-28 py-28;
+  }
+
+  section {
+    @apply flex w-full max-w-4xl flex-col px-6;
+  }
+}
+
 /*
- * Design Token Utilities
+ * Design token utilities
  * These are the ONLY allowed combinations. Do not introduce new variants
  * without careful consideration — constraints create harmony.
- *
- * token-display       — Hero headlines
- * token-heading-lg    — Featured section headings
- * token-heading       — Regular section headings
- * token-title         — Item titles
- * token-title-mono    — Library/package names
- * token-eyebrow       — Promo section labels
- * token-label         — Category labels
- * token-lead          — Intro paragraphs
- * token-body          — Body text
- * token-body-lg       — Large body text
- * token-body-relaxed  — Long-form paragraphs
- * token-link          — Link hover behavior
  */
 
 /* Hero headlines */
@@ -135,14 +133,4 @@
 /* Links */
 @utility token-link {
   @apply hover:text-cerise transition-colors;
-}
-
-@layer base {
-  section-group {
-    @apply flex flex-col items-center gap-28 py-28;
-  }
-
-  section {
-    @apply flex w-full max-w-4xl flex-col px-6;
-  }
 }
