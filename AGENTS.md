@@ -23,16 +23,6 @@ See [`metadata.json`](/metadata.json) for the canonical tagline and description.
 - **Share card (source):** [`/public/starmode-og.svg`](/public/starmode-og.svg)
 - **Share card (png):** [`/public/starmode-og.png`](/public/starmode-og.png)
 
-### Links
-
-Update these when branding changes:
-
-- **Website:** https://www.starmode.dev
-- **GitHub:** https://github.com/starmode-base
-- **Discord:** https://discord.gg/zqmZJmZAQ7
-- **LinkedIn (company):** https://www.linkedin.com/company/starmode/
-- **LinkedIn (Mikael):** https://www.linkedin.com/in/mikaellirbank/
-
 ## Design system
 
 **Constraints create harmony.** Fewer variants = more cohesive design. Re-use existing patterns instead of inventing new ones.
