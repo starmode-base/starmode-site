@@ -62,16 +62,29 @@
  * Design Token Utilities
  * These are the ONLY allowed combinations. Do not introduce new variants
  * without careful consideration — constraints create harmony.
+ *
+ * token-display       — Hero headlines
+ * token-heading-lg    — Featured section headings
+ * token-heading       — Regular section headings
+ * token-title         — Item titles
+ * token-title-mono    — Library/package names
+ * token-eyebrow       — Promo section labels
+ * token-label         — Category labels
+ * token-lead          — Intro paragraphs
+ * token-body          — Body text
+ * token-body-lg       — Large body text
+ * token-body-relaxed  — Long-form paragraphs
+ * token-link          — Link hover behavior
  */
 
-/* Hero tagline */
-@utility token-tagline {
-  @apply font-light text-slate-600 sm:text-xl;
+/* Hero headlines */
+@utility token-display {
+  @apply text-5xl font-extrabold tracking-tight sm:text-7xl;
 }
 
-/* Category labels */
-@utility token-label {
-  @apply text-cerise text-xs font-bold tracking-widest uppercase;
+/* Featured section headings */
+@utility token-heading-lg {
+  @apply text-2xl font-bold sm:text-3xl;
 }
 
 /* Section headings */
@@ -89,14 +102,34 @@
   @apply font-mono text-base text-slate-800;
 }
 
-/* Body text */
+/* Promo section labels */
+@utility token-eyebrow {
+  @apply text-cerise text-sm font-bold tracking-widest uppercase;
+}
+
+/* Category labels */
+@utility token-label {
+  @apply text-cerise text-xs font-bold tracking-widest uppercase;
+}
+
+/* Intro paragraphs */
+@utility token-lead {
+  @apply text-slate-600 sm:text-lg sm:leading-relaxed;
+}
+
+/* Body text (small) */
 @utility token-body {
   @apply text-sm text-slate-600;
 }
 
-/* Body text (relaxed) */
+/* Body text (small, relaxed) */
 @utility token-body-relaxed {
   @apply text-sm leading-relaxed text-slate-600;
+}
+
+/* Body text (large) */
+@utility token-body-lg {
+  @apply text-base text-slate-600;
 }
 
 /* Links */
