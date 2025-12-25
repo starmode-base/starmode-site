@@ -1,46 +1,29 @@
 {
   "name": "starmode-site",
-  "private": true,
+  "type": "module",
   "engines": {
-    "node": "22.x"
+    "node": "24.x"
   },
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "prettier --check . && vitest run && next build",
-    "start": "next start",
-    "lint": "next lint --max-warnings 0 --fix",
+    "dev": "astro dev",
+    "build": "prettier --check . && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
     "format": "prettier --write .",
-    "test": "vitest",
-    "env:pull": "bunx vercel@latest env pull .env",
-    "clean": "rm -rf node_modules tsconfig.tsbuildinfo bun.lock .output .next && bun install"
+    "og": "npx @resvg/resvg-js-cli --fit-width 2400 public/starmode-og.svg public/starmode-og.png",
+    "clean:soft": "rm -rf node_modules tsconfig.tsbuildinfo .astro dist && bun install",
+    "clean:hard": "rm -rf node_modules tsconfig.tsbuildinfo .astro dist bun.lock && bun install"
   },
   "dependencies": {
-    "@vapi-ai/web": "^2.3.6",
-    "@vercel/analytics": "^1.5.0",
-    "ably": "^2.9.0",
-    "lucide-react": "^0.522.0",
-    "next": "^15.3.4",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-player": "^2.16.0",
-    "tiny-invariant": "^1.3.3",
-    "vapi": "^0.1.0",
-    "zod": "^3.25.67"
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.16.6",
+    "onedollarstats": "^0.0.11",
+    "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.1",
-    "@tailwindcss/postcss": "^4.1.10",
-    "@total-typescript/ts-reset": "^0.6.1",
-    "@types/node": "^24.0.3",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "eslint": "^9.29.0",
-    "eslint-config-next": "^15.3.4",
-    "prettier": "^3.5.3",
-    "prettier-plugin-tailwindcss": "^0.6.13",
-    "tailwindcss": "^4.1.10",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.34.1",
-    "vitest": "^3.2.4"
+    "prettier": "^3.7.4",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "typescript": "^5.9.3"
   }
 }

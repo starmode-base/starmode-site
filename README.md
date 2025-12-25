@@ -1,78 +1,38 @@
-# nextjs-template
+# STΛR MODΞ website
 
-https://nextjs-template.starmode.dev/
+https://www.starmode.dev/
 
-Next.js is great for content sites. If you are building an interactive web app, consider using TanStack Start.
+- [metadata](./metadata.json)
+- [AGENTS.md](./AGENTS.md)
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app) and enahnced with our favorite configuration and tooling.
+## Tech stack
 
-## Template usage
+- **Framework:** [Astro](https://astro.build/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Hosting:** [Netlify](https://www.netlify.com/)
+- **Accessibility:** WCAG AA
 
-### Setup
+## Services
 
-1. Create a new repo from this [template repo](https://github.com/new?template_name=nextjs-template&template_owner=starmode-base)
-1. In the new repo, add the template as a remote named upstream: `git remote add upstream https://github.com/starmode-base/nextjs-template.git`
-1. Fetch the latest changes from the template `git fetch upstream`
+- https://app.netlify.com/projects/helpful-cobbler-137f12
+- https://onedollarstats.com/analytics/dashboard/www.starmode.dev
 
-### Pulling in updates from the template
+## Brand assets
 
-When you want to sync in changes from the template:
+| Asset           | File                        | Live                                              | GitHub                                                                                      | Figma                                                                             |
+| --------------- | --------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Logo (wordmark) | `/public/starmode-logo.svg` | [SVG](https://www.starmode.dev/starmode-logo.svg) | [GitHub](https://github.com/starmode-base/starmode-site/blob/main/public/starmode-logo.svg) | [Figma](https://www.figma.com/file/gt1f3Jz3fRhh7GAcvqplp3/Star-Mode?node-id=14-2) |
+| Icon (star)     | `/public/starmode-icon.svg` | [SVG](https://www.starmode.dev/starmode-icon.svg) | [GitHub](https://github.com/starmode-base/starmode-site/blob/main/public/starmode-icon.svg) | [Figma](https://www.figma.com/file/gt1f3Jz3fRhh7GAcvqplp3/Star-Mode?node-id=14-2) |
+| Share card      | `/public/starmode-og.svg`   | [SVG](https://www.starmode.dev/starmode-og.svg)   | [GitHub](https://github.com/starmode-base/starmode-site/blob/main/public/starmode-og.svg)   | [Figma](https://www.figma.com/file/gt1f3Jz3fRhh7GAcvqplp3/Star-Mode?node-id=14-2) |
+| Share card      | `/public/starmode-og.png`   | [PNG](https://www.starmode.dev/starmode-og.png)   | [GitHub](https://github.com/starmode-base/starmode-site/blob/main/public/starmode-og.png)   | —                                                                                 |
+| Rainbow notch   | `/public/rainbow-notch.svg` | [SVG](https://www.starmode.dev/rainbow-notch.svg) | [GitHub](https://github.com/starmode-base/starmode-site/blob/main/public/rainbow-notch.svg) | —                                                                                 |
 
-```sh
-git fetch upstream
-git merge upstream/main --allow-unrelated-histories
-```
+## Branding checklist
 
-Optional: Use a dedicated sync branch to test merges:
+Update these when branding changes:
 
-```sh
-git checkout -b template-sync
-git merge upstream/main --allow-unrelated-histories
-# Resolve conflicts if any, test, then merge into main
-```
-
-## Recommendations
-
-- [NVM](https://github.com/nvm-sh/nvm/blob/master/README.md) to install Node.js and NPM
-- [Cursor](https://www.cursor.com/)
-- [GitHub Desktop](https://desktop.github.com/)
-
-## Prerequisites
-
-You only have to do this the first time you set up the app.
-
-1. Install [Node.js](https://nodejs.org/) v22 (using [NVM](https://github.com/nvm-sh/nvm/blob/master/README.md))
-1. Install [Bun](https://bun.sh/)
-1. Clone the [Git repo](https://github.com/starmode-base/nextjs-template)
-1. Install dependencies: `bun install`
-1. Link the Vercel project, to be able to pull development environment variables from Vercel: `bunx vercel@latest link`
-   - Set up “~/GitHub/starmode-base/nextjs-template”? yes
-   - Which scope should contain your project? STAR MODE
-   - Found project “starmode/nextjs-template”. Link to it? yes
-
-### Local development
-
-1. Pull development environment variables from Vercel: `bun env:pull`
-1. Start the app in development mode: `bun dev`
-
-## Preconfigured packages and tools
-
-- https://nextjs.org/
-- https://vitest.dev/
-- https://tailwindcss.com/docs/guides/nextjs
-- https://prettier.io/
-- https://typescript-eslint.io/linting/configs/#strict
-- https://www.npmjs.com/package/eslint-plugin-deprecation
-- https://www.npmjs.com/package/@total-typescript/ts-reset
-- https://www.npmjs.com/package/tiny-invariant
-- https://code.visualstudio.com/
-
-## Scripts
-
-- `bun run dev` - Start the development server
-- `bun run build` - Check Prettier formatting, run tests, and build the production app. This script is run by Vercel when deploying.
-- `bun run start` - Run the built app
-- `bun run lint` - Lint all files
-- `bun run format` - Format all files with Prettier
-- `bun run test` - Run tests in watch mode
-- `bun run env:pull` - Pull the latest developer environment variables from Vercel
+- **Website:** https://www.starmode.dev
+- **GitHub:** https://github.com/starmode-base
+- **Discord:** https://discord.gg/zqmZJmZAQ7
+- **LinkedIn (company):** https://www.linkedin.com/company/starmode/
+- **LinkedIn (Mikael):** https://www.linkedin.com/in/mikaellirbank/

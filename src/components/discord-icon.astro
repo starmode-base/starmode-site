@@ -1,0 +1,20 @@
+---
+// Source: https://discord.com/branding
+import rawSvg from "../assets/discord-icon.svg?raw";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+
+// Strip XML declaration and inject class + fill attributes
+const svg = rawSvg
+  .replace(/<\?xml[^>]*\?>/, "")
+  .replace(
+    "<svg",
+    `<svg class="${className || ""}" fill="currentColor" aria-hidden="true"`,
+  );
+---
+
+<Fragment set:html={svg} />

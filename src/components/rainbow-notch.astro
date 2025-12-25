@@ -1,0 +1,28 @@
+---
+// Progress Pride flag notch
+interface Props {
+  href?: string;
+  variant?: "hanging" | "inline";
+}
+
+const { href, variant = "hanging" } = Astro.props;
+const Tag = href ? "a" : "div";
+---
+
+<div class="flex justify-center">
+  <Tag
+    {...href ? { href } : {}}
+    class:list={[
+      "flex overflow-hidden",
+      variant === "hanging" ? "rounded-t-sm" : "rounded-xs",
+    ]}
+  >
+    <img
+      src="/rainbow-notch.svg"
+      alt="Rainbow notch"
+      width="88"
+      height="8"
+      class="h-2 w-auto"
+    />
+  </Tag>
+</div>
