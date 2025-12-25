@@ -63,10 +63,10 @@ const socialLinks = [
           class="h-auto w-full max-w-sm"
         />
       </div>
-      <p class="token-display">
+      <p class="token-hero-tagline">
         {metadata.tagline}
       </p>
-      <p class="token-lead max-w-lg">
+      <p class="token-hero-description max-w-lg">
         {metadata.description}
       </p>
     </header>
@@ -85,9 +85,7 @@ const socialLinks = [
               ][]
             ).map(([category, items]) => (
               <div class="flex flex-col gap-10">
-                <h3 class="token-label border-b border-slate-200 pb-2">
-                  {category}
-                </h3>
+                <h2 class="border-b border-slate-200 pb-2">{category}</h2>
                 {items.map((project) => (
                   <ProjectCard project={project} category={category} />
                 ))}
@@ -100,11 +98,11 @@ const socialLinks = [
       <section-group class="bg-slate-100">
         <section class="items-center gap-6 sm:flex-row sm:justify-between">
           <div class="flex flex-col gap-3 text-center sm:text-left">
-            <span class="token-eyebrow">Join us on Discord</span>
-            <h2 class="token-heading-lg">
+            <h2>Join us on Discord</h2>
+            <h3 class="token-xl">
               Talk about your projects, collaborate, contribute, and learn
-            </h2>
-            <p class="token-body-lg">
+            </h3>
+            <p>
               We're friendly folks who love talking about AI, code, design, and
               marketing. Our Discord server is a low-key space for
               brainstorming, asking questions, and connecting with people who
@@ -125,7 +123,7 @@ const socialLinks = [
       <section-group>
         <!-- Collective -->
         <section class="gap-6">
-          <h2 class="token-heading">Collective</h2>
+          <h2>Collective</h2>
           <div class="flex flex-wrap gap-10">
             {
               people.map((person) => (
@@ -139,9 +137,9 @@ const socialLinks = [
                     alt={person.name}
                     class="h-20 w-20 rounded-full bg-slate-200 transition-transform group-hover:scale-105"
                   />
-                  <span class="token-title group-hover:text-cerise transition-colors">
+                  <h3 class="group-hover:text-cerise transition-colors">
                     {person.name}
-                  </span>
+                  </h3>
                 </a>
               ))
             }
@@ -151,8 +149,8 @@ const socialLinks = [
         <!-- Inclusion -->
         <section id="inclusion" class="items-start gap-6">
           <RainbowNotch variant="inline" />
-          <h2 class="token-heading">Inclusion</h2>
-          <p class="token-body-relaxed max-w-2xl">
+          <h2>Inclusion</h2>
+          <p class="max-w-2xl">
             Everyone deserves to feel safe, respected, and welcome—everywhere,
             always. That means creating an environment where people can
             contribute openly, ask questions freely, and be themselves. It also
@@ -166,7 +164,7 @@ const socialLinks = [
     <!-- Footer -->
     <footer>
       <section-group class="bg-slate-100 py-12">
-        <section class="token-body justify-between gap-6 sm:flex-row">
+        <section class="justify-between gap-6 sm:flex-row">
           <div class="flex items-center gap-6">
             {
               socialLinks.map(({ label, href }) => (

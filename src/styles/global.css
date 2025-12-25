@@ -58,79 +58,58 @@
     U+2215, U+FEFF, U+FFFD;
 }
 
-/* Section layout */
+/*
+ * Base typography
+ * HTML elements have sensible defaults. Add modifiers only when needed.
+ */
 @layer base {
+  /* Section group */
   section-group {
     @apply flex flex-col items-center gap-28 py-28;
   }
 
+  /* Section */
   section {
     @apply flex w-full max-w-4xl flex-col px-6;
+  }
+
+  /* Section headers */
+  h2 {
+    @apply text-cerise text-sm font-bold tracking-widest uppercase;
+  }
+
+  /* Item titles */
+  h3 {
+    @apply text-lg font-semibold text-slate-800;
+  }
+
+  /* Body text */
+  p {
+    @apply text-base text-slate-600;
   }
 }
 
 /*
- * Design token utilities
- * These are the ONLY allowed combinations. Do not introduce new variants
- * without careful consideration — constraints create harmony.
+ * Typography modifiers
+ * Use these to adjust base styles when needed.
  */
 
-/* Hero headlines */
-@utility token-display {
-  @apply text-5xl font-extrabold tracking-tight sm:text-7xl;
+/* Hero tagline */
+@utility token-hero-tagline {
+  @apply text-5xl font-extrabold tracking-tight text-slate-800 sm:text-7xl;
 }
 
-/* Featured section headings */
-@utility token-heading-lg {
-  @apply text-2xl font-bold sm:text-3xl;
+/* Hero description */
+@utility token-hero-description {
+  @apply text-base text-slate-600 sm:text-lg;
 }
 
-/* Section headings */
-@utility token-heading {
-  @apply text-lg font-semibold text-slate-800;
+/* Extra-large heading (for featured sections) */
+@utility token-xl {
+  @apply text-2xl font-bold text-slate-800 sm:text-3xl;
 }
 
-/* Titles */
-@utility token-title {
-  @apply text-base font-semibold text-slate-800;
-}
-
-/* Monospace titles */
-@utility token-title-mono {
-  @apply font-mono text-base text-slate-800;
-}
-
-/* Promo section labels */
-@utility token-eyebrow {
-  @apply text-cerise text-sm font-bold tracking-widest uppercase;
-}
-
-/* Category labels */
-@utility token-label {
-  @apply text-cerise text-xs font-bold tracking-widest uppercase;
-}
-
-/* Intro paragraphs */
-@utility token-lead {
-  @apply text-slate-600 sm:text-lg sm:leading-relaxed;
-}
-
-/* Body text (small) */
-@utility token-body {
-  @apply text-sm text-slate-600;
-}
-
-/* Body text (small, relaxed) */
-@utility token-body-relaxed {
-  @apply text-sm leading-relaxed text-slate-600;
-}
-
-/* Body text (large) */
-@utility token-body-lg {
-  @apply text-base text-slate-600;
-}
-
-/* Links */
+/* Link hover effect */
 @utility token-link {
   @apply hover:text-cerise transition-colors;
 }
