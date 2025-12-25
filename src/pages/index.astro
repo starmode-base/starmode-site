@@ -30,7 +30,10 @@ const socialLinks = [
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{metadata.name}</title>
-    <meta name="description" content={metadata.description} />
+    <meta
+      name="description"
+      content={`${metadata.tagline}. ${metadata.description}`}
+    />
     <meta property="og:image" content={metadata.shareCard} />
     <script>
       import { configure } from "onedollarstats";
@@ -61,13 +64,10 @@ const socialLinks = [
         />
       </div>
       <p class="text-5xl font-extrabold tracking-tight sm:text-7xl">
-        <!-- {metadata.tagline} -->
-        A software collective
+        {metadata.tagline}
       </p>
       <p class="max-w-lg text-slate-600 sm:text-lg sm:leading-relaxed">
-        <!-- {metadata.description} -->
-        We care deeply about first-class experiences for users, developers, and LLMs
-        alike.
+        {metadata.description}
       </p>
     </header>
 

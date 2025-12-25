@@ -6,9 +6,7 @@
 
 ## Taglines
 
-**Hero:** A quality-focused software collective
-
-**Description:** A quality-focused software collective. We care deeply about first-class experiences for users, developers, and LLMs alike.
+See [`metadata.json`](/metadata.json) for the canonical tagline and description.
 
 ## Assets
 
