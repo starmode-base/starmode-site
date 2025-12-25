@@ -16,13 +16,6 @@ Always use sentence case for headings and labels.
 
 See [`metadata.json`](/metadata.json) for the canonical tagline and description.
 
-### Assets
-
-- **Logo (wordmark):** [`/public/starmode-logo.svg`](/public/starmode-logo.svg)
-- **Icon (star):** [`/public/starmode-icon.svg`](/public/starmode-icon.svg)
-- **Share card (source):** [`/public/starmode-og.svg`](/public/starmode-og.svg)
-- **Share card (png):** [`/public/starmode-og.png`](/public/starmode-og.png)
-
 ## Design system
 
 **Constraints create harmony.** Fewer variants = more cohesive design. Re-use existing patterns instead of inventing new ones.

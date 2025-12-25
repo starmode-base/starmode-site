@@ -17,6 +17,16 @@ https://www.starmode.dev/
 - https://app.netlify.com/projects/helpful-cobbler-137f12
 - https://onedollarstats.com/analytics/dashboard/www.starmode.dev
 
+## Brand assets
+
+| Asset           | File                        | Live                                              | GitHub                                                                                      | Figma                                                                             |
+| --------------- | --------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Logo (wordmark) | `/public/starmode-logo.svg` | [SVG](https://www.starmode.dev/starmode-logo.svg) | [GitHub](https://github.com/starmode-base/starmode-site/blob/main/public/starmode-logo.svg) | [Figma](https://www.figma.com/file/gt1f3Jz3fRhh7GAcvqplp3/Star-Mode?node-id=14-2) |
+| Icon (star)     | `/public/starmode-icon.svg` | [SVG](https://www.starmode.dev/starmode-icon.svg) | [GitHub](https://github.com/starmode-base/starmode-site/blob/main/public/starmode-icon.svg) | [Figma](https://www.figma.com/file/gt1f3Jz3fRhh7GAcvqplp3/Star-Mode?node-id=14-2) |
+| Share card      | `/public/starmode-og.svg`   | [SVG](https://www.starmode.dev/starmode-og.svg)   | [GitHub](https://github.com/starmode-base/starmode-site/blob/main/public/starmode-og.svg)   | [Figma](https://www.figma.com/file/gt1f3Jz3fRhh7GAcvqplp3/Star-Mode?node-id=14-2) |
+| Share card      | `/public/starmode-og.png`   | [PNG](https://www.starmode.dev/starmode-og.png)   | [GitHub](https://github.com/starmode-base/starmode-site/blob/main/public/starmode-og.png)   | —                                                                                 |
+| Rainbow notch   | `/public/rainbow-notch.svg` | [SVG](https://www.starmode.dev/rainbow-notch.svg) | [GitHub](https://github.com/starmode-base/starmode-site/blob/main/public/rainbow-notch.svg) | —                                                                                 |
+
 ## Branding checklist
 
 Update these when branding changes:
