@@ -12,18 +12,6 @@ export interface Project {
 }
 
 export const projects = {
-  Apps: [
-    {
-      name: "heartbeats",
-      displayName: "Heartbeats",
-      description:
-        "The first humanless bookkeeper. AI-first accounting without humans behind the scenes.",
-      status: "alpha",
-      owner: "Mikael Lirbank & Spencer Smith",
-      github: "https://github.com/starmode-base/heartbeats",
-      site: "https://heartbeats.co",
-    },
-  ],
   Libraries: [
     {
       name: "auth",
@@ -88,6 +76,18 @@ export const projects = {
       owner: "Mikael Lirbank",
       github: "https://github.com/starmode-base/touch",
       site: "https://touch.starmode.dev",
+    },
+  ],
+  Apps: [
+    {
+      name: "heartbeats",
+      displayName: "Heartbeats",
+      description:
+        "The first humanless bookkeeper. AI-first accounting without humans behind the scenes.",
+      status: "alpha",
+      owner: "Mikael Lirbank & Spencer Smith",
+      github: "https://github.com/starmode-base/heartbeats",
+      site: "https://heartbeats.co",
     },
   ],
 } as const satisfies Record<string, Project[]>;
