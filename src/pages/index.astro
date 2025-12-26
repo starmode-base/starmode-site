@@ -1,4 +1,5 @@
 ---
+import "../styles/fonts.css";
 import "../styles/global.css";
 import RainbowNotch from "../components/rainbow-notch.astro";
 import ProjectCard from "../components/project-card.astro";
@@ -15,6 +16,8 @@ const socialLinks = [
   { label: "Bluesky", href: "https://bsky.app/profile/lirbank.com" },
   { label: "Twitter", href: "https://x.com/MikaelLirbank" },
 ];
+
+const year = new Date().getFullYear();
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -199,7 +202,7 @@ const socialLinks = [
               ))
             }
           </div>
-          <p>© 2025 {metadata.name}</p>
+          <p>© {year} {metadata.name}</p>
         </section>
       </section-group>
     </footer>
