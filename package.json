@@ -11,7 +11,7 @@
     "astro": "astro",
     "format": "prettier --write .",
     "og": "npx @resvg/resvg-js-cli --fit-width 2400 public/starmode-og.svg public/starmode-og.png",
-    "icons": "bun run src/scripts/generate-icons.ts",
+    "icons": "bun run scripts/generate-icons.ts",
     "clean:soft": "rm -rf node_modules tsconfig.tsbuildinfo .astro dist && bun install",
     "clean:hard": "rm -rf node_modules tsconfig.tsbuildinfo .astro dist bun.lock && bun install"
   },

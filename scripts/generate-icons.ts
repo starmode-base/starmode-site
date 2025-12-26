@@ -4,7 +4,7 @@
  * Generates platform-specific icons from the base star SVG with appropriate
  * backgrounds, padding, and sizing for each platform's requirements.
  *
- * Usage: bun run src/scripts/generate-icons.ts
+ * Usage: bun run scripts/generate-icons.ts
  */
 
 import sharp from "sharp";
@@ -92,7 +92,7 @@ async function generateIcon(
 
 async function main() {
   const scriptDir = dirname(fileURLToPath(import.meta.url));
-  const projectRoot = join(scriptDir, "../..");
+  const projectRoot = join(scriptDir, "..");
   const publicDir = join(projectRoot, "public");
   const sourceSvg = join(publicDir, "starmode-icon.svg");
 
