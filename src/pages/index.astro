@@ -5,6 +5,7 @@ import ProjectCard from "../components/project-card.astro";
 import DiscordIcon from "../components/discord-icon.astro";
 import { projects, type ProjectCategory } from "../data/projects";
 import { people } from "../data/people";
+import { partners } from "../data/partners";
 import metadata from "../../metadata.json";
 
 // Social links
@@ -158,6 +159,29 @@ const socialLinks = [
             means calling out discrimination and exclusionary behavior—silence
             isn't neutrality.
           </p>
+        </section>
+
+        <!-- Partners -->
+        <section class="gap-6">
+          <h2>Partners</h2>
+          <div class="flex flex-wrap items-center gap-10">
+            {
+              partners.map((partner) => (
+                <a
+                  href={partner.url}
+                  class="group flex items-center"
+                  target="_blank"
+                  title={partner.description}
+                >
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    class="h-8 opacity-80 transition-opacity group-hover:opacity-100"
+                  />
+                </a>
+              ))
+            }
+          </div>
         </section>
       </section-group>
     </main>
