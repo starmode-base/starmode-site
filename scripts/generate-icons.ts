@@ -34,6 +34,13 @@ interface IconVariant {
 
 const variants: IconVariant[] = [
   {
+    name: "apple-touch-icon",
+    size: 180,
+    padding: 28, // 15.5%
+    background: colors.slate50,
+    description: "Apple touch icon (iOS home screen)",
+  },
+  {
     name: "discord-icon",
     size: 512,
     padding: 80, // 15.6%
@@ -41,11 +48,11 @@ const variants: IconVariant[] = [
     description: "Discord server icon (light bg for dark mode visibility)",
   },
   {
-    name: "apple-touch-icon",
-    size: 180,
-    padding: 28, // 15.5%
+    name: "netlify-icon",
+    size: 512,
+    padding: 80, // 15.6%
     background: colors.slate50,
-    description: "Apple touch icon (iOS home screen)",
+    description: "Netlify dashboard site icon",
   },
 ];
 
