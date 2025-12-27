@@ -41,14 +41,14 @@ const variants: IconVariant[] = [
     description: "Apple touch icon (iOS home screen)",
   },
   {
-    name: "discord-icon",
+    name: "starmode-icon-discord",
     size: 512,
     padding: 80, // 15.6%
     background: colors.slate50,
     description: "Discord server icon (light bg for dark mode visibility)",
   },
   {
-    name: "netlify-icon",
+    name: "starmode-icon-netlify",
     size: 512,
     padding: 80, // 15.6%
     background: colors.slate50,
