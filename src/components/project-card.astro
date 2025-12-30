@@ -1,12 +1,14 @@
 ---
-import type { Project, ProjectCategory } from "../data/projects";
+import { render, type CollectionEntry } from "astro:content";
+import type { ProjectCategory } from "../content/config";
 
 interface Props {
-  project: Project;
+  project: CollectionEntry<"projects">;
   category: ProjectCategory;
 }
 
 const { project, category } = Astro.props;
+const { Content } = await render(project);
 
 // Site link label varies by type
 const siteLinkLabel = category === "Templates" ? "Demo" : "Visit";
@@ -16,36 +18,36 @@ const siteLinkLabel = category === "Templates" ? "Demo" : "Visit";
   <div class="flex justify-between gap-2">
     <div class="flex items-center gap-2">
       <h3>
-        {project.displayName}
+        {project.data.displayName}
       </h3>
       {
-        project.status && (
+        project.data.status && (
           <span class="status-badge cursor-default rounded px-2 py-0.5 text-xs tracking-wide uppercase">
-            {project.status}
+            {project.data.status}
           </span>
         )
       }
     </div>
     <div class="flex gap-2">
-      <a href={project.github} class="token-link">GitHub</a>
+      <a href={project.data.github} class="token-link">GitHub</a>
       {
-        project.npm && (
-          <a href={project.npm} class="token-link">
+        project.data.npm && (
+          <a href={project.data.npm} class="token-link">
             npm
           </a>
         )
       }
       {
-        project.site && (
-          <a href={project.site} class="token-link">
+        project.data.site && (
+          <a href={project.data.site} class="token-link">
             {siteLinkLabel}
           </a>
         )
       }
     </div>
   </div>
-  <p>{project.description}</p>
-  <p class="text-slate-500">by {project.owner}</p>
+  <Content />
+  <p class="text-slate-500">by {project.data.owner}</p>
 </div>
 
 <style>
