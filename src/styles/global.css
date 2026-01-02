@@ -51,6 +51,12 @@
   p {
     @apply text-base text-slate-600;
   }
+
+  /* Prose links */
+  p a,
+  li a {
+    @apply hover:decoration-cerise underline decoration-slate-300 underline-offset-2 transition-colors;
+  }
 }
 
 /*

@@ -1,5 +1,5 @@
 ---
-displayName: "@starmode/auth"
+displayName: "ΛUTH"
 category: Libraries
 order: 1
 status: alpha

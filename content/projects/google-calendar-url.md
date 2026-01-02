@@ -1,5 +1,5 @@
 ---
-displayName: google-calendar-url
+displayName: Google Calendar URL
 category: Libraries
 order: 4
 owner: Mikael Lirbank
