@@ -60,7 +60,7 @@ const year = new Date().getFullYear();
       name="description"
       content={`${metadata.tagline}. ${metadata.description}`}
     />
-    <meta property="og:image" content={`${metadata.shareCard}?v=1`} />
+    <meta property="og:image" content={metadata.shareCard} />
     <meta name="twitter:card" content="summary_large_image" />
     <script>
       import { configure } from "onedollarstats";
