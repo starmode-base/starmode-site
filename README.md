@@ -36,3 +36,11 @@ Update these when branding changes:
 - **Discord:** https://discord.gg/zqmZJmZAQ7
 - **LinkedIn (company):** https://www.linkedin.com/company/starmode/
 - **LinkedIn (Mikael):** https://www.linkedin.com/in/mikaellirbank/
+
+## Open Graph
+
+- [Discord](https://discord.com/developers/embeds?url=https%253A%252F%252Fwww.starmode.dev%252F)
+- [Facebook](https://developers.facebook.com/tools/debug/?q=https%3A%2F%2Fwww.starmode.dev%2F)
+- [LinkedIn](https://www.linkedin.com/post-inspector/inspect/https:%2F%2Fwww.starmode.dev%2F)
+- [Twitter](https://cards-dev.twitter.com/validator)
+- [opengraph.xyz](https://www.opengraph.xyz/url/https%3A%2F%2Fwww.starmode.dev)
