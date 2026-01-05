@@ -43,4 +43,4 @@ Update these when branding changes:
 - [Facebook](https://developers.facebook.com/tools/debug/?q=https%3A%2F%2Fwww.starmode.dev%2F)
 - [LinkedIn](https://www.linkedin.com/post-inspector/inspect/https:%2F%2Fwww.starmode.dev%2F)
 - [Twitter](https://cards-dev.twitter.com/validator)
-- [opengraph.xyz](https://www.opengraph.xyz/url/https%3A%2F%2Fwww.starmode.dev)
+- [opengraph.xyz](https://www.opengraph.xyz/url/https%3A%2F%2Fwww.starmode.dev%2F)
