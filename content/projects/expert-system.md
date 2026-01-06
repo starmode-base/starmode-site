@@ -7,6 +7,6 @@ github: https://github.com/starmode-base/expert-system
 site: https://expert-system.starmode.dev/
 ---
 
-Experimental multi-agent system for complex reasoning tasks.
+Expert System is an observable, ambient reasoning system that turns the world’s unstructured information into a coherent, queryable and compounding knowledge corpus.
 
-Expert System processes unstructured information and transforms it into structured, actionable insights. It creates an intermediate layer of understanding through concise takeaway cards, enabling AI to surface connections and hypotheses that would be difficult to discover manually. A powerful tool for investors and researchers needing to analyze large volumes of data.
+It operates continuously—reading, compressing, and cross-linking primary sources to maintain an up-to-date worldview grounded in provenance rather than narrative summaries. At its core are factual, reference-linked units of meaning that research agents reason across over time and domains. These agents also have direct access to public financial, market, and macroeconomic data, enabling quantitative grounding and synthesis between narrative signals and hard data, and surfacing connections, second-order effects, and hypotheses that are difficult to uncover manually. 
