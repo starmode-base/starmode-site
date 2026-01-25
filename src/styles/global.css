@@ -55,7 +55,7 @@
   /* Prose links */
   p a,
   li a {
-    @apply hover:decoration-cerise underline decoration-slate-300 underline-offset-2 transition-colors;
+    @apply hover:decoration-cerise hover:text-cerise underline decoration-slate-300 underline-offset-2 transition-colors;
   }
 }
 

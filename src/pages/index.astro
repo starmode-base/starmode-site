@@ -118,7 +118,7 @@ const year = new Date().getFullYear();
         </section>
       </section-group>
 
-      <section-group class="bg-slate-100">
+      <section-group class="bg-slate-100" id="discord">
         <section class="items-center gap-6 sm:flex-row sm:justify-between">
           <div class="flex flex-col gap-3 text-center sm:text-left">
             <h2>Join us on Discord</h2>
@@ -169,9 +169,15 @@ const year = new Date().getFullYear();
             builders helping each other.
           </p>
         </section>
+
         <!-- Collective -->
         <section class="gap-6">
           <h2>Members</h2>
+          <p class="max-w-2xl">
+            Some of our active members. Meet them and the rest of the collective
+            on
+            <a href="#discord">our Discord server</a>.
+          </p>
           <div class="flex flex-wrap gap-10">
             {
               people.map((person) => (
