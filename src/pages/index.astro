@@ -9,6 +9,7 @@ import type { ProjectCategory } from "../content.config";
 import { people } from "../data/people";
 import { partners } from "../data/partners";
 import metadata from "../../metadata.json";
+import { Icon } from "astro-icon/components";
 
 // Fetch and group projects by category
 type Project = CollectionEntry<"projects">;
@@ -193,6 +194,14 @@ const year = new Date().getFullYear();
               ))
             }
           </div>
+          <a
+            href="https://github.com/starmode-base/starmode-site/edit/main/src/data/people.ts"
+            class="hover:text-cerise flex items-center gap-2 text-sm transition-colors"
+            target="_blank"
+            title="Edit this list on GitHub"
+          >
+            <Icon name="ph:pencil-simple-line" class="size-5" /> Add yourself
+          </a>
         </section>
 
         <!-- Inclusion -->

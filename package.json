@@ -18,10 +18,12 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.16.15",
+    "astro-icon": "^1.1.5",
     "onedollarstats": "^0.0.11",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
+    "@iconify-json/ph": "^1.2.2",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
