@@ -93,7 +93,7 @@ const year = new Date().getFullYear();
       <p class="token-hero-tagline">
         {metadata.tagline}
       </p>
-      <p class="token-hero-description max-w-lg">
+      <p class="token-hero-description max-w-sm">
         {metadata.description}
       </p>
     </header>
@@ -143,9 +143,34 @@ const year = new Date().getFullYear();
       </section-group>
 
       <section-group>
+        <!-- What the collective offers -->
+        <section class="gap-6">
+          <h2>What the collective offers</h2>
+          <ul class="flex max-w-2xl flex-col gap-3">
+            <li>
+              <strong>Bring your own project</strong> — Open source, free apps, commercial
+              products. All welcome.
+            </li>
+            <li>
+              <strong>Rendezvous</strong> — 30 min weekly video call on Discord where
+              we discuss challenges, share progress, get feedback.
+            </li>
+            <li>
+              <strong>Discord community</strong> — Async collaboration and conversation.
+            </li>
+            <li>
+              <strong>Publish on starmode.dev</strong> — Showcase your projects here.
+            </li>
+          </ul>
+          <p class="max-w-2xl">
+            Everything is optional. Open to any builder. Projects belong to
+            their authors. STΛR MODΞ is not a company, it is a collective of
+            builders helping each other.
+          </p>
+        </section>
         <!-- Collective -->
         <section class="gap-6">
-          <h2>Collective</h2>
+          <h2>Members</h2>
           <div class="flex flex-wrap gap-10">
             {
               people.map((person) => (
