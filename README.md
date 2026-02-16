@@ -16,6 +16,8 @@ https://www.starmode.dev/
 
 - https://app.netlify.com/projects/helpful-cobbler-137f12
 - https://onedollarstats.com/analytics/dashboard/www.starmode.dev
+- https://app.ahrefs.com/
+- https://search.google.com/search-console?resource_id=sc-domain:starmode.dev
 
 ## Brand assets
 
