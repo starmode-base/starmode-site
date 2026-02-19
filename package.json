@@ -16,6 +16,7 @@
     "clean:hard": "rm -rf node_modules tsconfig.tsbuildinfo .astro dist bun.lock && bun install"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.0",
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.16.15",
     "astro-icon": "^1.1.5",
