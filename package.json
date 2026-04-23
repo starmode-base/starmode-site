@@ -18,9 +18,9 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",
     "@tailwindcss/vite": "^4.2.4",
-    "astro": "^5.18.1",
+    "astro": "^6.1.9",
     "astro-icon": "^1.1.5",
-    "onedollarstats": "^0.0.11",
+    "onedollarstats": "^0.0.19",
     "tailwindcss": "^4.2.4"
   },
   "devDependencies": {
@@ -29,6 +29,6 @@
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.3",
     "sharp": "^0.34.5",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.3"
   }
 }
