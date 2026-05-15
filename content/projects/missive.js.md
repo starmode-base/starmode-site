@@ -1,7 +1,7 @@
 ---
 displayName: Missive.js
 category: Libraries
-order: 2
+order: 1
 owner: Sébastien Morel
 github: https://github.com/missive-js/missive.js
 npm: https://www.npmjs.com/package/missive.js
