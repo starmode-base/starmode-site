@@ -1,7 +1,7 @@
 ---
 displayName: "ΛUTH"
 category: Libraries
-order: 1
+order: 2
 status: alpha
 owner: Mikael Lirbank
 github: https://github.com/starmode-base/auth

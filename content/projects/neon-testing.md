@@ -1,7 +1,7 @@
 ---
 displayName: Neon Testing
 category: Libraries
-order: 2
+order: 1
 owner: Mikael Lirbank
 github: https://github.com/starmode-base/neon-testing
 npm: https://www.npmjs.com/package/neon-testing

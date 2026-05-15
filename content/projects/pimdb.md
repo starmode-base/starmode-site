@@ -1,6 +1,6 @@
 ---
 displayName: PimDB
-category: Libraries
+category: Research
 order: 3
 status: alpha
 owner: Mikael Lirbank
