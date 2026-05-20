@@ -21,5 +21,6 @@ export const people: Person[] = [
   {
     name: "Vincent Chan",
     github: "cvince",
+    website: "https://vincentchan.vc"
   },
 ];
