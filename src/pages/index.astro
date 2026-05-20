@@ -17,9 +17,9 @@ const allProjects = await getCollection("projects");
 
 const categoryOrder: ProjectCategory[] = [
   "Libraries",
+  "Apps",
   "Templates",
   "Research",
-  "Apps",
 ];
 
 const projectsByCategory: [ProjectCategory, Project[]][] = categoryOrder.map(
