@@ -18,4 +18,8 @@ export const people: Person[] = [
     name: "Sébastien Morel",
     github: "plopix",
   },
+  {
+    name: "Vincent Chan",
+    github: "cvince",
+  },
 ];
