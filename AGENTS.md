@@ -2,6 +2,8 @@
 
 Guidelines for AI agents and contributors working on this codebase.
 
+For project orientation — tech stack, services, and brand assets — see the [README](./README.md).
+
 ## Writing style
 
 Always use sentence case for headings and labels.
