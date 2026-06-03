@@ -16,9 +16,9 @@
     "clean:hard": "rm -rf node_modules tsconfig.tsbuildinfo .astro dist bun.lock && bun install"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.2",
+    "@astrojs/sitemap": "^3.7.3",
     "@tailwindcss/vite": "^4.3.0",
-    "astro": "^6.3.6",
+    "astro": "^6.4.3",
     "astro-icon": "^1.1.5",
     "onedollarstats": "^0.0.23",
     "tailwindcss": "^4.3.0"
@@ -30,6 +30,6 @@
     "prettier-plugin-tailwindcss": "^0.8.0",
     "sharp": "^0.34.5",
     "typescript": "^6.0.3",
-    "wrangler": "^4.93.0"
+    "wrangler": "^4.97.0"
   }
 }
