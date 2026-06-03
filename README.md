@@ -9,12 +9,12 @@ https://www.starmode.dev/
 
 - **Framework:** [Astro](https://astro.build/)
 - **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
-- **Hosting:** [Netlify](https://www.netlify.com/)
+- **Hosting:** [Cloudflare Workers](https://workers.cloudflare.com/)
 - **Accessibility:** WCAG AA
 
 ## Services
 
-- https://app.netlify.com/projects/helpful-cobbler-137f12
+- https://dash.cloudflare.com/2d2d507f9bf33bb828cbe7407de74630/workers/services/view/starmode-site/production
 - https://onedollarstats.com/analytics/dashboard/www.starmode.dev
 - https://app.ahrefs.com/
 - https://search.google.com/search-console?resource_id=sc-domain:starmode.dev
