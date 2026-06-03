@@ -4,20 +4,20 @@ https://www.starmode.dev/
 
 - [metadata](./metadata.json)
 - [AGENTS.md](./AGENTS.md)
+- [robots.txt](./public/robots.txt)
 
 ## Tech stack
 
 - **Framework:** [Astro](https://astro.build/)
 - **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
-- **Hosting:** [Cloudflare Workers](https://workers.cloudflare.com/)
 - **Accessibility:** WCAG AA
 
 ## Services
 
-- https://dash.cloudflare.com/2d2d507f9bf33bb828cbe7407de74630/workers/services/view/starmode-site/production
-- https://onedollarstats.com/analytics/dashboard/www.starmode.dev
-- https://app.ahrefs.com/
-- https://search.google.com/search-console?resource_id=sc-domain:starmode.dev
+- **Hosting:** [Cloudflare Workers](https://dash.cloudflare.com/2d2d507f9bf33bb828cbe7407de74630/workers/services/view/starmode-site/production)
+- **Analytics:** [OneDollarStats](https://onedollarstats.com/analytics/dashboard/www.starmode.dev)
+- **SEO:** [Ahrefs](https://app.ahrefs.com/)
+- **Search:** [Google Search Console](https://search.google.com/search-console?resource_id=sc-domain:starmode.dev)
 
 ## Brand assets
 
