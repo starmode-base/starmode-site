@@ -31,7 +31,7 @@ https://www.starmode.dev/
 
 ## Branding checklist
 
-Update these when branding changes:
+External pages where STΛR MODΞ is mentioned or described. As our branding evolves, revisit these and update their bios/descriptions so the brand stays coherent across the web:
 
 - **Website:** https://www.starmode.dev
 - **GitHub:** https://github.com/starmode-base
