@@ -5,6 +5,7 @@ import "../styles/global.css";
 import RainbowNotch from "../components/rainbow-notch.astro";
 import ProjectCard from "../components/project-card.astro";
 import DiscordButton from "../components/discord-button.astro";
+import GitHubButton from "../components/github-button.astro";
 import type { ProjectCategory } from "../content.config";
 import { people } from "../data/people";
 import { partners } from "../data/partners";
@@ -263,6 +264,9 @@ const year = new Date().getFullYear();
 
     <!-- Footer -->
     <footer>
+      <div class="bg-cerise flex justify-center">
+        <GitHubButton />
+      </div>
       <section-group class="bg-slate-100 py-12">
         <section class="justify-between gap-6 sm:flex-row">
           <div class="flex items-center gap-6">
