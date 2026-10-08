@@ -23,4 +23,9 @@ export const people: Person[] = [
     github: "cvince",
     website: "https://www.vincentchan.vc",
   },
+  {
+    name: "Tudor Zaharia",
+    github: "tdrz",
+    website: "https://tudor.zaharia.ch",
+  },  
 ];
